@@ -118,7 +118,7 @@ switch ($pagina) {
                             <a class="dropdown-item" href="somos.php">CATÁLOGO</a>
                             <a class="dropdown-item" href="historia.php">REVISTA IMÁN</a>
                             <a class="dropdown-item" href="reglamento.php">OFERTAS</a>
-                            <a class="dropdown-item" href="reglamento.php">INFÓRMATE</a>
+                            <a class="dropdown-item" href="reglamento.php">INFÓRMATEEEE</a>
 
                         </div>
                     </li>
