@@ -167,8 +167,8 @@
                             <input type="text" class="form-control mt-1 mb-2" name="img2" id="img2" value="<?= $this->dataPub['img2'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
                             <span><?= $this->translate('Imagen 3') ?> :</span>
                             <input type="text" class="form-control mt-1 mb-2" name="img3" id="img3" value="<?= $this->dataPub['img3'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
-                            <span><?= $this->translate('Imagen 4') ?> :</span>
-                            <input type="text" class="form-control mt-1 mb-2" name="img4" id="img4" value="<?= $this->dataPub['img4'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
+                           <!--  <span><//?= $this->translate('Imagen 4') ?> :</span>
+                            <input type="text" class="form-control mt-1 mb-2" name="img4" id="img4" value="<//?= $this->dataPub['img4'] ?>" oninput="changePortada(this.value)" placeholder="//<//?= $this->translate('Link de imagen') ?>"> -->
                             <img class="mt-2" src="<?= $this->dataPub['portada'] ?>" onerror="this.src = `https://via.placeholder.com/320x220`" id="imgPortada">
                             <!-- hidden -->
                             <textarea name="cuerpo" id="txtcuerpo"></textarea>

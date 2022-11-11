@@ -141,10 +141,12 @@ if (isset($URI[1])) {
             opacity: 1;
         }
 
-        #minigaleria img:hover {
+        .sombra {
             opacity: .5;
 
-
+        }
+        #minigaleria img:hover{
+            opacity: .5;
         }
     </style>
 
@@ -172,7 +174,7 @@ if (isset($URI[1])) {
 
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active" data-bs-interval="10000">
+                                    <div id="slider1" class="carousel-item active" data-bs-interval="10000">
                                         <?php
                                         if (!empty($dataPub['portada'])) { ?>
                                             <img src="<?= $dataPub['portada'] ?>" class="d-block w-100">
@@ -181,24 +183,24 @@ if (isset($URI[1])) {
                                     </div>
                                     <?php
                                     if (!empty($dataPub['img2'])) { ?>
-                                        <div class="carousel-item" data-bs-interval="2000">
+                                        <div id="slider2" class="carousel-item" data-bs-interval="2000">
+
+                                            <img src="<?= $dataPub['img1'] ?>" class="d-block w-100">
+
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img3'])) { ?>
+                                        <div id="slider3" class="carousel-item" data-bs-interval="2000">
 
                                             <img src="<?= $dataPub['img2'] ?>" class="d-block w-100">
 
                                         </div>
                                     <?php } ?>
                                     <?php
-                                    if (!empty($dataPub['img3'])) { ?>
-                                        <div class="carousel-item" data-bs-interval="2000">
-
-                                            <img src="<?= $dataPub['img3'] ?>" class="d-block w-100">
-
-                                        </div>
-                                    <?php } ?>
-                                    <?php
                                     if (!empty($dataPub['img4'])) { ?>
-                                        <div class="carousel-item" data-bs-interval="2000">
-                                            <img src="<?= $dataPub['img4'] ?>" class="d-block w-100">
+                                        <div id="slider4" class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img3'] ?>" class="d-block w-100">
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -220,26 +222,26 @@ if (isset($URI[1])) {
                     <div id="minigaleria" class="row d-flex-justify-content-around">
                         <div class="col-lg-3 px-2">
                             <?php
+                            if (!empty($dataPub['portada'])) { ?>
+                                <img id="minigaleria1" src="<?= $dataPub['portada'] ?>" class="crop1">
+                            <?php } ?>
+                        </div>
+                        <div class="col-lg-3 px-2">
+                            <?php
                             if (!empty($dataPub['img1'])) { ?>
-                                <img src="<?= $dataPub['img1'] ?>" class="crop1">
+                                <img id="minigaleria2" src="<?= $dataPub['img1'] ?>" class="crop1">
                             <?php } ?>
                         </div>
                         <div class="col-lg-3 px-2">
                             <?php
                             if (!empty($dataPub['img2'])) { ?>
-                                <img src="<?= $dataPub['img2'] ?>" class="crop1">
+                                <img id="minigaleria3" src="<?= $dataPub['img2'] ?>" class="crop1">
                             <?php } ?>
                         </div>
                         <div class="col-lg-3 px-2">
                             <?php
                             if (!empty($dataPub['img3'])) { ?>
-                                <img src="<?= $dataPub['img3'] ?>" class="crop1">
-                            <?php } ?>
-                        </div>
-                        <div class="col-lg-3 px-2">
-                            <?php
-                            if (!empty($dataPub['img4'])) { ?>
-                                <img src="<?= $dataPub['img4'] ?>" class="crop1">
+                                <img id="minigaleria4" src="<?= $dataPub['img3'] ?>" class="crop1">
                             <?php } ?>
                         </div>
                     </div>
@@ -313,3 +315,52 @@ if (isset($URI[1])) {
 </body>
 
 </html>
+
+<script>
+    let mini1 = document.getElementById("minigaleria1");
+    let mini2 = document.getElementById("minigaleria2");
+    let mini3 = document.getElementById("minigaleria3");
+    let mini4 = document.getElementById("minigaleria4");
+    /* let slider = document.getElementById("slider2"); */
+
+    mini1.onclick = function() {
+        document.getElementById("slider1").classList.add("active");
+        document.getElementById("minigaleria1").classList.add("sombra");
+        document.getElementById("minigaleria2").classList.remove("sombra");
+        document.getElementById("minigaleria3").classList.remove("sombra");
+        document.getElementById("minigaleria4").classList.remove("sombra");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+    }
+    mini2.onclick = function() {
+        document.getElementById("slider2").classList.add("active");
+        document.getElementById("minigaleria2").classList.add("sombra");
+        document.getElementById("minigaleria1").classList.remove("sombra");
+        document.getElementById("minigaleria3").classList.remove("sombra");
+        document.getElementById("minigaleria4").classList.remove("sombra");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+    }
+    mini3.onclick = function() {
+        document.getElementById("slider3").classList.add("active");
+        document.getElementById("minigaleria3").classList.add("sombra");
+        document.getElementById("minigaleria2").classList.remove("sombra");
+        document.getElementById("minigaleria1").classList.remove("sombra");
+        document.getElementById("minigaleria4").classList.remove("sombra");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+    }
+    mini4.onclick = function() {
+        document.getElementById("slider4").classList.add("active");
+        document.getElementById("minigaleria4").classList.add("sombra");
+        document.getElementById("minigaleria2").classList.remove("sombra");
+        document.getElementById("minigaleria3").classList.remove("sombra");
+        document.getElementById("minigaleria1").classList.remove("sombra");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+    }
+</script>
