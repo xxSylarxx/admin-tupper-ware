@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'type' => 'project',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => NULL,
+        'name' => 'app/web-admin',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'app/web-admin' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => NULL,
+            'dev_requirement' => false,
+        ),
+        'facebook/graph-sdk' => array(
+            'pretty_version' => '5.7.0',
+            'version' => '5.7.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../facebook/graph-sdk',
+            'aliases' => array(),
+            'reference' => '2d8250638b33d73e7a87add65f47fabf91f8ad9b',
+            'dev_requirement' => false,
+        ),
+        'fpdo/fluentpdo' => array(
+            'pretty_version' => 'v2.2.4',
+            'version' => '2.2.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fpdo/fluentpdo',
+            'aliases' => array(),
+            'reference' => '1985e0e8406a56140f387bc9bec786b419cbeccc',
+            'dev_requirement' => false,
+        ),
+    ),
+);

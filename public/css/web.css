@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&display=swap");
+
+/* colores web */
+:root {
+  --color1: #e30385;
+  --color2: black;
+  --color3: #333399;
+  --color4: #b7862a;
+  --color5: #ffff;
+  --color6: #800000;
+}
+
+/* @font-face{
+  font-family:'maiamdra';
+  src:url('../fonts/Maiandra.ttf');
+} */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 17.5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p.line {
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h4 {
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+  color: var(--color1);
+  font-weight: 700;
+}
+h5 {
+  text-align: center;
+  color: var(--color3);
+  font-weight: 700;
+}
+/* estilos header */
+header {
+  -moz-box-shadow: 0 3px 3px rgba(94, 94, 94, 0.75);
+  -webkit-box-shadow: 0 3px 3px rgba(94, 94, 94, 0.75);
+  box-shadow: 0 3px 3px rgba(94, 94, 94, 0.75);
+}
+
+header .bar-sup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 7.5%;
+  background: var(--color2);
+}
+header .bar-sup2 {
+  padding-top: 1.5rem;
+  background: var(--color1);
+}
+
+header .bar-sup :hover {
+  color: var(--color5);
+}
+header .bar-sup a {
+  color: var(--color5);
+  font-size: 0.85em;
+}
+header ul.navbar-nav > li {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+header nav.navbar {
+  /* border-bottom: 3px solid #f6f6f8;
+  border-top:3px solid #f6f6f8 ; */
+  background-color: var(--color5);
+  padding-left: 2%;
+  padding-right: 2%;
+}
+header #menu1 {
+  background-color: var(--color5);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+header a.nav-link {
+  color: var(--color2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.83em;
+  text-transform: uppercase;
+}
+
+header a.nav-link i {
+  font-size: 1.3em;
+}
+
+header a {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header .dropdown-menu {
+  /* background-color: var(--color2); */
+  box-shadow: 0 0 3px rgb(197, 197, 197);
+}
+
+header .dropdown-item {
+  font-size: 0.8em;
+  padding: 8px 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+header .dropdown-item:hover {
+  background-color: var(--color1);
+}
+
+header #submenu:hover {
+  background-color: var(--color1);
+}
+header #logo {
+  margin: 0px 5px 0px 5px;
+  height: 34px;
+  width: 200px;
+}
+header #logoresponsive {
+  margin: 0px 5px 0px 5px;
+  height: 34px;
+  width: 200px;
+  display: none;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: var(--color2);
+}
+
+.text-justify {
+  text-align: justify;
+}
+.back {
+  font-size: 15px;
+}
+
+#lema {
+  position: relative;
+  margin-top: -90px;
+}
+
+#lema .div-lema {
+  border-radius: 20px;
+  background-color: var(--color1);
+}
+#lema .div-lema h2 {
+  color: var(--color3);
+}
+
+/* estilos footer */
+
+footer .bar-inf {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 7%;
+  /* background-color: var(--color6); */
+}
+
+footer .bar-inf a {
+  color: white;
+  font-size: 0.85em;
+}
+footer {
+  background: var(--color2);
+  background-size: 20%;
+}
+
+footer #terminos {
+  font-size: 1rem;
+}
+#perfiles {
+  padding-top: 5.5rem;
+}
+.imgnivel {
+  height: 350px;
+}
+.ubic li {
+  align-items: center;
+  border: none;
+  background: transparent;
+  justify-content: center;
+}
+footer .bar-inf2 {
+  display: none;
+}
+
+/* mod responsive */
+@media screen and (max-width: 600px) {
+  header #logo {
+    display: none;
+  }
+  header nav.navbar {
+    background-color: white;
+    padding: 2.7% 3%;
+  }
+  header #logoresponsive {
+
+    display: block;
+  }
+  footer .bar-inf {
+    padding: 6px 3%;
+  }
+
+  header .bar-sup span {
+    display: none;
+  }
+  footer .bar-inf span {
+    display: none;
+  }
+  footer .bar-inf2 {
+    display: inline-block;
+  }
+  footer .bar-inf2 span {
+    display: none;
+  }
+  footer .div-escudo {
+    padding-bottom: 1.5rem;
+  }
+  footer .contacto .form-check {
+    padding-left: 0.8rem;
+    padding-top: 1rem;
+  }
+  header #submenu span {
+    display: none;
+  }
+}
+@media screen and (max-width: 1399px) {
+  footer #terminos {
+    width: 100%;
+    font-size: 12px;
+  }
+  .back {
+    font-size: 12px;
+  }
+}
