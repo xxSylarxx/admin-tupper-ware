@@ -22,7 +22,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?= $dataEmpresa['metades'] ?>">
-    <title><?= $dataEmpresa['nombre']?></title>
+    <title><?= $dataEmpresa['nombre'] ?></title>
     <link rel="shortcut icon" href="<?= PATH_PUBLIC ?>/img/icons/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
@@ -43,7 +43,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- CARROUSEL -->
 
-   
+
 </head>
 
 <body>
@@ -311,8 +311,18 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
 
 
         #productos img {
-            height: 400px;
-            width: 400px;
+            height: 500px;
+            width: 500px;
+
+        }
+
+        #productos h4 {
+            color: var(--color1);
+            font-weight: 700;
+        }
+
+        #productos p {
+            text-align: center;
 
         }
 
@@ -332,10 +342,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
             opacity: 1;
         }
 
-        #productos h4 {
-            color: var(--color1);
-            font-weight: 700;
-        }
+
 
         .btn-primary {
             background-color: var(--color1) !important;
@@ -352,8 +359,8 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
 
         }
     </style>
-  <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
-  <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
 
     <section>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -491,7 +498,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
                 <div class="col-lg-4 my-auto">
                     <h4>Kit de bienvenida</h4>
                     <h5>Tu primer paso al éxito</h5>
-                    <p>al iniciar este KIT DE BIENVENIDA</p>
+                    <p>Al iniciar tu negocio con nosotros, te entregamos este KIT DE BIENVENIDA</p>
                     <br>
                     <div class="d-flex justify-content-center"><button class="btn btn-primary float-right">Ver más</button></div>
                 </div>
