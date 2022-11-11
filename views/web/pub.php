@@ -117,8 +117,8 @@ if (isset($URI[1])) {
         }
 
         .crop1 {
-            width: 200px;
-            height: 200px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
 
         }
@@ -130,7 +130,7 @@ if (isset($URI[1])) {
 
         .div1 .div2 {
             position: absolute;
-            right: 	0;
+            right: 0;
             top: 0;
             left: 0;
             opacity: 0;
@@ -139,6 +139,12 @@ if (isset($URI[1])) {
 
         .div1:hover .div2 {
             opacity: 1;
+        }
+
+        #minigaleria img:hover {
+            opacity: .5;
+
+
         }
     </style>
 
@@ -163,32 +169,74 @@ if (isset($URI[1])) {
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <?php
+
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="10000">
+                                        <?php
+                                        if (!empty($dataPub['portada'])) { ?>
+                                            <img src="<?= $dataPub['portada'] ?>" class="d-block w-100">
+                                        <?php } ?>
+                                        <!--   <img src="..." class="d-block w-100" alt="..."> -->
+                                    </div>
+                                    <?php
+                                    if (!empty($dataPub['img2'])) { ?>
+                                        <div class="carousel-item" data-bs-interval="2000">
+
+                                            <img src="<?= $dataPub['img2'] ?>" class="d-block w-100">
+
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img3'])) { ?>
+                                        <div class="carousel-item" data-bs-interval="2000">
+
+                                            <img src="<?= $dataPub['img3'] ?>" class="d-block w-100">
+
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img4'])) { ?>
+                                        <div class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img4'] ?>" class="d-block w-100">
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <!-- <//?php
                             if (!empty($dataPub['portada'])) { ?>
-                                <img src="<?= $dataPub['portada'] ?>" width="100%">
-                            <?php } ?>
+                                <img src="<//?= $dataPub['portada'] ?>" width="100%">
+                            <//?php } ?> -->
                         </div>
                     </div>
-                    <div class="row d-flex-justify-content-around">
-                        <div class="col-lg-3">
+                    <div id="minigaleria" class="row d-flex-justify-content-around">
+                        <div class="col-lg-3 px-2">
                             <?php
                             if (!empty($dataPub['img1'])) { ?>
                                 <img src="<?= $dataPub['img1'] ?>" class="crop1">
                             <?php } ?>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 px-2">
                             <?php
                             if (!empty($dataPub['img2'])) { ?>
                                 <img src="<?= $dataPub['img2'] ?>" class="crop1">
                             <?php } ?>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 px-2">
                             <?php
                             if (!empty($dataPub['img3'])) { ?>
                                 <img src="<?= $dataPub['img3'] ?>" class="crop1">
                             <?php } ?>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 px-2">
                             <?php
                             if (!empty($dataPub['img4'])) { ?>
                                 <img src="<?= $dataPub['img4'] ?>" class="crop1">
