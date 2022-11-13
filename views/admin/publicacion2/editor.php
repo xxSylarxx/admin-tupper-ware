@@ -177,7 +177,7 @@
                     </div>
                 </div>
                 <div class="ps-4" style="width: calc(100% - 285px);">
-                    <input type="text" class="form-control mb-3 text-uppercase" id="titulo" name="titulo" value="<?= $this->dataPub['titulo'] ?>" placeholder="<?= $this->translate('Titulo de publicación') ?>" required>
+                    <input type="text" class="form-control mb-3" id="titulo" name="titulo" value="<?= $this->dataPub['titulo'] ?>" placeholder="<?= $this->translate('Titulo de publicación') ?>" required>
                     <textarea id="editor"><?php echo $this->dataPub['cuerpo'] ?></textarea>
                 </div>
             </div>

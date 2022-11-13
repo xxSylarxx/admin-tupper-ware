@@ -66,6 +66,7 @@ if (isset($URI[1])) {
         #publications .card h3.titulo {
             color: var(--color2);
             font-weight: bold;
+            text-align: left;
         }
 
         #publications .card-header {
@@ -122,6 +123,18 @@ if (isset($URI[1])) {
             object-fit: cover;
 
         }
+        .crop2 {
+            width: 600px;
+            height: 600px;
+            object-fit: cover;
+
+        }
+        .crop3 {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+
+        }
 
         /* Estilos de efecto hover en productos */
         .div1 {
@@ -145,8 +158,13 @@ if (isset($URI[1])) {
             opacity: .5;
 
         }
-        #minigaleria img:hover{
+
+        #minigaleria img:hover {
             opacity: .5;
+        }
+        #cuerpo-publicacion span{
+            font-size: 14px;
+            line-height: 0px;
         }
     </style>
 
@@ -174,33 +192,35 @@ if (isset($URI[1])) {
 
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div id="slider1" class="carousel-item active" data-bs-interval="10000">
-                                        <?php
-                                        if (!empty($dataPub['portada'])) { ?>
-                                            <img src="<?= $dataPub['portada'] ?>" class="d-block w-100">
-                                        <?php } ?>
-                                        <!--   <img src="..." class="d-block w-100" alt="..."> -->
-                                    </div>
                                     <?php
-                                    if (!empty($dataPub['img2'])) { ?>
+                                    if (!empty($dataPub['portada'])) { ?>
+                                        <div id="slider1" class="carousel-item active" data-bs-interval="10000">
+
+                                            <img src="<?= $dataPub['portada'] ?>" class="d-block crop2">
+
+                                            <!--   <img src="..." class="d-block w-100" alt="..."> -->
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img1'])) { ?>
                                         <div id="slider2" class="carousel-item" data-bs-interval="2000">
 
-                                            <img src="<?= $dataPub['img1'] ?>" class="d-block w-100">
+                                            <img src="<?= $dataPub['img1'] ?>" class="d-block crop2">
+
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img2'])) { ?>
+                                        <div id="slider3" class="carousel-item" data-bs-interval="2000">
+
+                                            <img src="<?= $dataPub['img2'] ?>" class="d-block crop2">
 
                                         </div>
                                     <?php } ?>
                                     <?php
                                     if (!empty($dataPub['img3'])) { ?>
-                                        <div id="slider3" class="carousel-item" data-bs-interval="2000">
-
-                                            <img src="<?= $dataPub['img2'] ?>" class="d-block w-100">
-
-                                        </div>
-                                    <?php } ?>
-                                    <?php
-                                    if (!empty($dataPub['img4'])) { ?>
                                         <div id="slider4" class="carousel-item" data-bs-interval="2000">
-                                            <img src="<?= $dataPub['img3'] ?>" class="d-block w-100">
+                                            <img src="<?= $dataPub['img3'] ?>" class="d-block crop2">
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -219,50 +239,57 @@ if (isset($URI[1])) {
                             <//?php } ?> -->
                         </div>
                     </div>
-                    <div id="minigaleria" class="row d-flex-justify-content-around">
-                        <div class="col-lg-3 px-2">
-                            <?php
-                            if (!empty($dataPub['portada'])) { ?>
+                    <div id="minigaleria" class="row d-flex justify-content-around pt-5">
+                        <?php
+                        if (!empty($dataPub['portada'])) { ?>
+                            <div id="divsombra1" class="col-lg-3 px-2">
+
                                 <img id="minigaleria1" src="<?= $dataPub['portada'] ?>" class="crop1">
-                            <?php } ?>
-                        </div>
-                        <div class="col-lg-3 px-2">
-                            <?php
-                            if (!empty($dataPub['img1'])) { ?>
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img1'])) { ?>
+                            <div id="divsombra2" class="col-lg-3 px-2">
+
                                 <img id="minigaleria2" src="<?= $dataPub['img1'] ?>" class="crop1">
-                            <?php } ?>
-                        </div>
-                        <div class="col-lg-3 px-2">
-                            <?php
-                            if (!empty($dataPub['img2'])) { ?>
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img2'])) { ?>
+                            <div id="divsombra3" class="col-lg-3 px-2">
+
                                 <img id="minigaleria3" src="<?= $dataPub['img2'] ?>" class="crop1">
-                            <?php } ?>
-                        </div>
-                        <div class="col-lg-3 px-2">
-                            <?php
-                            if (!empty($dataPub['img3'])) { ?>
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img3'])) { ?>
+                            <div div="divsombra4" class="col-lg-3 px-2">
+
                                 <img id="minigaleria4" src="<?= $dataPub['img3'] ?>" class="crop1">
-                            <?php } ?>
-                        </div>
+
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
 
             </div>
             <div class="col-md-6 my-2">
-                <br>
+            
 
                 <div class="card border-0">
                     <div class="card-header">
-                        <div class="px-2 pt-4">
-                            <h3 class="titulo pt-2 pb-2"><?= $dataPub['titulo'] ?></h3>
+                        <div class="px-2">
+                            <h3 class="titulo "><?= $dataPub['titulo'] ?></h3>
                             <!--  <p class="date">
                                 <i class="far fa-calendar"></i>&nbsp; <//?= date('M d, Y', strtotime($dataPub['fecpub'])) ?>
                                 <i class="far fa-clock ms-3"></i> <//?= date('h:i', strtotime($dataPub['fecpub'])) ?>
                             </p> -->
                         </div>
                     </div>
-                    <hr>
-                    <div class="card-body p-1">
+                    <div id="cuerpo-publicacion" class="card-body p-1">
                         <?= $dataPub['cuerpo'] ?>
 
                     </div>
@@ -276,7 +303,7 @@ if (isset($URI[1])) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="fw-bold mb-2 mt-4 text-start">PRODUCTOS RECIENTES</h2>
+                    <h2 class="fw-bold mb-2 mt-4 text-start">CONOCE MÁS PRODUCTOS</h2>
                     <br>
                     <br>
                     <div class="row">
@@ -290,11 +317,11 @@ if (isset($URI[1])) {
                                 <a href="/pub/<?= $pub['tagname'] ?>">
                                     <div class="div1 ">
                                         <div class="images d-flex justify-content-center">
-                                            <img class="crop1" src="<?= $pub['portada'] ?>">
+                                            <img class="crop3" src="<?= $pub['portada'] ?>">
                                         </div>
                                         <center>
                                             <div class="div2">
-                                                <img class="crop1" src="<?= $pub['img1'] ?>">
+                                                <img class="crop3" src="<?= $pub['img1'] ?>">
                                             </div>
                                         </center>
                                     </div>
@@ -321,46 +348,31 @@ if (isset($URI[1])) {
     let mini2 = document.getElementById("minigaleria2");
     let mini3 = document.getElementById("minigaleria3");
     let mini4 = document.getElementById("minigaleria4");
-    /* let slider = document.getElementById("slider2"); */
 
     mini1.onclick = function() {
         document.getElementById("slider1").classList.add("active");
-        document.getElementById("minigaleria1").classList.add("sombra");
-        document.getElementById("minigaleria2").classList.remove("sombra");
-        document.getElementById("minigaleria3").classList.remove("sombra");
-        document.getElementById("minigaleria4").classList.remove("sombra");
         document.getElementById("slider2").classList.remove("active");
         document.getElementById("slider3").classList.remove("active");
         document.getElementById("slider4").classList.remove("active");
     }
     mini2.onclick = function() {
         document.getElementById("slider2").classList.add("active");
-        document.getElementById("minigaleria2").classList.add("sombra");
-        document.getElementById("minigaleria1").classList.remove("sombra");
-        document.getElementById("minigaleria3").classList.remove("sombra");
-        document.getElementById("minigaleria4").classList.remove("sombra");
         document.getElementById("slider1").classList.remove("active");
         document.getElementById("slider3").classList.remove("active");
         document.getElementById("slider4").classList.remove("active");
     }
     mini3.onclick = function() {
         document.getElementById("slider3").classList.add("active");
-        document.getElementById("minigaleria3").classList.add("sombra");
-        document.getElementById("minigaleria2").classList.remove("sombra");
-        document.getElementById("minigaleria1").classList.remove("sombra");
-        document.getElementById("minigaleria4").classList.remove("sombra");
         document.getElementById("slider1").classList.remove("active");
         document.getElementById("slider2").classList.remove("active");
         document.getElementById("slider4").classList.remove("active");
     }
     mini4.onclick = function() {
         document.getElementById("slider4").classList.add("active");
-        document.getElementById("minigaleria4").classList.add("sombra");
-        document.getElementById("minigaleria2").classList.remove("sombra");
-        document.getElementById("minigaleria3").classList.remove("sombra");
-        document.getElementById("minigaleria1").classList.remove("sombra");
         document.getElementById("slider1").classList.remove("active");
         document.getElementById("slider2").classList.remove("active");
         document.getElementById("slider3").classList.remove("active");
+
     }
+
 </script>

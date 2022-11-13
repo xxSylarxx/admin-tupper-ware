@@ -419,7 +419,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                     </div>
                     <div class="row d-flex justify-content-around">
                         <?php foreach ($dataPublicaciones as $key => $pub) : ?>
-                            <div class="col-lg-3 d-flex justify-content-center">
+                            <div class="col-lg-3 d-flex justify-content-center pt-2">
                                 <a href="/pub/<?= $pub['tagname'] ?>">
                                     <div class="div1">
                                         <div class="images">
@@ -428,6 +428,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                                         <div class="div2">
                                             <img class="crop1" src="<?= $pub['img1'] ?>">
                                         </div>
+                                    </div>
+                                    <div>
+                                        <h5 class="titulo pt-2"><?= $pub['titulo'] ?></h5>
                                     </div>
                                 </a>
                             </div>
