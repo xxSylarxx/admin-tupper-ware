@@ -404,17 +404,10 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
-                        <p>Prácticas y modernas, diseñadas para organizar y decorar su cocina. Todos tus alimentos frescos, sabrosos y ordenados.
-                            Siempre listas para tenerlos siempre a mano.
+                        <p>Servir y guardar en forma práctica y cómoda. Coloridos que alegran la mesa de la familias.
                         </p>
                         <h3>INTRODUCCIÓN</h3>
-                        <p>Productos para almacenar alimentos secos y mantenerlos en buenas condiciones por más tiempo. Prácticas y líneas modernas, diseñadas para organizar y decorar su cocina.
-                            Tienen tamaños ideales para satisfacer las diferentes necesidades de almacenamiento.
-                            Deja que tu cocina sea más organizado y hermoso!<br>
-                            1. Son ideales para mantener la alacena ordenada y libre de olores.<br>
-                            2. Diseñados para almacenar alimentos como: azúcar, café, harina, sal, pasta, granos, galletas, confites, etc.<br>
-                            3. Mantienen la frescura, el sabor y aroma de los alimentos por mucho más tiempo.<br>
-                            4. Además, decoran tu cocina.
+                        <p>Productos diseñados para la conservación de líquidos en forma práctica y cómoda.  Ideales para la casa, el picnic, la playa, deportes, el trabajo y los niños. Útil por sus diseños coloridos y prácticos. 
                         </p>
                     </div>
                     <div class="row d-flex justify-content-around">

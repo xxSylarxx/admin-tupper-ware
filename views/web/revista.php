@@ -18,8 +18,8 @@ if ($filter !== 'all') {
     $nameCategoria = $dataCategoria['nombre'];
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 } else {
-    $idCateg = '7';
-    $nameCategoria = '7';
+    $idCateg = '5';
+    $nameCategoria = '5';
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 }
 
@@ -314,8 +314,8 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         }
 
         .crop1 {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            height: 300px;
             object-fit: cover;
 
         }
@@ -383,7 +383,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <div class="container">
             <div class="row">
 
-                <h1>ALACENA</h1>
+                <h1>REVISTAS IMÁN</h1>
             </div>
         </div>
     </section>
@@ -391,64 +391,32 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="resumen">
         <div class="container">
             <div class="row d-flex justify-content-around">
-                <div class="col-lg-3 px-5">
-
-                    <h3 class="fw-bold mb-2 text-start">Categorias</h3>
-                    <?php
-                    foreach ($dataCategorias as $value) : ?>
-                        <div class="d-flex" style="font-size: 14.5px;">
-                            <a href="/<?= $value['filtro'] ?>"><?= $value['nombre'] ?> (<?= $value['totalPub'] ?>)</a>
-                        </div>
-                    <?php endforeach; ?>
-                    <hr>
-                </div>
-                <div class="col-lg-9">
+                <div class="col-lg">
                     <div class="row">
-                        <p>Perfectas para preparar cualquier alimento que desees, postres atractivos e individuales, etc.
-                        </p>
-                        <h3>INTRODUCCIÓN</h3>
-                        <p>Productos útiles, soluciones simples y sin electricidad. Una línea que optimiza los tiempos de preparación de tus comidas utilizando todo el diseño e innovación tecnológica de Tupperware. Línea preparación. Cuantificar, nombrar y describir, los productos. 
-                        </p>
+                       <h2>¡Descubre nuestras ofertas y disfruta de todas las novedades y oportunidades ventajosas!</h2>
                     </div>
                     <div class="row d-flex justify-content-around">
-                        <?php foreach ($dataPublicaciones as $key => $pub) : ?>
-                            <div class="col-lg-3 d-flex justify-content-center pt-2">
-                                <a href="/pub/<?= $pub['tagname'] ?>">
-                                    <div class="div1">
-                                        <div class="images">
-                                            <img class="crop1" src="<?= $pub['portada'] ?>">
-                                        </div>
-                                        <div class="div2">
-                                            <img class="crop1" src="<?= $pub['img1'] ?>">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h5 class="titulo pt-2"><?= $pub['titulo'] ?></h5>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php endforeach; ?>
-                        <!-- <div class="col-lg-3 d-flex justify-content-center">
+                        <div class="col-lg-3 d-flex justify-content-center">
                             <div class="div1">
                                 <div class="images">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto1.jpg">
+                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_bienvenida.jpg">
                                 </div>
                                 <div class="div2">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto2.jpg">
+                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_bienvenida.jpg">
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-lg-3 d-flex justify-content-center">
                             <div class="div1">
                                 <div class="images">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto1.jpg">
+                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_lanzamiento.jpg">
                                 </div>
                                 <div class="div2">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto2.jpg">
+                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_lanzamiento.jpg">
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
+                        
                     </div>
                 </div>
             </div>

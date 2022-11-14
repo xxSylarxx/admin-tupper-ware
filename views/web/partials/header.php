@@ -115,9 +115,9 @@ switch ($pagina) {
                     <li class="nav-item dropdown my-auto">
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">CÁTALAGOS</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="somos.php">CATÁLOGO</a>
-                            <a class="dropdown-item" href="historia.php">REVISTA IMÁN</a>
-                            <a class="dropdown-item" href="reglamento.php">OFERTAS</a>
+                            <a class="dropdown-item" href="/catalogo">CATÁLOGO</a>
+                            <a class="dropdown-item" href="/revista">REVISTA IMÁN</a>
+                            <a class="dropdown-item" href="/ofertas">OFERTAS</a>
                             
 
                         </div>

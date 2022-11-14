@@ -18,8 +18,8 @@ if ($filter !== 'all') {
     $nameCategoria = $dataCategoria['nombre'];
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 } else {
-    $idCateg = '%';
-    $nameCategoria = '1';
+    $idCateg = '5';
+    $nameCategoria = '5';
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 }
 
@@ -404,17 +404,13 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
-                        <p>Prácticas y modernas, diseñadas para organizar y decorar su cocina. Todos tus alimentos frescos, sabrosos y ordenados.
-                            Siempre listas para tenerlos siempre a mano.
-                        </p>
+                        <p>Un buen compañero para chicos y grandes llévalos a la oficina, picnic, escuela, gymnasio , etc.</p>
                         <h3>INTRODUCCIÓN</h3>
-                        <p>Productos para almacenar alimentos secos y mantenerlos en buenas condiciones por más tiempo. Prácticas y líneas modernas, diseñadas para organizar y decorar su cocina.
-                            Tienen tamaños ideales para satisfacer las diferentes necesidades de almacenamiento.
-                            Deja que tu cocina sea más organizado y hermoso!<br>
-                            1. Son ideales para mantener la alacena ordenada y libre de olores.<br>
-                            2. Diseñados para almacenar alimentos como: azúcar, café, harina, sal, pasta, granos, galletas, confites, etc.<br>
-                            3. Mantienen la frescura, el sabor y aroma de los alimentos por mucho más tiempo.<br>
-                            4. Además, decoran tu cocina.
+                        <p>Productos para llevar los alimentos a cualquier lado y en cualquier momento. 
+                            Diseñados para transportar con facilidad y seguridad.<br>
+                            1. Son ideales para Transportar.<br>
+                            2. Diseños prácticos y compactos.<br>
+
                         </p>
                     </div>
                     <div class="row d-flex justify-content-around">

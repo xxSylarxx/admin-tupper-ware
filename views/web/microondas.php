@@ -18,8 +18,8 @@ if ($filter !== 'all') {
     $nameCategoria = $dataCategoria['nombre'];
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 } else {
-    $idCateg = '%';
-    $nameCategoria = '1';
+    $idCateg = '6';
+    $nameCategoria = '6';
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 }
 
@@ -404,17 +404,27 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
-                        <p>Prácticas y modernas, diseñadas para organizar y decorar su cocina. Todos tus alimentos frescos, sabrosos y ordenados.
-                            Siempre listas para tenerlos siempre a mano.
+                        <p>Productos especiales para Micro que harán tu vida más fácil!!<br>
+                            Cocina en microondas con Tupperware<br>
+                            Los productos para microondas Tupperware te permiten ahorrar tiempo, dinero, espacio y esfuerzo.<br>
+                            Hoy en día el ritmo de vida provoca que las personas dispongan de menos tiempo para preparar los alimentos, por esta razón el cocinar en microondas resulta una solución perfecta.
+
                         </p>
                         <h3>INTRODUCCIÓN</h3>
-                        <p>Productos para almacenar alimentos secos y mantenerlos en buenas condiciones por más tiempo. Prácticas y líneas modernas, diseñadas para organizar y decorar su cocina.
-                            Tienen tamaños ideales para satisfacer las diferentes necesidades de almacenamiento.
-                            Deja que tu cocina sea más organizado y hermoso!<br>
-                            1. Son ideales para mantener la alacena ordenada y libre de olores.<br>
-                            2. Diseñados para almacenar alimentos como: azúcar, café, harina, sal, pasta, granos, galletas, confites, etc.<br>
-                            3. Mantienen la frescura, el sabor y aroma de los alimentos por mucho más tiempo.<br>
-                            4. Además, decoran tu cocina.
+                        <p>Productos versátiles. Ideales para llevar de la nevera al microondas y luego a la mesa, listos para servir. Son productos modernos e innovadores han sido desarrollados especialmente para preparar de forma rápida y práctica diversos platos en el microondas.
+                            Usa tu tiempo mejor!<br>
+                            1. Ideales para calentar alimentos en el microondas sin que pierdan la humedad natural.<br>
+                            2. Diseñados para calentar: líquidos y alimentos cocidos.<br>
+                            3. Ciertos recipientes sirven para transportar tus alimentos a donde quieras.<br>
+                            4. También algunos de estos productos son fabulosos para cocinar postres y vegetales.<br>
+                            5. Tips de Uso: No todos los productos Tupperware son aptos para microondas. 
+                            Utilice sólo aquellos que se encuentren debidamente identificados 
+                            6. en el folleto con su correspondiente logo o instructivo.<br>
+                            7. Se pueden calentar y cocinar alimentos.<br>
+                            8. Recuerde dejar escapar el vapor entre tapa y recipiente.<br>
+                            9. Calentar en periodos de 5 a 6 minutos.<br>
+                            10. Evitar las grasas, aceites y azucares.<br>
+                            11. Al destaparlos se recomienda tener cuidado con el liquido caliente.<br>
                         </p>
                     </div>
                     <div class="row d-flex justify-content-around">
