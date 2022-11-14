@@ -128,28 +128,22 @@ switch ($pagina) {
                             <li> <a class="dropdown-item" href="#"> LÍNEA DE PRODUCTOS &raquo; </a>
                                 <ul class="submenu dropdown-menu">
                                     <li><a class="dropdown-item" href="/alacena">Alacena</a></li>
-                                    <li><a class="dropdown-item" href="#">Freezer</a></li>
-                                    <li><a class="dropdown-item" href="#">Heladera</a></li>
-                                    <li><a class="dropdown-item" href="#">Líquido</a></li>
-                                    <li><a class="dropdown-item" href="#">Lunch</a></li>
-                                    <li><a class="dropdown-item" href="#">Microondas</a></li>
-                                    <!-- <li><a class="dropdown-item" href="#">Niños</a></li>
-                                    <li><a class="dropdown-item" href="#">Organizar</a></li> -->
-                                    <li><a class="dropdown-item" href="#">Preparación</a></li>
-                                    <!-- <li><a class="dropdown-item" href="#">Servir</a></li> -->
+                                    <li><a class="dropdown-item" href="/freezer">Freezer</a></li>
+                                    <li><a class="dropdown-item" href="/heladera">Heladera</a></li>
+                                    <li><a class="dropdown-item" href="/liquido">Líquido</a></li>
+                                    <li><a class="dropdown-item" href="/lunch">Lunch</a></li>
+                                    <li><a class="dropdown-item" href="/microondas">Microondas</a></li>
+                                    <li><a class="dropdown-item" href="/preparacion">Preparación</a></li>
                                 </ul>
                             </li>
                             <li> <a class="dropdown-item" href="#"> ESTILO &raquo; </a>
                                 <ul class="submenu dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Línea Chef</a></li>
-                                    <li><a class="dropdown-item" href="#">Moldes</a></li>
-                                    <li><a class="dropdown-item" href="#">Ollas Chef</a></li>
-                                    <li><a class="dropdown-item" href="#">Termos</a></li>
-                                    <li><a class="dropdown-item" href="#">Utensilios</a></li>
-                                    <li><a class="dropdown-item" href="#">Recetas TW</a></li>
-                                    <li><a class="dropdown-item" href="#">Tupperware y Tú</a></li>
-                                    <li><a class="dropdown-item" href="#">Carácteristicas Especiales</a></li>
-                                    <li><a class="dropdown-item" href="#">Otros</a></li>
+                                    <li><a class="dropdown-item" href="/linea">Línea Chef</a></li>
+                                    <li><a class="dropdown-item" href="/moldes">Moldes</a></li>
+                                    <li><a class="dropdown-item" href="/ollas">Ollas Chef</a></li>
+                                    <li><a class="dropdown-item" href="/termos">Termos</a></li>
+                                    <li><a class="dropdown-item" href="/utensilios">Utensilios</a></li>
+                                    <li><a class="dropdown-item" href="/otros">Otros</a></li>
                                 </ul>
                             </li>
                         </ul>

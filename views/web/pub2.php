@@ -3,8 +3,8 @@
 use Admin\Models;
 
 $objEmpresa = new Models\EmpresaModel;
-$objCategorias = new Models\CategoriasModel;
-$objPublicacion = new Models\PublicacionModel;
+$objCategorias = new Models\CategoriasModel2;
+$objPublicacion = new Models\PublicacionModel2;
 $dataEmpresa = $objEmpresa->listEmpresa()[1];
 $dataCategorias = $objCategorias->listCategoriasInWeb();
 $listPublicaciones = $objPublicacion->listPublicacionesInWeb(0, 5);
