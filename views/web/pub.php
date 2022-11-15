@@ -338,7 +338,7 @@ if (isset($URI[1])) {
 
     <br><br><br>
 
-
+    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
 </body>
 
 </html>
@@ -375,3 +375,5 @@ if (isset($URI[1])) {
     }
 
 </script>
+
+
