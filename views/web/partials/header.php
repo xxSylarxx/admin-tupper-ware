@@ -118,8 +118,6 @@ switch ($pagina) {
                             <a class="dropdown-item" href="/catalogo">CATÁLOGO</a>
                             <a class="dropdown-item" href="/revista">REVISTA IMÁN</a>
                             <a class="dropdown-item" href="/ofertas">OFERTAS</a>
-                            
-
                         </div>
                     </li>
                     <li class="nav-item dropdown my-auto" id="myDropdown">
@@ -151,8 +149,8 @@ switch ($pagina) {
                     <li class="nav-item dropdown my-auto">
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">NOSOTROS</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Tupperware</a>
-                            <a class="dropdown-item" href="#">Siempre Juntos Perú</a>
+                            <a class="dropdown-item" href="/tupperware">Tupperware</a>
+                            <a class="dropdown-item" href="/siempre-juntos">Siempre Juntos Perú</a>
                             <a class="dropdown-item" href="#">Nosotros</a>
                             <a class="dropdown-item" href="#">Camino hacia el futuro</a>
 
@@ -179,7 +177,7 @@ switch ($pagina) {
                     <li class="nav-item dropdown my-auto">
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">ÚNETE</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">ÚNETE</a>
+                            <a class="dropdown-item" href="/unete">ÚNETE</a>
 
                         </div>
                     </li>
