@@ -365,6 +365,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             font-weight: 700;
         }
 
+        /* Estilos de boton */
         #unete button {
             font-family: inherit;
             font-size: 20px;
@@ -418,6 +419,107 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             }
         }
 
+        #nosotros1 {
+            background-color: var(--color8);
+        }
+
+        #nosotros2 {
+            background-image: url('<?= PATH_PUBLIC ?>/img/img-page/fondo-nosotros.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #nosotros3 {
+            background-image: url('<?= PATH_PUBLIC ?>/img/img-page/fondo-celeste-punto-blancos-3-1.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #icono {
+            background-color: var(--color11);
+            border-radius: 50%;
+            border: solid 3px white;
+        }
+
+        #icono span {
+            padding: 15px;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        #futuro2 #col-niveles1 {
+
+            padding: 2rem;
+            margin-left: 10px;
+            margin-right: 10px;
+            position: relative;
+            margin-top: -70px;
+            background-color: var(--color5);
+            font-size: 1rem;
+            text-align: center;
+            border-bottom: solid 3px var(--color1);
+            height: 40%;
+        }
+
+        #futuro2 #col-niveles2 {
+
+            padding: 2rem;
+            margin-left: 10px;
+            margin-right: 10px;
+            position: relative;
+            margin-top: -70px;
+            background-color: var(--color5);
+            font-size: 1rem;
+            text-align: center;
+            border-bottom: solid 3px var(--color1);
+            height: 40%;
+        }
+
+        #futuro2 #col-niveles3 {
+
+            padding: 2rem;
+            margin-left: 10px;
+            margin-right: 10px;
+            position: relative;
+            margin-top: -70px;
+            background-color: var(--color5);
+            font-size: 1rem;
+            text-align: center;
+            border-bottom: solid 3px var(--color1);
+            height: 40%;
+        }
+
+        #futuro2 div.crop {
+            height: 200px;
+            max-height: 200px;
+            overflow: hidden;
+        }
+
+        #futuro2 div.card-body p {
+            height: 70px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            transition: height 0.25s ease-out;
+        }
+
+        #futuro2 div.card-body:hover p {
+            height: 140px;
+            display: block;
+            transition: height 0.25s ease-in;
+        }
+
+        #futuro2 .card {
+            background: linear-gradient(rgb(255, 255, 255), rgb(243, 243, 243));
+            box-shadow: 0 0 5px var(--color1);
+
+        }
+
+
+
+
 
 
         @media only screen and (max-width:1399px) {
@@ -428,6 +530,12 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 margin-top: 0rem !important;
             }
 
+            #nosotros3 {
+                background-image: url('<?= PATH_PUBLIC ?>/img/img-page/fondo-celeste-punto-blancos-3-1.jpg');
+                background-size: 120%;
+                background-repeat: no-repeat;
+            }
+
         }
     </style>
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
@@ -436,55 +544,139 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="portada">
         <div class="container">
             <div class="row">
-                <h1>ÚNETE</h1>
+                <h1>CAMINO HACIA EL FUTURO</h1>
             </div>
         </div>
     </section>
-    <br><br>
-    <section id="unete">
+    <section id="futuro1">
+
+        <img src="<?= PATH_PUBLIC ?>/img/img-page/camino-futuro-tupper.jpg" width="100%" alt="">
+
+    </section>
+    <section id="futuro2">
+        <br>
+        <br>
         <div class="container">
-            <div class="row d-flex justify-content-center">
+            <div class="col-lg">
+                <h2 style="font-size:40px;color:var(--color1);font-weight:600;">Más Tupperware menos desechables</h2>
+                <br>
+                <p style="text-align:center;color:var(--color8);font-size:28px;font-weight:400;">Comparte estos
+                    consejos y seamos parte de la solución y no del problema.
+                    Ayudemos a nuestro planeta.</p>
+                <br>
+                <p style="text-align:center;">En Tupperware somos apasionados de Cambiar la Vida de las personas, de ofrecerles oportunidades tangibles para prepararse, despertar sus capacidades
+                    y aumentar su potencial.</p>
+                <p style="text-align:center;">Una persona empoderada impacta positivamente a su familia, sus comunidades
+                    y a su país; es por ellos que apoyamos la causa y situación que así lo requieren,
+                    ya sea para el logro de sus sueños de la persona o superarse en su día día.</p>
+                <p style="text-align:center;">Extender una mano es uno de nuestros valores y esto
+                    significa que nos impulsamos mutuamente para empoderar
+                    a las mujeres a través de oportunidades que les cambian la
+                    vida y de esa manera puedan crear su propio negocio.</p>
+            </div>
+        </div>
+    </section>
+    <section id="futuro2">
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
 
-                <div class="col-lg-5 d-flex justify-content-center" style="background-color:var(--color1);">
+                <div class="col-lg-4" id="col-niveles">
+                    <div class="col">
+                        <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro1.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="col" id="col-niveles1">
+                        <h5>REDUCE Y REUTILIZA</h5>
+                        <p style="text-align:center;">
+                            No uses ni rellenes botellas desechables,
+                            lleva una botella reutilizable y rellena en
+                            cualquier momento.</p>
 
-                    <div class="p-5 " style="margin:auto auto;">
-                        <h2 class="py-3" style="border-bottom: 4px solid #ffdb00;color:white;font-weight:900;">INICIA TU CARRERA CON TUPPERWARE</h2>
 
-                        <br>
-                        <p style="color:white;font-weight:600;">Hoy tú puedes formar parte de nuestra
-                            fuerza de ventas en donde podrás tener
-                            flexibilidad con tus horarios, ganar dinero,
-                            crecer personal y profesionalmente.</p>
-                        <br>
-                        <div class="d-flex justify-content-center">
-                            <button>
-                                <a href="https://forms.gle/ESneVXioTopDd5QYA" style="color:white;" target="_blank">
-                                    <div class="svg-wrapper-1">
-                                        <div class="svg-wrapper">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <span>Inscríbete Ya</span>
-                            </button>
-                        </div>
                     </div>
 
-
                 </div>
-                <div class="col-lg-7 p-0">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/unete.jpg" class="img-fluid w-100" alt="">
+
+                <div class="col-lg-4" id="col-niveles">
+                    <div class="col">
+                        <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro2.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="col" id="col-niveles2">
+                        <h5>CALIENTA Y TRANSPORTA</h5>
+                        <p style="text-align:center;">
+                            Lleva tu comida en un recipiente y utilízala en el microondas sin problemas.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4" id="col-niveles">
+                    <div class="col">
+                        <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro3.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="col " id="col-niveles3">
+                        <h5>COMO SALUDABLE</h5>
+                        <p style="text-align:center;">Envía a tus niños su merienda saludable con seguridad y sin derrames.</p>
+
+                    </div>
                 </div>
 
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4" id="col-niveles">
+                    <div class="col">
+                        <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro4.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="col " id="col-niveles3">
+                        <h5>CONSERVA TUS ALIMENTOS</h5>
+                        <p style="text-align:center;">
+                            Evite dejar que la comida se deteriore y 
+                            conserve los alimentos con envases especiales 
+                            por más tiempo. Menos desechos para el planeta.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4" id="col-niveles">
+                    <div class="col">
+                        <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro5.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="col " id="col-niveles3">
+                        <h5>LLEVA TU BOLSA</h5>
+                        <p style="text-align:center;">
+                            Evita las bolsas de plásticos y papel. 
+                            Lleve su bolsa reutilizable al momento de 
+                            hacer compras en el mercado o súper mercado.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4" id="col-niveles">
+                    <div class="col">
+                        <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro6.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="col " id="col-niveles3">
+                        <h5>COMPARTE CON TUS AMIGOS</h5>
+                        <p style="text-align:center;">
+                            Comparte estos consejos y seamos parte 
+                            de la solución y no del problema. 
+                            Ayudemos a nuestro planeta.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </section>
-    <br>
-    <br>
-    <br>
+
 
     <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
 </body>

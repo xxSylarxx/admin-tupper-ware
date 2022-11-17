@@ -11,6 +11,8 @@
   --color7:#ffdb00;
   --color8:#1eb5da;
   --color9:#EDEDED;
+  --color10: #009a49;
+  --color11: #203276;
 }
 
 /* @font-face{
@@ -35,7 +37,9 @@ h2,
 h4 {
   font-family: "Source Sans Pro", sans-serif;
   text-align: center;
+  
 }
+
 h3 {
   text-align: center;
   color: var(--color1);

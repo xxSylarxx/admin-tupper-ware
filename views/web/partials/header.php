@@ -151,8 +151,8 @@ switch ($pagina) {
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="/tupperware">Tupperware</a>
                             <a class="dropdown-item" href="/siempre-juntos">Siempre Juntos Perú</a>
-                            <a class="dropdown-item" href="#">Nosotros</a>
-                            <a class="dropdown-item" href="#">Camino hacia el futuro</a>
+                            <a class="dropdown-item" href="/nosotros">Nosotros</a>
+                            <a class="dropdown-item" href="/futuro">Camino hacia el futuro</a>
 
                         </div>
                     </li>
@@ -162,7 +162,7 @@ switch ($pagina) {
                     <li class="nav-item dropdown my-auto">
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">PLAN DE CARRERA</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Plan de Carrera</a>
+                            <a class="dropdown-item" href="/carrera">Plan de Carrera</a>
                             <a class="dropdown-item" href="#">Formulario de Inscripción</a>
                         </div>
                     </li>

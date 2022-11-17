@@ -436,49 +436,33 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="portada">
         <div class="container">
             <div class="row">
-                <h1>ÚNETE</h1>
+                <h1>PLAN DE CARRERA</h1>
             </div>
         </div>
     </section>
-    <br><br>
-    <section id="unete">
+
+    <section id="carrera1">
+
         <div class="container">
-            <div class="row d-flex justify-content-center">
-
-                <div class="col-lg-5 d-flex justify-content-center" style="background-color:var(--color1);">
-
-                    <div class="p-5 " style="margin:auto auto;">
-                        <h2 class="py-3" style="border-bottom: 4px solid #ffdb00;color:white;font-weight:900;">INICIA TU CARRERA CON TUPPERWARE</h2>
-
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="" alt="">
+                </div>
+                <div class="col-lg-6" style="background-color:var(--color8);">
+                    <div>
                         <br>
-                        <p style="color:white;font-weight:600;">Hoy tú puedes formar parte de nuestra
-                            fuerza de ventas en donde podrás tener
-                            flexibilidad con tus horarios, ganar dinero,
-                            crecer personal y profesionalmente.</p>
                         <br>
-                        <div class="d-flex justify-content-center">
-                            <button>
-                                <a href="https://forms.gle/ESneVXioTopDd5QYA" style="color:white;" target="_blank">
-                                    <div class="svg-wrapper-1">
-                                        <div class="svg-wrapper">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <span>Inscríbete Ya</span>
-                            </button>
-                        </div>
+                        <h2 style="font-size:40px;color:var(--color1);font-weight:600;">¡Tenemos diseñado un Plan de Carrera especial para ti!</h2>
+                        <br>
+                        <p style="text-align:center;color:white;font-size:25px;font-weight:600;">
+                            Tupperware te ofrece un Plan de Carrera sólido el cual te permitirá crecer personal y profesionalmente, como una persona Emprendedora y de negocios logrando tus metas y sueños.
+                        </p>
                     </div>
+                    <hr>
+                    <div>
 
-
+                    </div>
                 </div>
-                <div class="col-lg-7 p-0">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/unete.jpg" class="img-fluid w-100" alt="">
-                </div>
-
             </div>
         </div>
     </section>

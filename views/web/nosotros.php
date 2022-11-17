@@ -365,6 +365,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             font-weight: 700;
         }
 
+        /* Estilos de boton */
         #unete button {
             font-family: inherit;
             font-size: 20px;
@@ -418,6 +419,37 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             }
         }
 
+        #nosotros1 {
+            background-color: var(--color8);
+        }
+
+        #nosotros2 {
+            background-image: url('<?= PATH_PUBLIC ?>/img/img-page/fondo-nosotros.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #nosotros3 {
+            background-image: url('<?= PATH_PUBLIC ?>/img/img-page/fondo-celeste-punto-blancos-3-1.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #icono {
+            background-color: var(--color11);
+            border-radius: 50%;
+            border: solid 3px white;
+        }
+
+        #icono span {
+            padding: 15px;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+
+
+
 
 
         @media only screen and (max-width:1399px) {
@@ -428,6 +460,12 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 margin-top: 0rem !important;
             }
 
+            #nosotros3 {
+                background-image: url('<?= PATH_PUBLIC ?>/img/img-page/fondo-celeste-punto-blancos-3-1.jpg');
+                background-size: 120%;
+                background-repeat: no-repeat;
+            }
+
         }
     </style>
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
@@ -436,55 +474,161 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="portada">
         <div class="container">
             <div class="row">
-                <h1>ÚNETE</h1>
+                <h1>NOSOTROS</h1>
             </div>
         </div>
     </section>
-    <br><br>
-    <section id="unete">
+    <section id="nosotros1">
+        <br>
+        <br>
         <div class="container">
-            <div class="row d-flex justify-content-center">
+            <h2 style="font-size:40px;color:var(--color1);font-weight:600;">Quienes Somos</h2>
+            <br>
+            <p style="text-align:center;color:white;font-size:25px;font-weight:600;">Ser una oportunidad de negocio que cambie vidas descubriendo talentos
+                y desarrollando las habilidades de las personas.</p>
+            <br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="row d-flex justify-content-center">
 
-                <div class="col-lg-5 d-flex justify-content-center" style="background-color:var(--color1);">
-
-                    <div class="p-5 " style="margin:auto auto;">
-                        <h2 class="py-3" style="border-bottom: 4px solid #ffdb00;color:white;font-weight:900;">INICIA TU CARRERA CON TUPPERWARE</h2>
-
-                        <br>
-                        <p style="color:white;font-weight:600;">Hoy tú puedes formar parte de nuestra
-                            fuerza de ventas en donde podrás tener
-                            flexibilidad con tus horarios, ganar dinero,
-                            crecer personal y profesionalmente.</p>
-                        <br>
-                        <div class="d-flex justify-content-center">
-                            <button>
-                                <a href="https://forms.gle/ESneVXioTopDd5QYA" style="color:white;" target="_blank">
-                                    <div class="svg-wrapper-1">
-                                        <div class="svg-wrapper">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <span>Inscríbete Ya</span>
-                            </button>
+                        <div id="icono" class="col-lg-2 d-flex justify-content-center">
+                            <span><i class="fa fa-paper-plane"></i></span>
                         </div>
                     </div>
-
-
                 </div>
-                <div class="col-lg-7 p-0">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/unete.jpg" class="img-fluid w-100" alt="">
-                </div>
+                <div class="col-lg-4">
+                    <div class="row d-flex justify-content-center">
 
+                        <div id="icono" class="col-lg-2 d-flex justify-content-center">
+                            <span><i class="fa fa-eye"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row d-flex justify-content-center">
+
+                        <div id="icono" class="col-lg-2 d-flex justify-content-center">
+                            <span><i class="fa fa-handshake"></i></span>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4">
+
+                    <h4 style="color:var(--color5);font-weight:600;">MISIÓN</h4>
+                    <p style="color:var(--color5);">Ser una oportunidad de negocio que cambie
+                        vidas descubriendo talentos y desarrollando
+                        las habilidades de las personas.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 style="color:var(--color5);font-weight:600;">VISIÓN</h4>
+                    <p style="color:var(--color5);">Despertar una comunidad global,
+                        especialmente de mujeres, para alcanzar su máximo
+                        potencial a través de la oportunidad, la prosperidad,
+                        la celebración y, sobre todo, formando relaciones enriquecedoras.
+                        Estamos comprometidos en acelerar el crecimiento rentable en beneficio
+                        de nuestra Fuerza de Ventas, Asociados, Consumidores e Inversionistas.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 style="color:var(--color5);font-weight:600;">PROPÓSITO</h4>
+                    <p style="color:var(--color5);">Inspirar a las mujeres a cultivar la confianza
+                        necesaria para enriquecer sus vidas, procurar
+                        dar todo por sus familias e impulsar comunidades
+                        alrededor del mundo.</p>
+                </div>
+            </div>
+
         </div>
+        <br>
+
     </section>
-    <br>
-    <br>
-    <br>
+    <section id="nosotros2">
+        <br>
+        <br>
+        <h2 style="font-size:40px;color:var(--color5);font-weight:900;">Nuestros Principios</h2>
+        <br>
+        <div class="container" style="background-color:rgb(255, 255, 255,0.5)">
+            <div class="row">
+                <div class="col-lg-6 p-3">
+                    <h2 style="color:#18605B;font-weight:900;">Nuestro Porqué</h2>
+                    <p style="color:var(--color5);text-align:center;">Cada día fomentamos un mejor futuro.</p>
+                </div>
+                <div class="col-lg-6 p-3">
+                    <h2 style="color:#18605B;font-weight:900;">Nuestro Qué</h2>
+                    <p style="color:var(--color5);text-align:center;">Productos que duran toda la vida y que la gente ama y confía</p>
+                </div>
+                <div class="col-lg-6 p-3">
+                    <h2 style="color:#18605B;font-weight:900;">Nuestro Cómo</h2>
+                    <p style="color:var(--color5);text-align:center;">A través de la obsesión por
+                        diseñar productos innovadores, funcionales y ambientalmente responsables.</p>
+                </div>
+                <div class="col-lg-6 p-3">
+                    <h2 style="color:#18605B;font-weight:900;">Nuestros Valores</h2>
+                    <p style="color:var(--color5);text-align:center;">Nosotros hacemos lo correcto. Nosotros tenemos éxito como equipo. Nosotros siempre mejoramos.</p>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+    </section>
+    <section id="nosotros3">
+
+        <br>
+        <br>
+        <h2 style="font-size:40px;color:var(--color2);font-weight:900;">En TupperWare Somos...</h2>
+        <br>
+        <div class="container" style="background-color:rgb(255, 255, 255,0.5)">
+            <div class="row">
+                <div class="col-lg-6 p-3">
+                    <h2 style="color:var(--color1);font-weight:900;">Auténticos</h2>
+                    <p style="color:var(--color2);text-align:justify;">
+                        Nuestro éxito se basa en expresar la mayor autenticidad en todo momento.
+                        Desarrollamos mejores comunidades a través de relaciones basadas en la
+                        confianza y la celebración de los éxitos en grupo. Cada miembro del mundo
+                        Tupperware® refleja genuinidad, seguridad, y en especial, alegría.</p>
+                    <h5 style="color:black;font-weight:700;">Auténtico es… Fiable, original, sincero, seguro</h5>
+                </div>
+                <div class="col-lg-6 p-3">
+                    <h2 style="color:var(--color1);font-weight:900;">Sorprendentes</h2>
+                    <p style="color:var(--color2);text-align:justify;">
+                        En Tupperware® creemos que cada día es una nueva oportunidad para sorprender
+                        al mundo con tu talento. A través de nuestros productos queremos convertir
+                        cada momento de tu hogar una experiencia única, que llene a tu familia de asombro y alegría.</p>
+                    <h5 style="color:black;font-weight:700;">Sorprendente es… Inesperado, Extraordinario, inolvidable</h5>
+                </div>
+                <div class="col-lg-6 p-3">
+                    <h2 style="color:var(--color1);font-weight:900;">Colaboradores</h2>
+                    <p style="color:var(--color2);text-align:justify;">
+                        Nuestra empresa se enorgullece de impulsar a miles de
+                        mujeres en el mundo a dar la mejor versión de sí mismas.
+                        Creemos que, con la generosidad, el compromiso y la valentía,
+                        el éxito es una cuestión de tiempo. En Tupperware® asumimos cada
+                        reto lleno de apoyo y confianza.</p>
+                    <h5 style="color:black;font-weight:700;">Colaborador es… Apoyo, compresión, compromiso</h5>
+                </div>
+                <div class="col-lg-6 p-3">
+                    <h2 style="color:var(--color1);font-weight:900;">Radiantes</h2>
+                    <p style="color:var(--color2);text-align:justify;">
+                        Empezamos cada día con una energía única, llena
+                        de vigor para alcanzar el mayor de los éxitos.
+                        La autenticidad y nuestra autoestima son los
+                        elementos que nos permiten realizar experiencias
+                        llenas brillo y creatividad, que permitan construir mejores
+                        comunidades a través de un trabajo inspirador.</p>
+                    <h5 style="color:black;font-weight:700;">Radiante es… Energético, vibrante, inspirador</h5>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+    </section>
+
 
     <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
 </body>
