@@ -55,6 +55,12 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- CARROUSEL -->
 
+    <!-- Letras Movimiento -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Anime style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
 </head>
 
@@ -418,6 +424,90 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             }
         }
 
+        .list {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+
+        /* separador */
+        h1.linea,
+        h2.linea {
+            position: relative;
+            z-index: 1
+        }
+
+        #carrera2 h1.linea:before,
+        #carrera2 h2.linea:before {
+            border-top: 3px solid #D8723E;
+            content: "";
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 98%;
+            z-index: -1
+        }
+
+        #carrera2 h1.linea span,
+        #carrera2 h2.linea span {
+            background: #fff;
+            padding: 0 25px;
+            font-family: 'Anton', sans-serif;
+            color: #D8723E;
+        }
+
+        #carrera3 h1.linea:before,
+        #carrera3 h2.linea:before {
+            border-top: 3px solid #D7D53F;
+            content: "";
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 98%;
+            z-index: -1
+        }
+
+        #carrera3 h1.linea span,
+        #carrera3 h2.linea span {
+            background: #fff;
+            padding: 0 25px;
+            font-family: 'Anton', sans-serif;
+            color: #D7D53F;
+        }
+
+        #carrera4 h1.linea:before,
+        #carrera4 h2.linea:before {
+            border-top: 3px solid #D5453A;
+            content: "";
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 98%;
+            z-index: -1
+        }
+
+        #carrera4 h1.linea span,
+        #carrera4 h2.linea span {
+            background: #fff;
+            padding: 0 25px;
+            font-family: 'Anton', sans-serif;
+            color: #D5453A;
+        }
+
+
+
+
+
 
 
         @media only screen and (max-width:1399px) {
@@ -437,31 +527,215 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <div class="container">
             <div class="row">
                 <h1>PLAN DE CARRERA</h1>
+                
             </div>
         </div>
     </section>
 
     <section id="carrera1">
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6">
-                    <img src="" alt="">
+                <div class="col-lg-6 my-auto px-4">
+                    <img src="<?= PATH_PUBLIC ?>/img/img-page/plandecarrera.jpeg" class="w-100 img-fluid " alt="">
                 </div>
-                <div class="col-lg-6" style="background-color:var(--color8);">
+                <div class="col-lg-6  px-4" style="background-color:var(--color8);">
                     <div>
                         <br>
+                        <h2 style="font-size:40px;color:var(--color1);font-weight:900;" class="animate__animated animate__fadeInUp">¡Tenemos diseñado un Plan de Carrera especial para ti!</h2>
                         <br>
-                        <h2 style="font-size:40px;color:var(--color1);font-weight:600;">¡Tenemos diseñado un Plan de Carrera especial para ti!</h2>
-                        <br>
-                        <p style="text-align:center;color:white;font-size:25px;font-weight:600;">
+                        <p style="text-align:center;color:white;font-weight:600;">
                             Tupperware te ofrece un Plan de Carrera sólido el cual te permitirá crecer personal y profesionalmente, como una persona Emprendedora y de negocios logrando tus metas y sueños.
                         </p>
                     </div>
                     <hr>
+                    <br>
+                    <h2 style="font-size:40px;color:var(--color3);font-weight:900;" class="animate__animated animate__fadeInUp">Tupperware te abre la
+                        puerta al Éxito</h2>
+                    <br>
+                    <p style="text-align:center;color:white;font-weight:600;">
+                        Combinar las actividades familiares con el trabajo, adecuar
+                        de manera flexible tus horarios, visualizar tus metas en ganancia
+                        y ofrecerte diversas Oportunidades para alcanzarlas; son algunos
+                        de los beneficios que podrás obtener con Tupperware.
+                    </p>
+                    <p style="text-align:center;color:white;font-weight:600;">
+                        Porque nuestra misión es Cambiar Vidas,
+                        y Tupperware te abre la puerta al Éxito
+                        ofreciéndote Oportunidades, confianza que te inspira
+                        a seguir creciendo extendiendo una mano a las personas
+                        que lo necesitan.
+                    </p>
                     <div>
 
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="carrera2">
+        <div class="container">
+            <br>
+            <br>
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h1 class="linea text-info"><span>Anfitriona</span></h1>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="<?= PATH_PUBLIC ?>/img/img-page/delumbrante-anfitrionas.jpg" class="w-100 img-fluid " alt="">
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <section class="d-flex list  ">
+                        <span style="color:#D8723E;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Es aquella persona que junto a su Dealer re
+                            aliza una Experiencia Tupperware invitando a sus familiares,
+                            amigos y conocidos a disfrutarla; allí podrán compartir las
+                            bondades y usos de los productos disponibles.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D8723E;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">La Anfitriona
+                            podrá obtener Set Exclusivos según el nivel que logre
+                            la Dealer en su reunión.</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="carrera3">
+        <div class="container">
+            <br>
+            <br>
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h1 class="linea text-info"><span>Comerciante</span></h1>
+                </div>
+            </div>
+            <br>
+            <p style="text-align:center;color:#D7D53F;font-size:21px;font-weight:800;">Persona que se vincula a
+                Tupperware optando una de las modalidades de Ingreso y desea obtener su propio negocio con nuestros productos.</p>
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <img src="<?= PATH_PUBLIC ?>/img/img-page/deslumbrante-dealer.jpg" class="w-100 img-fluid " alt="">
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <p style="text-align:justify;">Para alcanzar un mayor crecimiento debes ser parte del programa de Prospectas.
+                        El cual está diseñado para brindar las herramientas adecuadas para consolidar
+                        un grupo Exitoso, incrementar la productividad para subir de nivel.</p>
+                    <p>Entre los beneficios que tiene el/la comerciante son:</p>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Ganancia sobre la venta.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Capacitaciones Gratuitas.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Regalos por actividad.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Regalos por brindar Oportunidades.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Eventos especiales.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Comerciante ruby.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Comerciante ruby.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Comerciante zafiro</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Comerciante esmeralda.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Comerciante diamante.</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="carrera4">
+        <div class="container">
+            <br>
+            <br>
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h1 class="linea text-info"><span>Empresario(a)</span></h1>
+                </div>
+            </div>
+            <br>
+            <p style="text-align:center;color:#D5453A;font-size:21px;font-weight:800;">Dealer que logro consolidar su grupo
+                de personas y las encamina al Éxito, realiza <br>reuniones de unidad y las capacita.</p>
+            <p style="text-align:center;">Empresario (a) que entrena y da seguimiento a sus Dealers,
+                brindándoles la Oportunidad de ser futuras Empresarias (os).</p>
+            <br>
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <img src="<?= PATH_PUBLIC ?>/img/img-page/empresaria.jpg" class="w-100 img-fluid " alt="">
+                </div>
+                <div class="col-lg-6 my-auto">
+
+                    <p>Entre los beneficios que tienen son:</p>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Ganancia sobre la venta.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Ganancia de la Unidad.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Ganancias de las Unidades Generadas.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Capacitaciones Gratuitas.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Regalos por actividad.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Beneficios por brindar oportunidades.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Eventos especiales.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Viajes especiales.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Bono Vanguard por nivel.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Organiza y realiza sus reuniones de unidad.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:#D5453A;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Organiza y capacita a sus propias unidades generadas</span>
+                    </section>
                 </div>
             </div>
         </div>
@@ -523,6 +797,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         auto: true,
         time: 3 // secondly
     });
+</script>
+<script>
+    AOS.init();
 </script>
 
 </html>

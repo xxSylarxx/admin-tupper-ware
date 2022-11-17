@@ -163,15 +163,15 @@ switch ($pagina) {
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">PLAN DE CARRERA</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="/carrera">Plan de Carrera</a>
-                            <a class="dropdown-item" href="#">Formulario de Inscripción</a>
+                            <a class="dropdown-item" href="/form-carrera">Formulario de Inscripción</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown my-auto">
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">EXPERIENCIA</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Tipos de Demostración</a>
-                            <a class="dropdown-item" href="#">Tips</a>
-                            <a class="dropdown-item" href="#">Programar Demostración</a>
+                            <a class="dropdown-item" href="/tipos">Tipos de Demostración</a>
+                            <a class="dropdown-item" href="/tips">Tips</a>
+                            <a class="dropdown-item" href="/programa-demo">Programar Demostración</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown my-auto">
