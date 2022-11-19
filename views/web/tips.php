@@ -827,7 +827,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 </div>
                 <div class="col-lg-6 my-auto ">
                     <div class="col-lg">
-                        <h2 style="color:var(--color12);font-weight:600;">TIPS PARA LA DEMOSTRACIÓN</h2>
+                        <h2 style="color:var(--color12);font-weight:600;">TIPS PARA FECHAR NUEVA DEMOSTRACIÓN</h2>
                         <p>Fechar es un compromiso definitivo para realizar una reunión Tupperware en un lugar, día y hora específico.</p>
                         <p>Es importante tener en cuenta los siguientes puntos para lograr “una agenda organizada”:</p>
                     </div>
