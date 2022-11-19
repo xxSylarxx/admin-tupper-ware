@@ -3,8 +3,8 @@
 use Admin\Models;
 
 $objEmpresa = new Models\EmpresaModel;
-$objCategorias = new Models\CategoriasModel2;
-$objPublicaciones = new Models\PublicacionModel2;
+$objCategorias = new Models\CategoriasModel;
+$objPublicaciones = new Models\PublicacionModel;
 $dataEmpresa = $objEmpresa->listEmpresa()[1];
 $dataCategorias = $objCategorias->listCategoriasInWeb();
 
@@ -18,8 +18,8 @@ if ($filter !== 'all') {
     $nameCategoria = $dataCategoria['nombre'];
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 } else {
-    $idCateg = '8';
-    $nameCategoria = '8';
+    $idCateg = '5';
+    $nameCategoria = '5';
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 }
 
@@ -314,8 +314,8 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         }
 
         .crop1 {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            height: 300px;
             object-fit: cover;
 
         }
@@ -365,6 +365,47 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             font-weight: 700;
         }
 
+        #videos a.card {
+            transition: transform .3s ease-in-out;
+        }
+
+        #videos a.card:hover {
+            transform: scale(1.05);
+        }
+
+        #videos .card-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 16px;
+            background: transparent;
+            color: #3f3f3f;
+            padding: 10px 18px;
+        }
+
+        .videos .card-footer i {
+            font-size: 20px;
+        }
+
+        .videos h5 {
+            font-size: 19px;
+            text-transform: uppercase;
+        }
+
+        .videos .detalle {
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-align: justify;
+            font-size: 17px;
+            color: #747474;
+            line-height: 1.6;
+        }
+
+
+
 
         @media only screen and (max-width:1399px) {
 
@@ -382,70 +423,62 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="portada">
         <div class="container">
             <div class="row">
-
-                <h1>LINEA CHEF</h1>
+                <h1>VIDEOS DEMOSTRATIVOS</h1>
             </div>
         </div>
     </section>
     <br><br>
-    <section id="resumen">
-        <div class="container">
-            <div class="row d-flex justify-content-around">
-                <div class="col-lg-3 px-5">
 
-                    <h3 class="fw-bold mb-2 text-start">Categorias</h3>
-                    <?php
-                    foreach ($dataCategorias as $value) : ?>
-                        <div class="d-flex" style="font-size: 14.5px;">
-                            <a href="/<?= $value['filtro'] ?>"><?= $value['nombre'] ?> (<?= $value['totalPub'] ?>)</a>
-                        </div>
-                    <?php endforeach; ?>
-                    <hr>
-                </div>
-                <div class="col-lg-9">
-                    
-                    <div class="row d-flex justify-content-around">
-                        <?php foreach ($dataPublicaciones as $key => $pub) : ?>
-                            <div class="col-lg-3 d-flex justify-content-center pt-2">
-                                <a href="/pub2/<?= $pub['tagname'] ?>">
-                                    <div class="div1">
-                                        <div class="images">
-                                            <img class="crop1" src="<?= $pub['portada'] ?>">
-                                        </div>
-                                        <div class="div2">
-                                            <img class="crop1" src="<?= $pub['img1'] ?>">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h5 class="titulo pt-2"><?= $pub['titulo'] ?></h5>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php endforeach; ?>
-                        <!-- <div class="col-lg-3 d-flex justify-content-center">
-                            <div class="div1">
-                                <div class="images">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto1.jpg">
-                                </div>
-                                <div class="div2">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto2.jpg">
-                                </div>
-                            </div>
+    <section class="container videos" id="videos">
 
+        <div class="row">
+            <div class="col-md-4 my-4 px-4">
+                <a href="vista.php?pag=1.14" class="card border-0 shadow h-100">
+                    <img src="https://www.youtube.com/img/desktop/yt_1200.png" width="100%" height="230">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold">Video1</h5>
+                        <div class="detalle">
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet recusandae corrupti, quidem quibusdam tenetur labore corporis ex ipsum esse quam tempora atque obcaecati quisquam fuga nulla. Neque, aliquid eaque.
                         </div>
-                        <div class="col-lg-3 d-flex justify-content-center">
-                            <div class="div1">
-                                <div class="images">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto1.jpg">
-                                </div>
-                                <div class="div2">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto2.jpg">
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
-                </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                    </div>
+                </a>
             </div>
+            <div class="col-md-4 my-4 px-4">
+                <a href="vista.php?pag=1.14" class="card border-0 shadow h-100">
+                    <img src="https://www.youtube.com/img/desktop/yt_1200.png" width="100%" height="230">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold">Video1</h5>
+                        <div class="detalle">
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet recusandae corrupti, quidem quibusdam tenetur labore corporis ex ipsum esse quam tempora atque obcaecati quisquam fuga nulla. Neque, aliquid eaque.
+                        </div>
+                    </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 my-4 px-4">
+                <a href="vista.php?pag=1.14" class="card border-0 shadow h-100">
+                    <img src="https://www.youtube.com/img/desktop/yt_1200.png" width="100%" height="230">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold">Video1</h5>
+                        <div class="detalle">
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet recusandae corrupti, quidem quibusdam tenetur labore corporis ex ipsum esse quam tempora atque obcaecati quisquam fuga nulla. Neque, aliquid eaque.
+                        </div>
+                    </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                    </div>
+                </a>
+            </div>
+
+
+
+
+
         </div>
     </section>
     <br>

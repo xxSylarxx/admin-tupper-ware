@@ -366,64 +366,199 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         }
 
         /* Estilos de boton */
-        #unete button {
+        #tips1 button {
+            --color: white;
             font-family: inherit;
-            font-size: 20px;
-            background-color: var(--color8);
-            color: white;
-            padding: 0.7em 1em;
-            padding-left: 0.9em;
-            display: flex;
-            align-items: center;
-            border: none;
-            border-radius: 16px;
+            display: inline-block;
+            width: 8em;
+            height: 2.6em;
+            line-height: 2.5em;
+            margin: 20px;
+            position: relative;
             overflow: hidden;
-            transition: all 0.2s;
+            border: 2px solid var(--color);
+            transition: color .5s;
+            z-index: 1;
+            font-size: 17px;
+            border-radius: 6px;
+            font-weight: 500;
+            color: white;
+            background-color: #1eb5da;
         }
 
-        #unete button span {
-            display: block;
-            margin-left: 0.3em;
-            transition: all 0.3s ease-in-out;
+        #tips1 button:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background: black;
+            height: 150px;
+            width: 200px;
+            border-radius: 50%;
         }
 
-        #unete button svg {
-            display: block;
-            transform-origin: center center;
-            transition: transform 0.3s ease-in-out;
+        #tips1 button:hover {
+            color: white;
         }
 
-        #unete button:hover .svg-wrapper {
-            animation: fly-1 0.6s ease-in-out infinite alternate;
+        #tips1 button:before {
+            top: 100%;
+            left: 100%;
+            transition: all .7s;
         }
 
-        #unete button:hover svg {
-            transform: translateX(2.4em) rotate(45deg) scale(1.1);
+        #tips1 button:hover:before {
+            top: -30px;
+            left: -30px;
         }
 
-        #unete button:hover span {
-            transform: translateX(7em);
-        }
-
-        #unete button:active {
-            transform: scale(0.95);
-        }
-
-        @keyframes fly-1 {
-            from {
-                transform: translateY(0.1em);
-            }
-
-            to {
-                transform: translateY(-0.1em);
-            }
+        #tips1 button:active:before {
+            background: #3a0ca3;
+            transition: background 0s;
         }
 
         #tips1 {
-            background: linear-gradient( to top, rgba(53, 99, 128, 0.5) 100%, #ffff 10%, #ffff 50% ), url('http://admin-web-tupper.com/public/img/img-page/tips-juegos.jpg');
+            background: linear-gradient(to top, rgba(53, 99, 128, 0.5) 100%, #ffff 10%, #ffff 50%), url('<?= PATH_PUBLIC ?>/img/img-page/tips-juegos.jpg');
             background-size: 100%;
             background-repeat: no-repeat;
         }
+
+        #tips1 span {
+
+            font-size: 49px;
+            color: white;
+            font-weight: 600;
+        }
+
+        #tips1 p {
+            margin-top: 3rem;
+
+            font-size: 18px;
+            color: white;
+            font-weight: 600;
+        }
+
+        #tips1 .container {
+            padding-top: 5rem;
+        }
+
+        #separador {
+            margin-top: -25px;
+        }
+
+        .separador2 {
+            background-color: var(--color1);
+            height: 4px;
+            width: 50px;
+        }
+
+        #tips2 h2 {
+            color: var(--color12);
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        #tips2 p {
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .list {
+            margin-top: .8rem;
+            margin-bottom: .8rem;
+            font-size: 1.1rem;
+        }
+
+        #tips3 i {
+            font-size: 3rem;
+            ;
+        }
+
+        #tips3 span {
+            font-size: 1.5rem;
+            ;
+        }
+
+        #tips4 {
+            background: linear-gradient(to top,
+                    rgba(37, 50, 208, 0.4) 100%,
+                    #ffff 10%,
+                    #ffff 50%),
+                url('<?= PATH_PUBLIC ?>/img/img-page/demostracion-programar-tupperware.jpg');
+            background-position: top;
+            background-attachment: fixed;
+        }
+
+        .separador3 {
+            background-color: #FFF300;
+            height: 4px;
+            width: 50px;
+        }
+
+        #tips4 h2 {
+            padding-top: 8rem;
+            color: #FFF300;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        #tips4 p {
+            color: white;
+            padding-top: 4rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        /* Estilos de boton */
+        #tips6 button {
+            --color: white;
+            font-family: inherit;
+            display: inline-block;
+            width: 8em;
+            height: 2.6em;
+            line-height: 2.5em;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--color);
+            transition: color .5s;
+            z-index: 1;
+            font-size: 17px;
+            border-radius: 6px;
+            font-weight: 500;
+            color: white;
+            background-color: #547EEA;
+        }
+
+        #tips6 button:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background: black;
+            height: 150px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        #tips6 button:hover {
+            color: white;
+        }
+
+        #tips6 button:before {
+            top: 100%;
+            left: 100%;
+            transition: all .7s;
+        }
+
+        #tips6 button:hover:before {
+            top: -30px;
+            left: -30px;
+        }
+
+        #tips6 button:active:before {
+            background: white;
+            transition: background 0s;
+        }
+
 
 
 
@@ -438,7 +573,55 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 margin-top: 0rem !important;
             }
 
-            
+            #tips1 {
+                background: linear-gradient(to top, rgba(53, 99, 128, 0.5) 100%, #ffff 10%, #ffff 50%), url('<?= PATH_PUBLIC ?>/img/img-page/tips-juegos.jpg');
+                background-size: 132%;
+                background-repeat: no-repeat;
+            }
+
+            #separador {
+                margin-top: -20px;
+            }
+
+
+
+
+
+
+
+        }
+
+        @media only screen and (max-width:410px) {
+            #tips1 span {
+
+                font-size: 19px;
+                color: white;
+                font-weight: 600;
+            }
+
+            #tips1 p {
+                margin-top: 1rem;
+
+                font-size: 10px;
+                color: white;
+                font-weight: 600;
+            }
+
+            #tips1 .container {
+                padding-top: 1rem;
+            }
+
+            #tips1 button {
+
+                font-size: 11px;
+                margin-top: -10px;
+            }
+
+            #separador {
+                margin-top: -16px;
+            }
+
+
 
         }
     </style>
@@ -453,95 +636,276 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         </div>
     </section>
     <section id="tips1">
+
         <div class="container">
             <div class="col-lg-6">
-                <span style="color:white;">TIPS PARA ORGANIZAR UNA DEMOSTRACIÓN</span>
-                
-                <p>Esta reunión es tan importante para ti como lo 
-                    es para la Anfitriona que ofreció su casa y 
-                    los invitados que lo comparten.</p>`
-                    <br>
-                        
+
+                <span>TIPS PARA ORGANIZAR UNA DEMOSTRACIÓN</span>
+                <p>
+                    Esta reunión es tan importante para ti como lo
+                    es para la Anfitriona que ofreció su casa y
+                    los invitados que lo comparten.</p>
+
+                <button> Consultar </button>
+
             </div>
+
         </div>
-      
+
 
     </section>
-    <section id="tipos2">
-
+    <section id="tips2">
+        <div id="separador">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 30" style="enable-background:new 0 0 1920 30;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+                </style>
+                <polygon class="st0" points="-0.5,29.5 959.5,-0.5 1919.5,29.5 " />
+            </svg>
+        </div>
         <div class="container my-5">
             <div class="row">
-                <div class="col-lg-5 my-auto">
-                    <h2 style="font-family: 'Hind Vadodara', sans-serif;font-size:50px;">MOMENTOS</h2>
-                    <h2 style="font-family: 'Hind Vadodara', sans-serif; font-weight:700;font-size:50px;">DIVERTIDOS</h2>
+                <div class="col-lg">
+                    <h2>TIPS PARA LA DEMOSTRACIÓN</h2>
+                    <div class="separador2 mx-auto"></div>
                 </div>
-                <div class="col-lg-6">
-                    <p>Programar tus demostraciones te
-                        brindará la confianza que necesitas
-                        para reclutar, fechar y planificar el ingreso
-                        que desees percibir, ya que has experimentado lo
-                        exitoso que puede ser el negocio. Realiza tu actividad
-                        con satisfacción, con excelencia y creatividad, 
-                        sean demostraciones o reuniones de negocios; esto 
-                        provoca que los beneficios sean constantes y por 
-                        consiguiente aumentarán tus ingresos.</p>
-                       
-                </div>
+
+
+                <p>
+                    Uno de los secretos del éxito es no olvidar nunca
+                    esta primera experiencia y sentir ante cada nueva reunión
+                    que estas poniendo el mismo cuidado y sintiendo la misma
+                    expectativa y alegría que la primera vez.
+                </p>
+                <p>Recuerda que al organizar tu reunión tiene que
+                    ser de tal modo, que en ellos encuentren lo que
+                    esperan y necesitan, es decir:</p>
             </div>
         </div>
     </section>
-    <section id="tipos3">
-        <br>
-        <br>
+    <section id="tips3">
         <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-10">
-                    <h2 style="font-size:60px;color:var(--color5);font-weight:600;">Tipos de Demostración</h2>
-                    <br>
-                    <p style="text-align:center;color:var(--color5);font-size:22px;font-weight:400;">Una Demostración es un
-                        momento divertido en el que se muestran los beneficios y soluciones<br> que ofrecen los
-                        productos Tupperware involucrando a todos los asistentes. Dependiendo de<br> las necesidades,
-                        se pueden definir diferentes tipos de Demostraciones adaptadas al lugar,<br> tiempo y temática
-                        requerida por los asistentes.</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <center><img src="<?= PATH_PUBLIC ?>/img/img-page/tips-organizar-tupperware.jpg" class="w-75 img-fluid " alt=""></center>
+                </div>
+                <div class="col-lg-6 my-auto">
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color1);"><i class="far fa-star"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Buen Servicio.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color1);"><i class="far fa-gem"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Nuevas Ideas.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color1);"><i class="far fa-grin-hearts"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Conocimiento y satisfacción de necesidades.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color1);"><i class="far fa-grin"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Alegría, afecto y reconocimiento.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color1);"><i class="far fa-thumbs-up"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Tener conocimiento de los productos que harán la demostración.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color1);"><i class="far fa-share-square"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Haber practicado la demostración antes.</span>
+                    </section>
+
+
+                </div>
+            </div>
+
+            <p style="color:var(--color1);text-align:center;font-size:1.2rem;" class="py-5">Lograr esto en tus reuniones tiene que ser tu objetivo siempre. Para ello, cuentas con una gran aliada, una persona que tiene tanto interés como tú en que la reunión tenga un éxito y que conoce muy bien a los invitados, ella es tu Anfitriona.</p>
+        </div>
+    </section>
+
+    <section id="tips4">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg">
+                    <h2>COMO REALIZAR UNA DEMOSTRACIÓN</h2>
+                    <div class="separador3 mx-auto"></div>
+                </div>
+                <p>
+                    Una de las características más distintivas de
+                    nuestras reuniones Tupperware es que puedas hacerlas
+                    tan dinámicas como quieras.<br>
+                    Para realizar tu demostración tienes que tener en cuenta los siguientes tips:
+                </p>
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="container d-flex justify-content-around p-4" style="background-color:#547EEA;margin-bottom:8.5rem;">
+                    <div class="col-lg-6">
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Antes de salir de casa prepararse
+                                adecuadamente, y con <br>buen ánimo y asegurarse que llevan todo lo que necesitan.</span>
+                        </section>
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Llegar a la reunión 1 hora antes.</span>
+                        </section>
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Armar un buen display.</span>
+                        </section>
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Dar la bienvenida y entregar el catálogo a los invitados.</span>
+                        </section>
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Comenzar la reunión a horario.</span>
+                        </section>
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Dar gracias a la Anfitriona.</span>
+                        </section>
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Saludar, dar la bienvenida e iniciar la demostración.</span>
+                        </section>
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Generalidades del producto.</span>
+                        </section>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Juegos.</span>
+                        </section>
+                        <section class="d-flex list  ">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Explicación del catálogo.</span>
+                        </section>
+                        <section class="d-flex list">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Explicación de forma de pago y fecha de entrega.</span>
+                        </section>
+                        <section class="d-flex list">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Fechar nuevas demostraciones con los invitados.</span>
+                        </section>
+                        <section class="d-flex list">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Los invitados que tomen contacto directo con los productos y que decidan su compra, asesorándolas si fuera necesario.</span>
+                        </section>
+                        <section class="d-flex list">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Entregar el Set Exclusivo de Anfitrionas.</span>
+                        </section>
+                        <section class="d-flex list">
+                            <span style="color:white;"><i class="fa fa-check"></i></span>
+                            <span class="ms-3" style="text-align:justify;color:white;">Cerrar la reunión felicitando y agradeciendo nuevamente a la Anfitriona y expresando el deseo de volverlas a ver en futuras reuniones.</span>
+                        </section>
+
+                    </div>
+
                 </div>
             </div>
         </div>
-        <br>
-        <br>
+
     </section>
-    <section id="tipo4">
-        <br>
-        <br>
+    <section id="tips5">
         <div class="container">
             <div class="row d-flex justify-content-around">
-                <div class="col-lg-5 py-5">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-tupperware-uno-uno.jpg" width="100%" alt="">
-                    <h3 class="my-3">Demostraciones Uno a Uno</h3>
-                    <p style="text-align:center;">Son Demostraciones que se hace a una sola persona para mostrar las características y beneficios de alguno de nuestros productos.</p>
+                <div class="col-lg-6 px-3 my-auto">
+                    <img src="<?= PATH_PUBLIC ?>/img/img-page/tips-fechar-tupperware-1.jpg" class="w-100 img-fluid " alt="">
                 </div>
-                <div class="col-lg-5 py-5">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-rapida-tupperware.jpg" width="100%" alt="">
-                    <h3 class="my-3">Demostraciones Rápidas</h3>
-                    <p style="text-align:center;">Se realizan en pequeños recesos en las oficinas, universidades, gimnasios o en cualquier lugar. La Demostración se basa en compartir con las personas presentes las soluciones que ofrecen nuestros productos con ejemplos o experiencias sencillas y rápidas. Si el lugar lo permite se puede preparar una sencilla y deliciosa receta.</p>
+                <div class="col-lg-6 my-auto ">
+                    <div class="col-lg">
+                        <h2 style="color:var(--color12);font-weight:600;">TIPS PARA LA DEMOSTRACIÓN</h2>
+                        <p>Fechar es un compromiso definitivo para realizar una reunión Tupperware en un lugar, día y hora específico.</p>
+                        <p>Es importante tener en cuenta los siguientes puntos para lograr “una agenda organizada”:</p>
+                    </div>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">En la misma reunión Tupperware hay todo un entorno y se crea un clima que predispone a las personas a reunirse nuevamente.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Fuera de la reunión cualquier lugar y momento es bueno para fechar.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">Antes de empezar la reunión, mientras van llegando los demás invitados.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Al mostrar la promoción de Anfitrionas vigente.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Cuando termina la demostración y antes de hacer el pedido de cada una.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Cuando se demuestra el pedido de clientes.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Crear una corriente de simpatía con cada una de los invitados.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Tratar de tener el nombre de los invitados y llamarlos por su nombre.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Motivarlos para que sientan el deseo de ganarse los regalos de Anfitrionas.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Proponerles reuniones distintas con diferentes temas de su interés.</span>
+                    </section>
+                    <section class="d-flex list  ">
+                        <span style="color:var(--color2);"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>
+                        <span class="ms-3" style="text-align:justify;">
+                            Que la reunión sea instructiva, pero a la vez ágil y dinámica.</span>
+                    </section>
+
+
                 </div>
-                <div class="col-lg-5 py-5">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-tematica-tupperware.jpg" width="100%" alt="">
-                    <h3 class="my-3">Demostraciones Temáticas</h3>
-                    <p style="text-align:center;">Son Demostraciones en donde se preparan recetas sencillas enfocadas en algún tema: comida saludable, bebidas nutritivas, dulces para niños, etc. Se realizan principalmente en el hogar de una Anfitriona en compañía de sus invitados.</p>
-                </div>
-                <div class="col-lg-5 py-5">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-gastronomica-tupperware.jpg" width="100%" alt="">
-                    <h3 class="my-3">Demostraciones Gastronómicas</h3>
-                    <p style="text-align:center;">Son Demostraciones en donde se 
-                    realizan recetas especializadas haciendo uso de nuestros productos 
-                    y compartiendo con los invitados un momento especial en donde todos 
-                    participan en la realización de los platos que luego serán degustados 
-                    por los asistentes.</p>
-                </div>
-                
             </div>
         </div>
     </section>
+    <section id="tips6">
+        <div id="separadorr">
+            <img src="<?= PATH_PUBLIC ?>/img/img-page/base2.svg" class="w-100 img-fluid " alt="">
+        </div>
+        <div class="container-fluid" style="background-color:#547EEA;">
+            <div class="row d-flex justify-content-center" style="padding:6rem;margin-top:-12px;">
+                <div class="col-lg-5 my-auto">
+                    <span style="color:white;font-size:1.5rem;font-weight:600;">¿Te gustaría realizar una Experiencia?.</span>
+                </div>
+                <div class="col-lg-3">
+                    <button> Contáctanos </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 
     <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>

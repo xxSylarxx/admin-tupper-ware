@@ -18,7 +18,7 @@ if ($filter !== 'all') {
     $nameCategoria = $dataCategoria['nombre'];
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 } else {
-    $idCateg = '%';
+    $idCateg = '1';
     $nameCategoria = '1';
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 }

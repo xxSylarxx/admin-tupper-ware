@@ -18,8 +18,8 @@ if ($filter !== 'all') {
     $nameCategoria = $dataCategoria['nombre'];
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 } else {
-    $idCateg = '8';
-    $nameCategoria = '8';
+    $idCateg = '13';
+    $nameCategoria = '13';
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 }
 
@@ -383,7 +383,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <div class="container">
             <div class="row">
 
-                <h1>LINEA CHEF</h1>
+                <h1>OTROS</h1>
             </div>
         </div>
     </section>

@@ -144,7 +144,10 @@ switch ($pagina) {
                                     <li><a class="dropdown-item" href="/otros">Otros</a></li>
                                 </ul>
                             </li>
+                            <li> <a class="dropdown-item" href="/recetas"> RECETAS </a></li>
+                            <li> <a class="dropdown-item" href="/videos-demostrativos"> VIDEOS DEMOSTRATIVOS </a></li>
                         </ul>
+                        
                     </li>
                     <li class="nav-item dropdown my-auto">
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">NOSOTROS</span><i class="fas fa-caret-down"></i></a>
@@ -181,13 +184,13 @@ switch ($pagina) {
 
                         </div>
                     </li>
-                    <li class="nav-item dropdown my-auto">
-                        <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">PEDIDOS</span><i class="fas fa-caret-down"></i></a>
+                   <!--  <li class="nav-item dropdown my-auto">
+                        <a class="nav-link fw-bold <//?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">PEDIDOS</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">APP</a>
 
                         </div>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>
