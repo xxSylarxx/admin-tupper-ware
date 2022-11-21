@@ -382,6 +382,20 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             color: #3f3f3f;
             padding: 10px 18px;
         }
+        #videos .card .news {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            padding: 4px 12px;
+            background-color: var(--color1);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+
+
+            transform: translateY(-5%);
+
+        }
 
         .videos .card-footer i {
             font-size: 20px;
@@ -433,54 +447,113 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 
         <div class="row">
             <div class="col-md-4 my-4 px-4">
-                <a href="vista.php?pag=1.14" class="card border-0 shadow h-100">
-                    <img src="https://www.youtube.com/img/desktop/yt_1200.png" width="100%" height="230">
+                <a href="video1" class="card border-0 shadow h-100">
+                <span class="news">Videos</span>
+                    <img src="https://img.youtube.com/vi/6cTFu55e71k/maxresdefault.jpg" width="100%" height="230">
                     <div class="card-body">
-                        <h5 class="text-info fw-bold">Video1</h5>
+                        <h5 class="text-info fw-bold pt-4">EcoTwist Tupperware</h5>
                         <div class="detalle">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet recusandae corrupti, quidem quibusdam tenetur labore corporis ex ipsum esse quam tempora atque obcaecati quisquam fuga nulla. Neque, aliquid eaque.
+                            Tupperware solo hay uno.
                         </div>
                     </div>
                     <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 my-4 px-4">
-                <a href="vista.php?pag=1.14" class="card border-0 shadow h-100">
-                    <img src="https://www.youtube.com/img/desktop/yt_1200.png" width="100%" height="230">
+                <a href="video2" class="card border-0 shadow h-100">
+                <span class="news">Videos</span>
+                    <img src="https://img.youtube.com/vi/bYsprATsHoU/maxresdefault.jpg" width="100%" height="230">
                     <div class="card-body">
-                        <h5 class="text-info fw-bold">Video1</h5>
+                        <h5 class="text-info fw-bold pt-4">VALORAMOS TU CONFIANZA</h5>
                         <div class="detalle">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet recusandae corrupti, quidem quibusdam tenetur labore corporis ex ipsum esse quam tempora atque obcaecati quisquam fuga nulla. Neque, aliquid eaque.
+                            Durante más de 75 años, nos hemos preocupado por hacer lo correcto para las personas y sus familias.
                         </div>
                     </div>
                     <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 my-4 px-4">
-                <a href="vista.php?pag=1.14" class="card border-0 shadow h-100">
-                    <img src="https://www.youtube.com/img/desktop/yt_1200.png" width="100%" height="230">
+                <a href="video3" class="card border-0 shadow h-100">
+                <span class="news">Videos</span>
+                    <img src="https://img.youtube.com/vi/6cTFu55e71k/maxresdefault.jpg" width="100%" height="230">
                     <div class="card-body">
-                        <h5 class="text-info fw-bold">Video1</h5>
+                        <h5 class="text-info fw-bold pt-4">FRESQUITA TUPPERWARE</h5>
                         <div class="detalle">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet recusandae corrupti, quidem quibusdam tenetur labore corporis ex ipsum esse quam tempora atque obcaecati quisquam fuga nulla. Neque, aliquid eaque.
+                            Ideal para mantener frescos por más tiempo alimentos crudos con un alto porcentaje de agua, tales como verduras y frutas. 
                         </div>
                     </div>
                     <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
                     </div>
                 </a>
             </div>
-
-
-
-
-
+            <div class="col-md-4 my-4 px-4">
+                <a href="video4" class="card border-0 shadow h-100">
+                <span class="news">Videos</span>
+                    <img src="https://img.youtube.com/vi/DicQcDDforQ/maxresdefault.jpg" width="100%" height="230">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold pt-4">ULTRA TAZONES TUPPERWARE</h5>
+                        <div class="detalle">
+                        Hay muchas recetas por preparar, y solo hay una marca Tupperware para prepararlas de la mejor manera.
+                        </div>
+                    </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 my-4 px-4">
+                <a href="video5" class="card border-0 shadow h-100">
+                <span class="news">Videos</span>
+                    <img src="https://img.youtube.com/vi/HuGzOWs-MmU/maxresdefault.jpg" width="100%" height="230">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold pt-4">!NO HAY TIEMPO QUE PERDER!</h5>
+                        <div class="detalle">
+                            Debemos pedir que los fabricantes faciliten el que los consumidores puedan encontrar repuestos de sus productos de una manera sencilla y durante el tiempo que marca la ley.
+                        </div>
+                    </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 my-4 px-4">
+                <a href="video6" class="card border-0 shadow h-100">
+                <span class="news">Videos</span>
+                    <img src="https://img.youtube.com/vi/6cTFu55e71k/maxresdefault.jpg" width="100%" height="230">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold pt-4">RALLADOR TUPPERWARE</h5>
+                        <div class="detalle">
+                            Práctico porque tiene dos tipos de rallado, solo tienes que girar el inserto rallador para el rallado que desees, la base y el sello son útiles para conservar tus alimentos rallados.
+                        </div>
+                    </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 my-4 px-4">
+                <a href="video7" class="card border-0 shadow h-100">
+                <span class="news">Videos</span>
+                    <img src="https://img.youtube.com/vi/5oTm7ksc3RQ/maxresdefault.jpg" width="100%" height="230">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold pt-4">TAZÓN MARAVILLA TUPPERWARE</h5>
+                        <div class="detalle">
+                            Su diseño y forma de tazón que permite transportar y conservar alimentos en la heladera.
+                        </div>
+                    </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
+    
     <br>
     <br>
     <br>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex" />
     <title>ADMIN - <?= mb_strtoupper(EMPRESA, 'UTF-8') ?></title>
-    <link rel="shortcut icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png" type="image/png">
+    <link rel="shortcut icon" href="<?= PATH_PUBLIC ?>/img/icons/icon.png" type="image/png">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/admin.css">
@@ -23,7 +23,7 @@
         }
 
         body {
-            background: var(--color1);
+            background: #e30385;
             height: 100%;
         }
 
@@ -41,7 +41,7 @@
 
     <div class="card card-login">
         <div class="text-center">
-            <img src="/public/img/icons/escudo.png" height="90">
+            <img src="/public/img/icons/siemprejuntos.png" height="90">
             <h4 class="fw-bold my-3">Web Admin</h4>
         </div>
         <form id="formLogin" onsubmit="verifyUsuario(event)">

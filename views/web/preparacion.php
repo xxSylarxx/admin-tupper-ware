@@ -383,7 +383,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <div class="container">
             <div class="row">
 
-                <h1>ALACENA</h1>
+                <h1>PREPARACIÓN</h1>
             </div>
         </div>
     </section>

@@ -132,6 +132,7 @@ switch ($pagina) {
                                     <li><a class="dropdown-item" href="/lunch">Lunch</a></li>
                                     <li><a class="dropdown-item" href="/microondas">Microondas</a></li>
                                     <li><a class="dropdown-item" href="/preparacion">Preparación</a></li>
+                                    <li><a class="dropdown-item" href="/niño">Niño</a></li>
                                 </ul>
                             </li>
                             <li> <a class="dropdown-item" href="#"> ESTILO &raquo; </a>

@@ -368,7 +368,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         #unete button {
             font-family: inherit;
             font-size: 20px;
-            background-color: var(--color8);
+            background-color: var(--color2);
             color: white;
             padding: 0.7em 1em;
             padding-left: 0.9em;
@@ -418,6 +418,17 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             }
         }
 
+        #back-form {
+
+            background: linear-gradient(to top,
+                    rgba(30, 181, 218, 0.8) 100%,
+                    #ffff 10%,
+                    #ffff 50%),
+                url('<?= PATH_PUBLIC ?>/img/img-page/unete.jpg');
+            background-size: 100%;
+
+        }
+
 
 
         @media only screen and (max-width:1399px) {
@@ -430,6 +441,8 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 
         }
     </style>
+
+    
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
     <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
 
@@ -444,39 +457,110 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="unete">
         <div class="container">
             <div class="row d-flex justify-content-center">
-
                 <div class="col-lg-5 d-flex justify-content-center" style="background-color:var(--color1);">
-
                     <div class="p-5 " style="margin:auto auto;">
                         <h2 class="py-3" style="border-bottom: 4px solid #ffdb00;color:white;font-weight:900;">INICIA TU CARRERA CON TUPPERWARE</h2>
-
                         <br>
                         <p style="color:white;font-weight:600;">Hoy tú puedes formar parte de nuestra
                             fuerza de ventas en donde podrás tener
                             flexibilidad con tus horarios, ganar dinero,
                             crecer personal y profesionalmente.</p>
-                        <br>
-                        <div class="d-flex justify-content-center">
-                            <button>
-                                <a href="https://forms.gle/W9KbSgQ8LmBEXnhd9" style="color:white;" target="_blank">
-                                    <div class="svg-wrapper-1">
-                                        <div class="svg-wrapper">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <span>Inscríbete Ya</span>
-                            </button>
-                        </div>
+
                     </div>
 
 
                 </div>
                 <div class="col-lg-7 p-0">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/carrera.jpg" class="img-fluid w-100" alt="">
+                    <!--  <img src="<//?= PATH_PUBLIC ?>/img/img-page/carrera.jpg" class="img-fluid w-100" alt=""> -->
+                    <div id="back-form" class="p-5">
+                        <form action="">
+                            <h3 style="color:white;">¡ATREVETE A SOÑAR! </h3>
+                            <br>
+                            <div class="row">
+                                <div class="col-md mb-3 text-white fw-bold">
+                                    NOMBRE(S)*
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" name="nombres" placeholder="" required="">
+                                </div>
+                                <div class="col-md mb-3 text-white fw-bold">
+                                    APELLIDO(S)*
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" name="apellidos" placeholder="" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md mb-3 text-white fw-bold">
+                                    NUMERO DE TELEFONO*
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" name="telefono" placeholder="" required="">
+                                </div>
+                                <div class="col-md mb-3 text-white fw-bold">
+                                    CORREO ELECTRONICO*
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" name="correo" placeholder="" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md mb-3 text-white fw-bold">
+                                    DEPARTAMENTO*
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>--Seleccione--</option>
+                                        <option value="Amazonas">Amazonas</option>
+                                        <option value="Ancash">Ancash</option>
+                                        <option value="Apurímac">Apurímac</option>
+                                        <option value="Arequipa">Arequipa</option>
+                                        <option value="Ayacucho">Ayacucho</option>
+                                        <option value="Cajamarca">Cajamarca</option>
+                                        <option value="Callao">Callao</option>
+                                        <option value="Cuzco">Cuzco </option>
+                                        <option value="Huancavelica">Huancavelica</option>
+                                        <option value="Huánuco">Huánuco</option>
+                                        <option value="Ica">Ica</option>
+                                        <option value="Junín">Junín</option>
+                                        <option value="La_Libertad">La Libertad</option>
+                                        <option value="Lambayeque">Lambayeque</option>
+                                        <option value="Lima">Lima</option>
+                                        <option value="Loreto">Loreto</option>
+                                        <option value="Madre_de_Dios">Madre de Dios</option>
+                                        <option value="Moquegua">Moquegua</option>
+                                        <option value="Pasco">Pasco</option>
+                                        <option value="Piura">Piura</option>
+                                        <option value="Puno">Puno</option>
+                                        <option value="San_Martín">San Martín</option>
+                                        <option value="Tacna">Tacna</option>
+                                        <option value="Tumbes">Tumbes</option>
+                                        <option value="Ucayali">Ucayali</option>
+                                    </select>
+                                </div>
+                                <div class="col-md mb-3 text-white fw-bold">
+                                    ZONA/DISTRITO*
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" name="nombres" placeholder="" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 text-white fw-bold">
+                                    CONSULTA
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="" rows="3" name="consulta" required="" spellcheck="false"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row pt-5">
+                                <div class="d-flex justify-content-center">
+                                    <button>
+                                        <a href="https://forms.gle/W9KbSgQ8LmBEXnhd9" style="color:white;" target="_blank">
+                                            <div class="svg-wrapper-1">
+                                                <div class="svg-wrapper">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <span>Inscríbete Ya</span>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
                 </div>
 
             </div>

@@ -29,6 +29,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/web.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/niveles.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/networks.css">
+    <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700;800;900&display=swap" rel="stylesheet">
@@ -359,9 +360,48 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
 
         }
     </style>
+   
+
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
     <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
+ <!-- admin - ventana emergente -->
+ <?php if ($dataModal['visible'] == 'S') : ?>
+        <style>
+            #modalAdmin div.responsive {
+                position: relative;
+                height: 0;
+                overflow: hidden;
+                padding-bottom: 56%;
+                margin-bottom: 20px;
+            }
 
+            #modalAdmin div.responsive iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        
+        <div class="modal" id="modalAdmin" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content animate__animated <?= $dataModal['animation'] ?>" style="<?= ($dataModal['margen'] == 'N' && $dataModal['header'] == 'N') ? 'background: transparent; border: none;' : null ?>">
+                    <?php if ($dataModal['header'] == 'S') { ?>
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title fw-bold"><?= $dataModal['titulo'] ?></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    <?php } ?>
+                    <div class="modal-body <?= $dataModal['margen'] == 'N' ? 'p-0' : null ?>">
+                        <//?= $dataModal['cuerpo'] ?>
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/63KnsWe2Tqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <?php endif; ?>
     <section>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -386,6 +426,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
         </div>
     </section>
     <br><br>
+    
     <section id="resumen">
         <div class="container">
             <div class="row d-flex justify-content-around">
@@ -561,5 +602,14 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
         time: 3 // secondly
     });
 </script>
-
+<script>
+            // instancia y muestra la ventana
+            let modalAdmin = new bootstrap.Modal(document.getElementById('modalAdmin'));
+            modalAdmin.show();
+            // al cierre de la ventana eliminamos el contenido
+            let modalAdmin2 = document.getElementById('modalAdmin');
+            modalAdmin2.addEventListener('hide.bs.modal', function(event) {
+                document.querySelector('.modal-body').remove();
+            });
+        </script>
 </html>

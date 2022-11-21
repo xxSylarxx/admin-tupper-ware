@@ -541,6 +541,15 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <div class="container">
             <div class="row d-flex justify-content-center">
+                <div class="col-lg-10">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/kHBZQX-HKYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
                 <div class="col-lg-10" style="background-color:white;">
                     <p style="padding-top:2rem;color:var(--color8);font-size:23px;text-align:center;font-weight:700;">Tupperware se esfuerza por ser la empresa de venta directa que más presta al desarrollo personal y da oportunidades de ingreso a la población del país.</p>
                     <p style="padding-bottom:2rem;color:var(--color1);font-size:23px;text-align:center;font-weight:700;">Te ayudamos a cambiar tú vida…</p>
