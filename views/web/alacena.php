@@ -407,10 +407,15 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                         <p>Prácticas y modernas, diseñadas para organizar y decorar su cocina. Todos tus alimentos frescos, sabrosos y ordenados.
                             Siempre listas para tenerlos siempre a mano.
                         </p>
+                        <br>
                         <h3>INTRODUCCIÓN</h3>
-                        <p>Productos para almacenar alimentos secos y mantenerlos en buenas condiciones por más tiempo. Prácticas y líneas modernas, diseñadas para organizar y decorar su cocina.
+                        <br>
+                        <br>
+                        <p>Productos para almacenar alimentos secos y mantenerlos 
+                            en buenas condiciones por más tiempo. Prácticas y líneas modernas, 
+                            diseñadas para organizar y decorar su cocina.
                             Tienen tamaños ideales para satisfacer las diferentes necesidades de almacenamiento.
-                            Deja que tu cocina sea más organizado y hermoso!<br>
+                            Deja que tu cocina sea más organizado y hermoso!<br><br>
                             1. Son ideales para mantener la alacena ordenada y libre de olores.<br>
                             2. Diseñados para almacenar alimentos como: azúcar, café, harina, sal, pasta, granos, galletas, confites, etc.<br>
                             3. Mantienen la frescura, el sabor y aroma de los alimentos por mucho más tiempo.<br>

@@ -256,7 +256,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     if (icon === 'success') {
-                        location.href = '/admin/publicacion2/all';
+                        location.href = '/admin/publicacion3/all';
                     }
                 }
             });;
@@ -337,7 +337,7 @@
             const cuerpo = tinyMCE.get('editor').getContent();
             document.getElementById('txtcuerpo').value = cuerpo;
             const data = new FormData(document.getElementById('formPub'));
-            fetch(`/admin/publicacion2/${action}`, {
+            fetch(`/admin/publicacion3/${action}`, {
                 method: 'POST',
                 body: data
             }).then(function(res) {

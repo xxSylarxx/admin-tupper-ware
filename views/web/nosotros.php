@@ -54,7 +54,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- CARROUSEL -->
-
+    <!-- ANIMACIONES AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -482,22 +484,22 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <br>
         <div class="container">
-            <h2 style="font-size:40px;color:var(--color1);font-weight:600;">Quienes Somos</h2>
+            <h2 style="font-size:40px;color:var(--color1);font-weight:600;" data-aos="fade-up">Quienes Somos</h2>
             <br>
-            <p style="text-align:center;color:white;font-size:25px;font-weight:600;">Ser una oportunidad de negocio que cambie vidas descubriendo talentos
+            <p style="text-align:center;color:white;font-size:25px;font-weight:600;" data-aos="fade-up">Ser una oportunidad de negocio que cambie vidas descubriendo talentos
                 y desarrollando las habilidades de las personas.</p>
             <br>
             <div class="row">
                 <div class="col-lg-4">
                     <div class="row d-flex justify-content-center">
 
-                        <div id="icono" class="col-lg-2 d-flex justify-content-center">
+                        <div id="icono" class="col-lg-2 d-flex justify-content-center" data-aos="flip-left">
                             <span><i class="fa fa-paper-plane"></i></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="row d-flex justify-content-center">
+                    <div class="row d-flex justify-content-center" data-aos="flip-left">
 
                         <div id="icono" class="col-lg-2 d-flex justify-content-center">
                             <span><i class="fa fa-eye"></i></span>
@@ -505,7 +507,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="row d-flex justify-content-center">
+                    <div class="row d-flex justify-content-center" data-aos="flip-left">
 
                         <div id="icono" class="col-lg-2 d-flex justify-content-center">
                             <span><i class="fa fa-handshake"></i></span>
@@ -515,14 +517,14 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             </div>
             <br>
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="flip-left">
 
                     <h4 style="color:var(--color5);font-weight:600;">MISIÓN</h4>
                     <p style="color:var(--color5);">Ser una oportunidad de negocio que cambie
                         vidas descubriendo talentos y desarrollando
                         las habilidades de las personas.</p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="flip-left">
                     <h4 style="color:var(--color5);font-weight:600;">VISIÓN</h4>
                     <p style="color:var(--color5);">Despertar una comunidad global,
                         especialmente de mujeres, para alcanzar su máximo
@@ -531,7 +533,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                         Estamos comprometidos en acelerar el crecimiento rentable en beneficio
                         de nuestra Fuerza de Ventas, Asociados, Consumidores e Inversionistas.</p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="flip-left">
                     <h4 style="color:var(--color5);font-weight:600;">PROPÓSITO</h4>
                     <p style="color:var(--color5);">Inspirar a las mujeres a cultivar la confianza
                         necesaria para enriquecer sus vidas, procurar
@@ -547,9 +549,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="nosotros2">
         <br>
         <br>
-        <h2 style="font-size:40px;color:var(--color5);font-weight:900;">Nuestros Principios</h2>
+        <h2 style="font-size:40px;color:var(--color5);font-weight:900;" data-aos="flip-up">Nuestros Principios</h2>
         <br>
-        <div class="container" style="background-color:rgb(255, 255, 255,0.5)">
+        <div class="container" style="background-color:rgb(255, 255, 255,0.5)" data-aos="flip-up">
             <div class="row">
                 <div class="col-lg-6 p-3">
                     <h2 style="color:#18605B;font-weight:900;">Nuestro Porqué</h2>
@@ -579,10 +581,10 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 
         <br>
         <br>
-        <h2 style="font-size:40px;color:var(--color2);font-weight:900;">En TupperWare Somos...</h2>
+        <h2 style="font-size:40px;color:var(--color2);font-weight:900;" data-aos="zoom-in">En TupperWare Somos...</h2>
         <br>
         <div class="container" style="background-color:rgb(255, 255, 255,0.5)">
-            <div class="row">
+            <div class="row" data-aos="zoom-in">
                 <div class="col-lg-6 p-3">
                     <h2 style="color:var(--color1);font-weight:900;">Auténticos</h2>
                     <p style="color:var(--color2);text-align:justify;">
@@ -686,3 +688,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 </script>
 
 </html>
+
+<script>
+  AOS.init();
+</script>

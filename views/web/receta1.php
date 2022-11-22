@@ -57,7 +57,7 @@
         }
     </style>
 
-<?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+    <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
     <style>
         .portada {
             background-color: var(--color2);
@@ -198,17 +198,40 @@
                 <li class="breadcrumb-item"><a href=""><//?= $dataPub['categoria'] ?></a></li>
             </ol> -->
             <div class="mt-3 py-5">
-                <h2 class="text-white">Receta 1</h2>
+                <h2 class="text-white">RECETAS</h2>
             </div>
         </div>
     </div>
 
     <br><br><br>
-
+    
     <div class="container-fluid">
         <div class="row justify-content-around">
             <div class="col-md-7">
-            <iframe width="100%" height="450" src="https://www.youtube.com/embed/Sbb5U8kYMIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                <center><h2 style="font-weight:700;">CREMA DE CHAMPIÑONES</h2></center>
+                <br>
+                <div><img src="https://deslumbrantes.com.bo/wp-content/uploads/2020/07/crema-champinones.jpg" alt="" width="100%" height="500" /></div>
+                <div>&nbsp;</div>
+                <div>6 Porciones</div>
+                <div>Tiempo de preparaci&oacute;n: 25 minutos</div>
+                <div>&nbsp;</div>
+                <div><strong>INGREDIENTES</strong></div>
+                <ul>
+                    <li>500 gramos de champi&ntilde;ones frescos o de lata.</li>
+                    <li>2 Cucharadas de mantequilla.</li>
+                    <li>3 Cucharadas de cebolla picada.</li>
+                    <li>1 Cucharada de f&eacute;cula de ma&iacute;z.</li>
+                    <li>1 L de leche.</li>
+                    <li>2 ramitas de perejil.</li>
+                    <li>Sal y pimienta al gusto.</li>
+                </ul>
+                <div><strong>PREPARACI&Oacute;N</strong></div>
+                <ol>
+                    <li>En la Cacerola cocer los Champi&ntilde;ones en agua y licuarlos en 2 tazas del agua en la que se cocieron. Si utilizas champi&ntilde;ones de lata, escurrir y licuar en agua limpia.</li>
+                    <li>Derretir la mantequilla en la Cacerola a fuego medio. Agregar la cebolla picada en el mini Chef y sofre&iacute;r hasta que se vea transparente, a&ntilde;adir la f&eacute;cula de ma&iacute;z y cocinar moviendo constantemente hasta que tome un tono ligeramente dorado.</li>
+                    <li>Verter el licuado de champi&ntilde;ones, seguir moviendo y a&ntilde;adir la leche con el perejil, cocinar moviendo constantemente hasta que haya hervido durante 5 minutos.</li>
+                    <li>Sazonar con sal y pimienta.</li>
+                </ol>
             </div>
             <div class="col-md-3">
 

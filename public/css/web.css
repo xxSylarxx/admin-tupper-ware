@@ -49,8 +49,9 @@ h3 {
 }
 h5 {
   text-align: center;
-  color: var(--color3);
-  font-weight: 700;
+  /* color: var(--color3); */
+  color:black;
+  font-weight: 600;
 }
 /* estilos header */
 header {

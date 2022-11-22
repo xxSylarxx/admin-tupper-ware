@@ -54,7 +54,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- CARROUSEL -->
-
+    <!-- ANIMACIONES AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -557,7 +559,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <br>
         <div class="container">
-            <div class="col-lg">
+            <div class="col-lg" data-aos="fade-up">
                 <h2 style="font-size:40px;color:var(--color1);font-weight:600;">Más Tupperware menos desechables</h2>
                 <br>
                 <p style="text-align:center;color:var(--color8);font-size:28px;font-weight:400;">Comparte estos
@@ -582,7 +584,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-4" id="col-niveles">
+                <div class="col-lg-4" id="col-niveles" data-aos="flip-left">
                     <div class="col">
                         <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro1.jpg" class="w-100" alt="">
                     </div>
@@ -598,7 +600,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 
                 </div>
 
-                <div class="col-lg-4" id="col-niveles">
+                <div class="col-lg-4" id="col-niveles" data-aos="flip-left">
                     <div class="col">
                         <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro2.jpg" class="w-100" alt="">
                     </div>
@@ -609,7 +611,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 
                     </div>
                 </div>
-                <div class="col-lg-4" id="col-niveles">
+                <div class="col-lg-4" id="col-niveles" data-aos="flip-left">
                     <div class="col">
                         <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro3.jpg" class="w-100" alt="">
                     </div>
@@ -629,41 +631,41 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4" id="col-niveles">
+                <div class="col-lg-4" id="col-niveles" data-aos="flip-left">
                     <div class="col">
                         <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro4.jpg" class="w-100" alt="">
                     </div>
                     <div class="col " id="col-niveles3">
                         <h5>CONSERVA TUS ALIMENTOS</h5>
                         <p style="text-align:center;">
-                            Evite dejar que la comida se deteriore y 
-                            conserve los alimentos con envases especiales 
+                            Evite dejar que la comida se deteriore y
+                            conserve los alimentos con envases especiales
                             por más tiempo. Menos desechos para el planeta.</p>
 
                     </div>
                 </div>
-                <div class="col-lg-4" id="col-niveles">
+                <div class="col-lg-4" id="col-niveles" data-aos="flip-left">
                     <div class="col">
                         <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro5.jpg" class="w-100" alt="">
                     </div>
                     <div class="col " id="col-niveles3">
                         <h5>LLEVA TU BOLSA</h5>
                         <p style="text-align:center;">
-                            Evita las bolsas de plásticos y papel. 
-                            Lleve su bolsa reutilizable al momento de 
+                            Evita las bolsas de plásticos y papel.
+                            Lleve su bolsa reutilizable al momento de
                             hacer compras en el mercado o súper mercado.</p>
 
                     </div>
                 </div>
-                <div class="col-lg-4" id="col-niveles">
+                <div class="col-lg-4" id="col-niveles" data-aos="flip-left">
                     <div class="col">
                         <img src="<?= PATH_PUBLIC ?>/img/img-page/futuro6.jpg" class="w-100" alt="">
                     </div>
                     <div class="col " id="col-niveles3">
                         <h5>COMPARTE CON TUS AMIGOS</h5>
                         <p style="text-align:center;">
-                            Comparte estos consejos y seamos parte 
-                            de la solución y no del problema. 
+                            Comparte estos consejos y seamos parte
+                            de la solución y no del problema.
                             Ayudemos a nuestro planeta.</p>
 
                     </div>
@@ -731,6 +733,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         auto: true,
         time: 3 // secondly
     });
+</script>
+<script>
+    AOS.init();
 </script>
 
 </html>

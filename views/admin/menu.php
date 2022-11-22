@@ -32,6 +32,14 @@
                 </span>
             </a>
         </li>
+        <li>
+            <a href="/admin/publicacion3" class="<?php echo $this->view_name == 'publicacion3' ? 'active' : '' ?>">
+            <i class="far fa-newspaper"></i>
+                <span class="links_name">
+                    <?= $this->translate('Publicaciones') ?>
+                </span>
+            </a>
+        </li>
         <!-- <li>
             <a href="/admin/correos" class="<?//php echo $this->view_name == 'suscripciones' ? 'active' : '' ?>">
                 <i class="fas fa-envelope"></i>

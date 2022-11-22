@@ -54,6 +54,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- CARROUSEL -->
+    <!-- ANIMACIONES AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 </head>
@@ -461,13 +464,13 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     </section>
     <section id="tipos2">
 
-        <div class="container my-5">
+        <div class="container my-5" >
             <div class="row">
-                <div class="col-lg-5 my-auto">
+                <div class="col-lg-5 my-auto" data-aos="flip-right">
                     <h2 style="font-family: 'Hind Vadodara', sans-serif;font-size:50px;">MOMENTOS</h2>
                     <h2 style="font-family: 'Hind Vadodara', sans-serif; font-weight:700;font-size:50px;">DIVERTIDOS</h2>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="flip-right">
                     <p>Programar tus demostraciones te
                         brindará la confianza que necesitas
                         para reclutar, fechar y planificar el ingreso
@@ -483,7 +486,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-10">
+                <div class="col-lg-10" data-aos="flip-up">
                     <h2 style="font-size:60px;color:var(--color5);font-weight:600;">Tipos de Demostración</h2>
                     <br>
                     <p style="text-align:center;color:var(--color5);font-size:22px;font-weight:400;">Una Demostración es un
@@ -501,23 +504,23 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <br>
         <div class="container">
-            <div class="row d-flex justify-content-around">
-                <div class="col-lg-5 py-5">
+            <div class="row d-flex justify-content-around" >
+                <div class="col-lg-5 py-5" data-aos="flip-down">
                     <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-tupperware-uno-uno.jpg" width="100%" alt="">
                     <h3 class="my-3">Demostraciones Uno a Uno</h3>
                     <p style="text-align:center;">Son Demostraciones que se hace a una sola persona para mostrar las características y beneficios de alguno de nuestros productos.</p>
                 </div>
-                <div class="col-lg-5 py-5">
+                <div class="col-lg-5 py-5" data-aos="flip-down">
                     <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-rapida-tupperware.jpg" width="100%" alt="">
                     <h3 class="my-3">Demostraciones Rápidas</h3>
                     <p style="text-align:center;">Se realizan en pequeños recesos en las oficinas, universidades, gimnasios o en cualquier lugar. La Demostración se basa en compartir con las personas presentes las soluciones que ofrecen nuestros productos con ejemplos o experiencias sencillas y rápidas. Si el lugar lo permite se puede preparar una sencilla y deliciosa receta.</p>
                 </div>
-                <div class="col-lg-5 py-5">
+                <div class="col-lg-5 py-5" data-aos="flip-down">
                     <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-tematica-tupperware.jpg" width="100%" alt="">
                     <h3 class="my-3">Demostraciones Temáticas</h3>
                     <p style="text-align:center;">Son Demostraciones en donde se preparan recetas sencillas enfocadas en algún tema: comida saludable, bebidas nutritivas, dulces para niños, etc. Se realizan principalmente en el hogar de una Anfitriona en compañía de sus invitados.</p>
                 </div>
-                <div class="col-lg-5 py-5">
+                <div class="col-lg-5 py-5" data-aos="flip-down">
                     <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-gastronomica-tupperware.jpg" width="100%" alt="">
                     <h3 class="my-3">Demostraciones Gastronómicas</h3>
                     <p style="text-align:center;">Son Demostraciones en donde se 
@@ -585,6 +588,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         auto: true,
         time: 3 // secondly
     });
+</script>
+<script>
+    AOS.init();
 </script>
 
 </html>

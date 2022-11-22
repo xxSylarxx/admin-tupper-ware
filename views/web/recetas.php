@@ -382,6 +382,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             color: #3f3f3f;
             padding: 10px 18px;
         }
+
         #videos .card .news {
             position: absolute;
             top: 50%;
@@ -448,52 +449,55 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <div class="row">
             <div class="col-md-4 my-4 px-4">
                 <a href="receta1" class="card border-0 shadow h-100">
-                <span class="news">Recetas</span>
+                    <span class="news">Recetas</span>
                     <img src="https://deslumbrantes.com.bo/wp-content/uploads/2020/07/crema-champinones.jpg" width="100%" height="230">
                     <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">RECETA1</h5>
+                        <h5 class="text-info fw-bold pt-4">CREMA DE CHAMPIÑONES</h5>
                         <div class="detalle">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet recusandae corrupti, quidem quibusdam tenetur labore corporis ex ipsum esse quam tempora atque obcaecati quisquam fuga nulla. Neque, aliquid eaque.
+                            6 Porciones Tiempo de preparación: 25 minutos
+                            INGREDIENTES 5oo gramos de champiñones frescos o de lata.
                         </div>
                     </div>
                     <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">22-11-2022</span>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 my-4 px-4">
-                <a href="receta2" class="card border-0 shadow h-100">
-                <span class="news">Recetas</span>
+                <a href="receta1" class="card border-0 shadow h-100">
+                    <span class="news">Recetas</span>
                     <img src="https://deslumbrantes.com.bo/wp-content/uploads/2020/07/crema-champinones.jpg" width="100%" height="230">
                     <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">RECETA2</h5>
+                        <h5 class="text-info fw-bold pt-4">CREMA DE CHAMPIÑONES</h5>
                         <div class="detalle">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet recusandae corrupti, quidem quibusdam tenetur labore corporis ex ipsum esse quam tempora atque obcaecati quisquam fuga nulla. Neque, aliquid eaque.
+                            6 Porciones Tiempo de preparación: 25 minutos
+                            INGREDIENTES 5oo gramos de champiñones frescos o de lata.
                         </div>
                     </div>
                     <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">22-11-2022</span>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 my-4 px-4">
-                <a href="receta3" class="card border-0 shadow h-100">
-                <span class="news">Recetas</span>
+                <a href="receta1" class="card border-0 shadow h-100">
+                    <span class="news">Recetas</span>
                     <img src="https://deslumbrantes.com.bo/wp-content/uploads/2020/07/crema-champinones.jpg" width="100%" height="230">
                     <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">RECETA3</h5>
+                        <h5 class="text-info fw-bold pt-4">CREMA DE CHAMPIÑONES</h5>
                         <div class="detalle">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eveniet recusandae corrupti, quidem quibusdam tenetur labore corporis ex ipsum esse quam tempora atque obcaecati quisquam fuga nulla. Neque, aliquid eaque.
+                            6 Porciones Tiempo de preparación: 25 minutos
+                            INGREDIENTES 5oo gramos de champiñones frescos o de lata.
                         </div>
                     </div>
                     <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">22-11-2022</span>
                     </div>
                 </a>
             </div>
         </div>
     </section>
-    
+
     <br>
     <br>
     <br>

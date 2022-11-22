@@ -54,7 +54,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- CARROUSEL -->
-
+    <!-- ANIMACIONES AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -444,7 +446,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="datos">
         <div class="container">
             <div class="row">
-                <div class="col-lg">
+                <div class="col-lg" data-aos="zoom-out">
                     <h2 style="text-align:center;font-weight:900;">OFICINA CENTRAL</h2>
                     <br>
 
@@ -457,10 +459,10 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             </div>
             <br>
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-7" data-aos="zoom-out">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.4601899522104!2d-77.01058778592615!3d-12.149041447117556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b81fb3b4e9d3%3A0xb5726c6ef736cb3f!2sAv.%20Jorge%20Chavez%201289%2C%20Santiago%20de%20Surco%2015049!5e0!3m2!1ses!2spe!4v1668554788359!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="col-lg-4 my-auto">
+                <div class="col-lg-4 my-auto" data-aos="zoom-out">
                     <img src="<?= PATH_PUBLIC ?>/img/icons/siemprejuntos.png" class="img-fluid w-100" alt="">
                 </div>
             </div>
@@ -527,3 +529,6 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 </script>
 
 </html>
+<script>
+  AOS.init();
+</script>

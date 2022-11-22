@@ -5,7 +5,7 @@ use Admin\Models;
 $objModal = new Models\ModalModel;
 $objBanner = new Models\BannerModel;
 $objEmpresa = new Models\EmpresaModel;
-$objPublicaciones = new Models\PublicacionModel;
+$objPublicaciones = new Models\PublicacionModel3;
 $objCorreos = new Models\CorreosModel;
 
 /* $dataCorreo = $objCorreos->registrarCorreos('1','2222'); */
@@ -13,7 +13,7 @@ $objCorreos = new Models\CorreosModel;
 $dataEmpresa = $objEmpresa->listEmpresa()[1];
 $dataBanner = $objBanner->listBannerInWeb();
 $dataModal = $objModal->obtenerPopUp();
-$dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
+$dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -43,6 +43,10 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- CARROUSEL -->
+
+    <!-- ANIMACIONES AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 </head>
@@ -360,12 +364,12 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
 
         }
     </style>
-   
+
 
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
     <?php include_once PATH_ROOT . '/views/web/partials/redes.php'; ?>
- <!-- admin - ventana emergente -->
- <?php if ($dataModal['visible'] == 'S') : ?>
+    <!-- admin - ventana emergente -->
+    <?php if ($dataModal['visible'] == 'S') : ?>
         <style>
             #modalAdmin div.responsive {
                 position: relative;
@@ -383,7 +387,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
                 height: 100%;
             }
         </style>
-        
+
         <div class="modal" id="modalAdmin" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
                 <div class="modal-content animate__animated <?= $dataModal['animation'] ?>" style="<?= ($dataModal['margen'] == 'N' && $dataModal['header'] == 'N') ? 'background: transparent; border: none;' : null ?>">
@@ -394,13 +398,13 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
                         </div>
                     <?php } ?>
                     <div class="modal-body <?= $dataModal['margen'] == 'N' ? 'p-0' : null ?>">
-                        <//?= $dataModal['cuerpo'] ?>
+                        </ /?=$dataModal['cuerpo'] ?>
                         <iframe width="100%" height="500" src="https://www.youtube.com/embed/63KnsWe2Tqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     <?php endif; ?>
     <section>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -426,7 +430,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
         </div>
     </section>
     <br><br>
-    
+
     <section id="resumen">
         <div class="container">
             <div class="row d-flex justify-content-around">
@@ -439,49 +443,30 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
                         <p style="text-align: center;">
                             Dicen que en este mundo nada es para siempre, excepto nuestros productos.
                         </p>
+                        
+                       <center><div class="col-lg-3 text-black fw-bold text-center" style="border-bottom:2px solid var(--color1);">
+                       <a href="/alacena">Ver Más</a>
+                       </div></center>
                     </div>
                 </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                    <div class="div1">
-                        <div class="images">
-                            <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto1.jpg">
-                        </div>
-                        <div class="div2">
-                            <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto2.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                    <div class="div1">
-                        <div class="images">
-                            <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto1.jpg">
-                        </div>
-                        <div class="div2">
-                            <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto2.jpg">
-                        </div>
-                    </div>
+                <?php foreach ($dataPublicaciones as $key => $pub) : ?>
+                    <div class="my-auto col-lg-2 d-flex justify-content-center">
+                        <a href="/pub/<?= $pub['tagname'] ?>">
+                            <div class="div1">
 
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                    <div class="div1">
-                        <div class="images">
-                            <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto1.jpg">
-                        </div>
-                        <div class="div2">
-                            <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto2.jpg">
-                        </div>
+                                <div class="images">
+                                    <img class="crop1" src="<?= $pub['portada'] ?>">
+                                </div>
+                                <div class="div2">
+                                    <img class="crop1" src="<?= $pub['img1'] ?>">
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="titulo pt-2"><?= $pub['titulo'] ?></h5>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col-lg-2 d-flex justify-content-center">
-                    <div class="div1">
-                        <div class="images">
-                            <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto1.jpg">
-                        </div>
-                        <div class="div2">
-                            <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/producto2.jpg">
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -491,10 +476,10 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     <section id="idyoutube">
         <div class="container">
             <div class="row d-flex">
-                <div class="col-lg-6" style="box-shadow: 0px 31px 10px -11px rgba(0,0,0,0.5);">
+                <div class="col-lg-6" style="box-shadow: 0px 31px 10px -11px rgba(0,0,0,0.5);" data-aos="flip-left">
                     <iframe width="100%" height="350" src="https://www.youtube.com/embed/Sbb5U8kYMIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="col-lg-6" style="box-shadow: 0px 31px 10px -11px rgba(0,0,0,0.5);">
+                <div class="col-lg-6" style="box-shadow: 0px 31px 10px -11px rgba(0,0,0,0.5);" data-aos="flip-right">
                     <iframe width="100%" height="350" src="https://www.youtube.com/embed/bYsprATsHoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
@@ -603,13 +588,17 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 3);
     });
 </script>
 <script>
-            // instancia y muestra la ventana
-            let modalAdmin = new bootstrap.Modal(document.getElementById('modalAdmin'));
-            modalAdmin.show();
-            // al cierre de la ventana eliminamos el contenido
-            let modalAdmin2 = document.getElementById('modalAdmin');
-            modalAdmin2.addEventListener('hide.bs.modal', function(event) {
-                document.querySelector('.modal-body').remove();
-            });
-        </script>
+    // instancia y muestra la ventana
+    let modalAdmin = new bootstrap.Modal(document.getElementById('modalAdmin'));
+    modalAdmin.show();
+    // al cierre de la ventana eliminamos el contenido
+    let modalAdmin2 = document.getElementById('modalAdmin');
+    modalAdmin2.addEventListener('hide.bs.modal', function(event) {
+        document.querySelector('.modal-body').remove();
+    });
+</script>
+
 </html>
+<script>
+  AOS.init();
+</script>

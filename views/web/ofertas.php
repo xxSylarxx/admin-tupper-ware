@@ -365,6 +365,62 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             font-weight: 700;
         }
 
+        #videos a.card {
+            transition: transform .3s ease-in-out;
+        }
+
+        #videos a.card:hover {
+            transform: scale(1.05);
+        }
+
+        #videos .card-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 16px;
+            background: transparent;
+            color: #3f3f3f;
+            padding: 10px 18px;
+        }
+
+        #videos .card .news {
+            position: absolute;
+            top: 58%;
+            left: 40%;
+            padding: 4px 12px;
+            background-color: var(--color1);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+
+
+            transform: translateY(-5%);
+
+        }
+
+        .videos .card-footer i {
+            font-size: 20px;
+        }
+
+        .videos h5 {
+            font-size: 19px;
+            text-transform: uppercase;
+        }
+
+        .videos .detalle {
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-align: justify;
+            font-size: 17px;
+            color: #747474;
+            line-height: 1.6;
+        }
+
+
+
 
         @media only screen and (max-width:1399px) {
 
@@ -382,57 +438,69 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="portada">
         <div class="container">
             <div class="row">
-
                 <h1>OFERTAS</h1>
             </div>
         </div>
     </section>
     <br><br>
-    <section id="resumen">
-        <div class="container">
-            <div class="row d-flex justify-content-around">
-                <div class="col-lg">
-                    <div class="row">
-                       <h2>¡Descubre nuestras ofertas y disfruta de todas las novedades y oportunidades ventajosas!</h2>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="row d-flex justify-content-around">
-                        <div class="col-lg-4 d-flex justify-content-center">
-                            <div class="div1">
-                                <div class="images">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_bienvenida.jpg">
-                                </div>
-                                <div class="div2">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_bienvenida.jpg">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 d-flex justify-content-center">
-                            <div class="div1">
-                                <div class="images">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_lanzamiento.jpg">
-                                </div>
-                                <div class="div2">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_lanzamiento.jpg">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 d-flex justify-content-center">
-                            <div class="div1">
-                                <div class="images">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_lanzamiento.jpg">
-                                </div>
-                                <div class="div2">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_lanzamiento.jpg">
-                                </div>
-                            </div>
+
+    <section class="container videos" id="videos">
+        <br>
+        <div class="row">
+            <h2>¡Descubre nuestras ofertas y disfruta de todas las novedades y oportunidades ventajosas!</h2>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-4 my-4 px-4">
+                <a href="#" class="card border-0 shadow h-100">
+                    <span class="news">Ofertas</span>
+                    <!-- <img src="<?= PATH_PUBLIC ?>/img/galeria/blog1.jpg" class="img-fluid" alt=""> -->
+                    <img src="<?= PATH_PUBLIC ?>/img/galeria/blog1.jpg" width="100%" height="330">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold pt-4">INICIA TU NEGOCIO</h5>
+                        <div class="detalle">
+                            No necesitas inversión inicial, obten ganancias semanales.Te capacitamos de forma gratuita
                         </div>
                     </div>
-                </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 my-4 px-4">
+                <a href="#" class="card border-0 shadow h-100">
+                    <span class="news">Ofertas</span>
+                    <img src="<?= PATH_PUBLIC ?>/img/galeria/blog2.jpg" width="100%" height="330">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold pt-4">EMPRENDE CON NOSOTROS</h5>
+                        <div class="detalle">
+                            Conviértete en emprendedora independiente con nosotros. ¡Genera tus propios ingresos y alcanza tus metas!
+                        </div>
+                    </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 my-4 px-4">
+                <a href="#" class="card border-0 shadow h-100">
+                    <span class="news">Ofertas</span>
+                    <img src="<?= PATH_PUBLIC ?>/img/galeria/blog3.jpg" width="100%" height="330">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold pt-4">KIT DE BIENVENIDA</h5>
+                        <div class="detalle">
+                            Al iniciar tu negocio con nosotros, te entregamos este KIT DE BIENVENIDA
+                        </div>
+                    </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
+
     <br>
     <br>
     <br>

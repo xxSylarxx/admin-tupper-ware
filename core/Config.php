@@ -6,7 +6,7 @@ define("PATH_ROOT", dirname(__DIR__));
 define("PATH_PUBLIC", PATH_WEB . "/public");
 
 // publicaciones
-define("PUB_MAX_WEB", 9);
+define("PUB_MAX_WEB", 15);
 define("PUB_MAX_ADMIN", 12);
 define("PUB_SUB_CATEG", false);
 

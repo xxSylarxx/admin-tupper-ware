@@ -205,7 +205,6 @@
     .btn-mas label {
         display: block;
         text-decoration: none;
-
         color: #fff;
         width: 55px;
         height: 55px;
@@ -237,7 +236,7 @@
 
     .btn-mas label {
         cursor: pointer;
-        background: var(--color2);
+        background: var(--color1);
         font-size: 23px;
     }
 

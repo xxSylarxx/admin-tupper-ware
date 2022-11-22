@@ -54,7 +54,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- CARROUSEL -->
-
+    <!-- ANIMACIONES AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -455,7 +457,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 
         <div class="container">
             <div class="row d-flex justify-content-around">
-                <div class="col-lg-5">
+                <div class="col-lg-5" data-aos="flip-up">
                     <div style="display:flex; align-items:center;">
                         <span style="color:white;font-size:40px;">Nuestra</span>&nbsp;&nbsp;<span style="color:var(--color1);font-size:40px;">Historia</span>
                     </div>
@@ -463,7 +465,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                         <img src="<?= PATH_PUBLIC ?>/img/img-page/historia-tupperware-1.png" class="w-100 img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6" style="text-align:justify;color:white;">
+                <div class="col-lg-6" style="text-align:justify;color:white;" data-aos="flip-up">
                     <p>En 1937 Earl Silas Tupper, un ingeniero químico que trabajaba
                         en la Planta Química de Dupont, en Delaware, Estados Unidos,
                         decide renunciar a su trabajo para empezar su propia empresa. Tupper
@@ -494,7 +496,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 my-auto" style="text-align:justify;">
+                <div class="col-lg-6 my-auto" style="text-align:justify;" data-aos="flip-up">
                     <p>Luego de una extensa búsqueda de ideas,
                         Tupper diseñó un sello hermético circular,
                         inspirado en la tapa de un bote de pintura.
@@ -527,7 +529,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                         así como la directora del sistema de ventas directas o “Reuniones en casa”.
                     </p>
                 </div>
-                <div class="col-lg-6 my-auto">
+                <div class="col-lg-6 my-auto" data-aos="flip-up">
                     <div class="row">
                         <div class="col-lg-6"><img src="<?= PATH_PUBLIC ?>/img/img-page/historia-tupperware1.jpg" class="w-100 img-fluid p-2" alt=""></div>
                         <div class="col-lg-6"><img src="<?= PATH_PUBLIC ?>/img/img-page/historia-tupperware2.jpg" class="w-100 img-fluid p-2" alt=""></div>
@@ -541,8 +543,8 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-10">
-                <iframe width="100%" height="450" src="https://www.youtube.com/embed/kHBZQX-HKYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="col-lg-10" data-aos="zoom-in">
+                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/kHBZQX-HKYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -550,7 +552,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-10" style="background-color:white;">
+                <div class="col-lg-10" style="background-color:white;" data-aos="zoom-in-down">
                     <p style="padding-top:2rem;color:var(--color8);font-size:23px;text-align:center;font-weight:700;">Tupperware se esfuerza por ser la empresa de venta directa que más presta al desarrollo personal y da oportunidades de ingreso a la población del país.</p>
                     <p style="padding-bottom:2rem;color:var(--color1);font-size:23px;text-align:center;font-weight:700;">Te ayudamos a cambiar tú vida…</p>
                 </div>
@@ -617,3 +619,6 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 </script>
 
 </html>
+<script>
+  AOS.init();
+</script>

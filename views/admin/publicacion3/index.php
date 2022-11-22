@@ -132,7 +132,7 @@
                 <?php endif; ?>
 
                 <button class="btn btn-danger me-3" data-bs-toggle="modal" data-bs-target="#modalCategorias"><i class="far fa-list-alt"></i>&nbsp; Ver categorías</button>
-                <a href="/admin/publicacion2/editor" class="btn btn-success text-white"><i class="fas fa-plus"></i>&nbsp; <?= $this->translate('Nueva publicación') ?></a>
+                <a href="/admin/publicacion3/editor" class="btn btn-success text-white"><i class="fas fa-plus"></i>&nbsp; <?= $this->translate('Nueva publicación') ?></a>
             </div>
         </div>
         <hr>
@@ -145,12 +145,12 @@
                             <img src="<?= $pub['portada'] ?>" onerror="this.src = `/public/img/icons/portada-default.png`">
                         </div>
                         <div class="card-body py-3">
-                            <h6 class="pub-categoria text-uppercase fw-bold"><?= $pub['categoria2'] ?></h6>
+                            <h6 class="pub-categoria text-uppercase fw-bold"><?= $pub['categoria3'] ?></h6>
                             <a href="/pub/<?= $pub['tagname'] ?>" class="pub-titulo text-uppercase" target="_blank"><?= $pub['titulo'] ?></a>
                             <p class="pub-fecha mt-2"><i class="far fa-calendar-alt"></i> <?= \Admin\Core\Funciones::obtenerFecha($pub['fecpub']) ?>&nbsp;&nbsp; <i class="far fa-clock"></i> <?= \Admin\Core\Funciones::obtenerHora($pub['fecpub']) ?></p>
                         </div>
                         <div class="card-footer d-flex align-items-center" style="padding-top: 12px; padding-bottom: 12px;">
-                            <button class="btn btn-outline-success me-2" onclick="location.href = '/admin/publicacion2/editor/<?= $pub['idpub'] ?>'" title="Editar"><i class="fas fa-pencil-alt"></i></button>
+                            <button class="btn btn-outline-success me-2" onclick="location.href = '/admin/publicacion3/editor/<?= $pub['idpub'] ?>'" title="Editar"><i class="fas fa-pencil-alt"></i></button>
                             <button class="btn btn-outline-danger" onclick="eliminarPub('<?= $pub['idpub'] ?>')" title="Eliminar"><i class="far fa-trash-alt"></i></button>
                             <div class="ms-auto d-flex">
                                 <label class="form-check-label me-1" style="padding-top: 1px; cursor: pointer;" for="check-<?= $pub['idpub'] ?>"><?= $this->translate('Visible') ?></label>
@@ -234,7 +234,7 @@
                 denyButtonText: 'Cancelar',
             }).then(async (result) => {
                 if (result.isConfirmed) {
-                    const url = `/admin/publicacion2/eliminar/${idpub}`;
+                    const url = `/admin/publicacion3/eliminar/${idpub}`;
                     fetch(url, {
                         method: 'GET'
                     }).then(function(res) {
@@ -255,7 +255,7 @@
 
         const cambiarEstado = (idpub) => {
             const estado = document.getElementById('check-' + idpub).checked;
-            const url = `/admin/publicacion2/estado/${idpub}/${estado ? 'S' : 'N'}`;
+            const url = `/admin/publicacion3/estado/${idpub}/${estado ? 'S' : 'N'}`;
             fetch(url, {
                 method: 'GET'
             }).then(function(res) {
@@ -268,7 +268,7 @@
         }
 
         const actionCategoria = (action, idcateg = null) => {
-            let url = '/admin/publicacion2/categoria';
+            let url = '/admin/publicacion3/categoria';
             if (action == 'save') {
                 const name = document.getElementById('txtcategoria').value;
                 if (name == '') return;
@@ -294,7 +294,7 @@
         }
 
         const cambiarCategoria = (value) => {
-            location.href = '/admin/publicacion2/' + value;
+            location.href = '/admin/publicacion3/' + value;
         }
 
         setTimeout(() => {
