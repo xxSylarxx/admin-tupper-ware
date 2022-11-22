@@ -491,11 +491,11 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
     <br>
     <section id="productos">
         <div class="container">
-            <div class="row py-5 d-flex justify-content-center ">
+            <div class="row py-5 d-flex justify-content-center " data-aos="fade-up">
                 <div class="col-lg-6  d-flex justify-content-center">
                     <img src="<?= PATH_PUBLIC ?>/img/galeria/blog1.jpg" class="img-fluid" alt="">
                 </div>
-                <div class="col-lg-4 my-auto">
+                <div class="col-lg-4 my-auto" >
                     <h4>Inicia tu negocio</h4>
                     <h5>Únete a nosotros</h5>
                     <p>No necesitas inversión inicial, obten ganancias semanales.Te capacitamos de forma gratuita</p>
@@ -504,7 +504,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
                 </div>
             </div>
             <hr>
-            <div class="row py-5 d-flex justify-content-center">
+            <div class="row py-5 d-flex justify-content-center" data-aos="fade-up">
                 <div class="col-lg-4 my-auto">
                     <h4>Emprende con nosotros</h4>
                     <h5>Tú pones los horarios</h5>
@@ -517,7 +517,7 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
                 </div>
             </div>
             <hr>
-            <div class="row py-5 d-flex justify-content-center ">
+            <div class="row py-5 d-flex justify-content-center " data-aos="fade-up">
                 <div class="col-lg-6  d-flex justify-content-center">
                     <img src="<?= PATH_PUBLIC ?>/img/galeria/blog3.jpg" class="img-fluid" alt="">
                 </div>
