@@ -646,7 +646,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                     es para la Anfitriona que ofreció su casa y
                     los invitados que lo comparten.</p>
 
-                <button> Consultar </button>
+                <a href="/form-carrera"><button> Consultar </button></a>
 
             </div>
 
@@ -689,7 +689,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <center><img src="<?= PATH_PUBLIC ?>/img/img-page/tips-organizar-tupperware.jpg" class="w-75 img-fluid " alt=""></center>
+                    <center><img src="<?= PATH_PUBLIC ?>/img/img-page/blog3.jpg" class="w-75 img-fluid " alt=""></center>
                 </div>
                 <div class="col-lg-6 my-auto">
                     <section class="d-flex list  ">
@@ -899,7 +899,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                     <span style="color:white;font-size:1.5rem;font-weight:600;">¿Te gustaría realizar una Experiencia?.</span>
                 </div>
                 <div class="col-lg-3">
-                    <button> Contáctanos </button>
+                    <a href="/form-carrera"><button> Contáctanos </button></a>
                 </div>
             </div>
         </div>

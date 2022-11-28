@@ -116,7 +116,7 @@ switch ($pagina) {
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">CÁTALAGOS</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="/catalogo">CATÁLOGO</a>
-                            <a class="dropdown-item" href="/revista">REVISTA IMÁN</a>
+                            <!-- a class="dropdown-item" href="/revista">REVISTA IMÁN</a> -->
                             <a class="dropdown-item" href="/ofertas">OFERTAS</a>
                         </div>
                     </li>
@@ -157,6 +157,7 @@ switch ($pagina) {
                             <a class="dropdown-item" href="/siempre-juntos">Siempre Juntos Perú</a>
                             <a class="dropdown-item" href="/nosotros">Nosotros</a>
                             <a class="dropdown-item" href="/futuro">Camino hacia el futuro</a>
+                            <a class="dropdown-item" href="https://museodigital.com.mx/" target="_blank">Museo</a>
 
                         </div>
                     </li>

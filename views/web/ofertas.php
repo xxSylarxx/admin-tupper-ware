@@ -3,8 +3,8 @@
 use Admin\Models;
 
 $objEmpresa = new Models\EmpresaModel;
-$objCategorias = new Models\CategoriasModel;
-$objPublicaciones = new Models\PublicacionModel;
+$objCategorias = new Models\CategoriasModel3;
+$objPublicaciones = new Models\PublicacionModel3;
 $dataEmpresa = $objEmpresa->listEmpresa()[1];
 $dataCategorias = $objCategorias->listCategoriasInWeb();
 
@@ -18,8 +18,8 @@ if ($filter !== 'all') {
     $nameCategoria = $dataCategoria['nombre'];
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 } else {
-    $idCateg = '5';
-    $nameCategoria = '5';
+    $idCateg = '15';
+    $nameCategoria = '15';
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 }
 
@@ -452,52 +452,24 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <br>
         <div class="row">
+        <?php foreach ($dataPublicaciones as $key => $pub) : ?>
             <div class="col-md-4 my-4 px-4">
-                <a href="#" class="card border-0 shadow h-100">
+                <a href="/pub2/<?= $pub['tagname'] ?>" class="card border-0 shadow h-100">
                     <span class="news">Ofertas</span>
                     <!-- <img src="<?= PATH_PUBLIC ?>/img/galeria/blog1.jpg" class="img-fluid" alt=""> -->
-                    <img src="<?= PATH_PUBLIC ?>/img/galeria/blog1.jpg" width="100%" height="330">
+                    <img src="<?= $pub['portada'] ?>" width="100%" height="330">
                     <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">INICIA TU NEGOCIO</h5>
+                        <h5 class="text-info fw-bold pt-4"><?= $pub['titulo'] ?></h5>
                         <div class="detalle">
-                            No necesitas inversión inicial, obten ganancias semanales.Te capacitamos de forma gratuita
+                        <?= $pub['detalle'] ?>
                         </div>
                     </div>
                     <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">&nbsp; <?= date('M d, Y', strtotime($pub['fecpub'])) ?></span>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 my-4 px-4">
-                <a href="#" class="card border-0 shadow h-100">
-                    <span class="news">Ofertas</span>
-                    <img src="<?= PATH_PUBLIC ?>/img/galeria/blog2.jpg" width="100%" height="330">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">EMPRENDE CON NOSOTROS</h5>
-                        <div class="detalle">
-                            Conviértete en emprendedora independiente con nosotros. ¡Genera tus propios ingresos y alcanza tus metas!
-                        </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 my-4 px-4">
-                <a href="#" class="card border-0 shadow h-100">
-                    <span class="news">Ofertas</span>
-                    <img src="<?= PATH_PUBLIC ?>/img/galeria/blog3.jpg" width="100%" height="330">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">KIT DE BIENVENIDA</h5>
-                        <div class="detalle">
-                            Al iniciar tu negocio con nosotros, te entregamos este KIT DE BIENVENIDA
-                        </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">24-04-2022</span>
-                    </div>
-                </a>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
 

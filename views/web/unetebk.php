@@ -54,9 +54,6 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- CARROUSEL -->
-    <!-- ANIMACIONES AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 </head>
@@ -368,7 +365,6 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             font-weight: 700;
         }
 
-        /* Estilos de boton */
         #unete button {
             font-family: inherit;
             font-size: 20px;
@@ -422,13 +418,6 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             }
         }
 
-        #tipos3 {
-            background-color: var(--color1);
-        }
-
-
-
-
 
 
         @media only screen and (max-width:1399px) {
@@ -439,12 +428,6 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 margin-top: 0rem !important;
             }
 
-            #nosotros3 {
-                background-image: url('<?= PATH_PUBLIC ?>/img/img-page/fondo-celeste-punto-blancos-3-1.jpg');
-                background-size: 120%;
-                background-repeat: no-repeat;
-            }
-
         }
     </style>
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
@@ -453,87 +436,55 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section id="portada">
         <div class="container">
             <div class="row">
-                <h1>TIPOS DE DEMOSTRACIÓN</h1>
+                <h1>ÚNETE</h1>
             </div>
         </div>
     </section>
-    <section id="tipos1">
-
-        <img src="<?= PATH_PUBLIC ?>/img/img-page/tipos_portada.jpg" width="100%" alt="">
-
-    </section>
-    <section id="tipos2">
-
-        <div class="container my-5" >
-            <div class="row">
-                <div class="col-lg-5 my-auto" data-aos="flip-right">
-                    <h2 style="font-family: 'Hind Vadodara', sans-serif;font-size:50px;">MOMENTOS</h2>
-                    <h2 style="font-family: 'Hind Vadodara', sans-serif; font-weight:700;font-size:50px;">DIVERTIDOS</h2>
-                </div>
-                <div class="col-lg-6" data-aos="flip-right">
-                    <p>Programar tus demostraciones te
-                        brindará la confianza que necesitas
-                        para reclutar, fechar y planificar el ingreso
-                        que desees percibir, ya que has experimentado lo
-                        exitoso que puede ser el negocio. Realiza tu actividad
-                        con satisfacción, con excelencia y creatividad, sean demostraciones o reuniones de negocios; esto provoca que los beneficios sean constantes y por consiguiente aumentarán tus ingresos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="tipos3">
-        <br>
-        <br>
+    <br><br>
+    <section id="unete">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-10" data-aos="flip-up">
-                    <h2 style="font-size:60px;color:var(--color5);font-weight:600;">Tipos de Demostración</h2>
-                    <br>
-                    <p style="text-align:center;color:var(--color5);font-size:22px;font-weight:400;">Una Demostración es un
-                        momento divertido en el que se muestran los beneficios y soluciones<br> que ofrecen los
-                        productos Tupperware involucrando a todos los asistentes. Dependiendo de<br> las necesidades,
-                        se pueden definir diferentes tipos de Demostraciones adaptadas al lugar,<br> tiempo y temática
-                        requerida por los asistentes.</p>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-    </section>
-    <section id="tipo4">
-        <br>
-        <br>
-        <div class="container">
-            <div class="row d-flex justify-content-around" >
-                <div class="col-lg-5 py-5" data-aos="flip-down">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-tupperware-uno-uno.jpg" width="100%" alt="">
-                    <h3 class="my-3">Demostraciones Uno a Uno</h3>
-                    <p style="text-align:center;">Son Demostraciones que se hace a una sola persona para mostrar las características y beneficios de alguno de nuestros productos.</p>
-                </div>
-                <div class="col-lg-5 py-5" data-aos="flip-down">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-rapida-tupperware.jpg" width="100%" alt="">
-                    <h3 class="my-3">Demostraciones Rápidas</h3>
-                    <p style="text-align:center;">Se realizan en pequeños recesos en las oficinas, universidades, gimnasios o en cualquier lugar. La Demostración se basa en compartir con las personas presentes las soluciones que ofrecen nuestros productos con ejemplos o experiencias sencillas y rápidas. Si el lugar lo permite se puede preparar una sencilla y deliciosa receta.</p>
-                </div>
-                <div class="col-lg-5 py-5" data-aos="flip-down">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-tematica-tupperware.jpg" width="100%" alt="">
-                    <h3 class="my-3">Demostraciones Temáticas</h3>
-                    <p style="text-align:center;">Son Demostraciones en donde se preparan recetas sencillas enfocadas en algún tema: comida saludable, bebidas nutritivas, dulces para niños, etc. Se realizan principalmente en el hogar de una Anfitriona en compañía de sus invitados.</p>
-                </div>
-                <div class="col-lg-5 py-5" data-aos="flip-down">
-                    <img src="<?= PATH_PUBLIC ?>/img/img-page/demostracion-gastronomica-tupperware.jpg" width="100%" alt="">
-                    <h3 class="my-3">Demostraciones Gastronómicas</h3>
-                    <p style="text-align:center;">Son Demostraciones en donde se 
-                    realizan recetas especializadas haciendo uso de nuestros productos 
-                    y compartiendo con los invitados un momento especial en donde todos 
-                    participan en la realización de los platos que luego serán degustados 
-                    por los asistentes.</p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
 
+                <div class="col-lg-5 d-flex justify-content-center" style="background-color:var(--color1);">
+
+                    <div class="p-5 " style="margin:auto auto;">
+                        <h2 class="py-3" style="border-bottom: 4px solid #ffdb00;color:white;font-weight:900;">INICIA TU CARRERA CON TUPPERWARE</h2>
+
+                        <br>
+                        <p style="color:white;font-weight:600;">Hoy tú puedes formar parte de nuestra
+                            fuerza de ventas en donde podrás tener
+                            flexibilidad con tus horarios, ganar dinero,
+                            crecer personal y profesionalmente.</p>
+                        <br>
+                        <div class="d-flex justify-content-center">
+                            <button>
+                                <a href="https://forms.gle/ESneVXioTopDd5QYA" style="color:white;" target="_blank">
+                                    <div class="svg-wrapper-1">
+                                        <div class="svg-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                                <span>Inscríbete Ya</span>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-7 p-0">
+                    <img src="<?= PATH_PUBLIC ?>/img/img-page/unete.jpg" class="img-fluid w-100" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
 
     <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
 </body>
@@ -588,9 +539,6 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         auto: true,
         time: 3 // secondly
     });
-</script>
-<script>
-    AOS.init();
 </script>
 
 </html>

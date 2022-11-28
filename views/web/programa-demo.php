@@ -455,7 +455,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                         <br>
                         <div class="d-flex justify-content-center">
                             <button>
-                                <a href="https://forms.gle/ESneVXioTopDd5QYA" style="color:white;" target="_blank">
+                                <a href="/unete" style="color:white;" >
                                     <div class="svg-wrapper-1">
                                         <div class="svg-wrapper">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">

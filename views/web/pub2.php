@@ -3,11 +3,11 @@
 use Admin\Models;
 
 $objEmpresa = new Models\EmpresaModel;
-$objCategorias = new Models\CategoriasModel2;
-$objPublicacion = new Models\PublicacionModel2;
+$objCategorias = new Models\CategoriasModel3;
+$objPublicacion = new Models\PublicacionModel3;
 $dataEmpresa = $objEmpresa->listEmpresa()[1];
 $dataCategorias = $objCategorias->listCategoriasInWeb();
-$listPublicaciones = $objPublicacion->listPublicacionesInWeb(0, 5);
+$listPublicaciones = $objPublicacion->listPublicacionesInWeb(0, 5,15);
 
 if (isset($URI[1])) {
     if ($URI[1] == 'preview') {
@@ -31,7 +31,7 @@ if (isset($URI[1])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= mb_strtoupper($dataEmpresa['nombre'], 'UTF-8') ?></title>
-    <link rel="shortcut icon" href="<?= PATH_PUBLIC ?>/img/icons/escudo.png" type="image/png">
+    <link rel="shortcut icon" href="<?= PATH_PUBLIC ?>/img/icons/icon.png" type="image/png">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/animate.min.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/bootstrap.min.css">
@@ -123,12 +123,14 @@ if (isset($URI[1])) {
             object-fit: cover;
 
         }
+
         .crop2 {
             width: 600px;
             height: 600px;
             object-fit: cover;
 
         }
+
         .crop3 {
             width: 240px;
             height: 240px;
@@ -162,9 +164,15 @@ if (isset($URI[1])) {
         #minigaleria img:hover {
             opacity: .5;
         }
-        #cuerpo-publicacion span{
+
+        #cuerpo-publicacion span {
             font-size: 14px;
             line-height: 0px;
+        }
+
+        .btn-primary {
+            background-color: var(--color1) !important;
+            border-color: var(--color1) !important;
         }
     </style>
 
@@ -183,127 +191,33 @@ if (isset($URI[1])) {
 
     <br><br><br>
 
-    <section class="container  animate__animated animate__zoomIn" id="publications">
-        <div class="row justify-content-between">
-            <div class="col-md-6 my-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
+    <section class="container-fluid  animate__animated animate__zoomIn" id="publications">
 
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <?php
-                                    if (!empty($dataPub['portada'])) { ?>
-                                        <div id="slider1" class="carousel-item active" data-bs-interval="10000">
+        <div class="row justify-content-around">
+            <div class="col-md-7">
+                <img src="<?= $dataPub['portada'] ?>" alt="" class="img-fluid">
+                <br>
+                <div>
+                    <?= $dataPub['cuerpo'] ?>
 
-                                            <img src="<?= $dataPub['portada'] ?>" class="d-block crop2">
-
-                                            <!--   <img src="..." class="d-block w-100" alt="..."> -->
-                                        </div>
-                                    <?php } ?>
-                                    <?php
-                                    if (!empty($dataPub['img1'])) { ?>
-                                        <div id="slider2" class="carousel-item" data-bs-interval="2000">
-
-                                            <img src="<?= $dataPub['img1'] ?>" class="d-block crop2">
-
-                                        </div>
-                                    <?php } ?>
-                                    <?php
-                                    if (!empty($dataPub['img2'])) { ?>
-                                        <div id="slider3" class="carousel-item" data-bs-interval="2000">
-
-                                            <img src="<?= $dataPub['img2'] ?>" class="d-block crop2">
-
-                                        </div>
-                                    <?php } ?>
-                                    <?php
-                                    if (!empty($dataPub['img3'])) { ?>
-                                        <div id="slider4" class="carousel-item" data-bs-interval="2000">
-                                            <img src="<?= $dataPub['img3'] ?>" class="d-block crop2">
-                                        </div>
-                                    <?php } ?>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <!-- <//?php
-                            if (!empty($dataPub['portada'])) { ?>
-                                <img src="<//?= $dataPub['portada'] ?>" width="100%">
-                            <//?php } ?> -->
-                        </div>
-                    </div>
-                    <div id="minigaleria" class="row d-flex justify-content-around pt-5">
-                        <?php
-                        if (!empty($dataPub['portada'])) { ?>
-                            <div id="divsombra1" class="col-lg-3 px-2">
-
-                                <img id="minigaleria1" src="<?= $dataPub['portada'] ?>" class="crop1">
-
-                            </div>
-                        <?php } ?>
-                        <?php
-                        if (!empty($dataPub['img1'])) { ?>
-                            <div id="divsombra2" class="col-lg-3 px-2">
-
-                                <img id="minigaleria2" src="<?= $dataPub['img1'] ?>" class="crop1">
-
-                            </div>
-                        <?php } ?>
-                        <?php
-                        if (!empty($dataPub['img2'])) { ?>
-                            <div id="divsombra3" class="col-lg-3 px-2">
-
-                                <img id="minigaleria3" src="<?= $dataPub['img2'] ?>" class="crop1">
-
-                            </div>
-                        <?php } ?>
-                        <?php
-                        if (!empty($dataPub['img3'])) { ?>
-                            <div div="divsombra4" class="col-lg-3 px-2">
-
-                                <img id="minigaleria4" src="<?= $dataPub['img3'] ?>" class="crop1">
-
-                            </div>
-                        <?php } ?>
-                    </div>
                 </div>
-
             </div>
-            <div class="col-md-6 my-2">
-            
+            <div class="col-md-3">
 
-                <div class="card border-0">
-                    <div class="card-header">
-                        <div class="px-2">
-                            <h3 class="titulo "><?= $dataPub['titulo'] ?></h3>
-                            <!--  <p class="date">
-                                <i class="far fa-calendar"></i>&nbsp; <//?= date('M d, Y', strtotime($dataPub['fecpub'])) ?>
-                                <i class="far fa-clock ms-3"></i> <//?= date('h:i', strtotime($dataPub['fecpub'])) ?>
-                            </p> -->
-                        </div>
-                    </div>
-                    <div id="cuerpo-publicacion" class="card-body p-1">
-                        <?= $dataPub['cuerpo'] ?>
-
-                    </div>
-                </div>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftupperwareperuoficial&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=543564153315944" width="100%" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
+
     </section>
     <br>
+    <br>
+    <div class="d-flex justify-content-center"><a href="/ofertas"><button class="btn btn-primary float-right"><i class="fas fa-chevron-double-left"></i>&nbsp;&nbsp;Regresar</button></a></div>
 
     <section id="otros">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="fw-bold mb-2 mt-4 text-start">CONOCE MÁS PRODUCTOS</h2>
+                    <h2 class="fw-bold mb-2 mt-4 text-start">CONOCE MÁS OFERTAS</h2>
                     <br>
                     <br>
                     <div class="row">
@@ -314,16 +228,19 @@ if (isset($URI[1])) {
                             }
                         ?>
                             <div class="col-lg-3 ">
-                                <a href="/pub/<?= $pub['tagname'] ?>">
+                                <a href="/pub2/<?= $pub['tagname'] ?>">
                                     <div class="div1 ">
                                         <div class="images d-flex justify-content-center">
                                             <img class="crop3" src="<?= $pub['portada'] ?>">
                                         </div>
+                                        <?php
+                                            if(!empty($pub['img1'])){?>
                                         <center>
                                             <div class="div2">
                                                 <img class="crop3" src="<?= $pub['img1'] ?>">
                                             </div>
                                         </center>
+                                        <?php } ?>
                                     </div>
                                 </a>
 
@@ -341,6 +258,7 @@ if (isset($URI[1])) {
 
 </body>
 <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
+
 </html>
 
 <script>
@@ -373,5 +291,4 @@ if (isset($URI[1])) {
         document.getElementById("slider2").classList.remove("active");
         document.getElementById("slider3").classList.remove("active");
     }
-
 </script>

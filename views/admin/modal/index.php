@@ -296,9 +296,9 @@
                             if (result.files.length > 0) {
                                 vue.listFiles = vue.listFiles.concat(result.files);
                                 vue.totalFiles = result.total;
-                            } else {
+                            } /* else {
                                 vue.sweetAlert(`<?= $this->translate('No hay más archivos para mostrar') ?>`, 'warning');
-                            }
+                            } */
                         } catch (error) {
                             vue.sweetAlert(res, 'error');
                         }

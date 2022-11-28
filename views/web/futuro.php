@@ -552,7 +552,14 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     </section>
     <section id="futuro1">
 
-        <img src="<?= PATH_PUBLIC ?>/img/img-page/camino-futuro-tupper.jpg" width="100%" alt="">
+        <!--   <div class="container-fluid px-0" >
+            <video width="100%"  style="height: calc(100vh - 90px);" controls >
+                <source src="<//?= PATH_PUBLIC ?>/img/img-page/video_futuro.mp4" type="video/mp4">
+            </video>        
+        </div> -->
+        <div class="container-fluid px-0">
+            <iframe width="100%" height="700" src="https://www.youtube.com/embed/WyhBMajAgT8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
     </section>
     <section id="futuro2">

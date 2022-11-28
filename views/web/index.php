@@ -14,6 +14,7 @@ $dataEmpresa = $objEmpresa->listEmpresa()[1];
 $dataBanner = $objBanner->listBannerInWeb();
 $dataModal = $objModal->obtenerPopUp();
 $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
+$dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -387,7 +388,6 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
                 height: 100%;
             }
         </style>
-
         <div class="modal" id="modalAdmin" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
                 <div class="modal-content animate__animated <?= $dataModal['animation'] ?>" style="<?= ($dataModal['margen'] == 'N' && $dataModal['header'] == 'N') ? 'background: transparent; border: none;' : null ?>">
@@ -398,37 +398,66 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
                         </div>
                     <?php } ?>
                     <div class="modal-body <?= $dataModal['margen'] == 'N' ? 'p-0' : null ?>">
-                        </ /?=$dataModal['cuerpo'] ?>
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/63KnsWe2Tqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <?= $dataModal['cuerpo'] ?>
                     </div>
                 </div>
             </div>
         </div>
 
     <?php endif; ?>
-    <section>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="<?= PATH_PUBLIC ?>/img/banner/banner1.png" class="d-block w-100" alt="...">
+    <!-- admin - banner dinámico -->
+    <div class="container-fluid content-banner px-0">
+        <?php
+        if ($dataBanner['tipo'] == 'slider') { ?>
+            <div id="carouselBanner" class="carousel slide <?= $dataBanner['opciones']['fade'] ? 'carousel-fade' : null ?>" data-bs-ride="carousel">
+                <?php if ($dataBanner['opciones']['indicadores']) { ?>
+                    <div class="carousel-indicators">
+                        <?php
+                        foreach ($dataBanner['cuerpo'] as $key => $val) : ?>
+                            <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="<?= $key ?>" class="<?= $key == 0 ? 'active' : '' ?>"></button>
+                        <?php endforeach; ?>
+                    </div>
+                <?php } ?>
+                <div class="carousel-inner">
+                    <?php
+                    foreach ($dataBanner['cuerpo'] as $key => $val) : ?>
+                        <div class="carousel-item <?= $key == 0 ? 'active' : '' ?>">
+                            <?php if (empty($val['enlace'])) { ?>
+                                <img src="<?= $val['imagen'] ?>" class="d-block w-100" style="<?= $dataBanner['opciones']['dimensionar'] ? 'object-fit: cover;' : null ?>;">
+                            <?php } else { ?>
+                                <a href="<?= $val['enlace'] ?>">
+                                    <img src="<?= $val['imagen'] ?>" class="d-block w-100" style="<?= $dataBanner['opciones']['dimensionar'] ? 'object-fit: cover;' : null ?>;">
+                                </a>
+                            <?php } ?>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-                <div class="carousel-item">
-                    <img src="<?= PATH_PUBLIC ?>/img/banner/banner2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="<?= PATH_PUBLIC ?>/img/banner/banner3.png" class="d-block w-100" alt="...">
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
+        <?php } else if ($dataBanner['tipo'] == 'video' && $dataBanner['opciones']['youtube'] == true) {
+            $src  = $dataBanner['cuerpo'] . '?rel=0&showinfo=0';
+            $src .= $dataBanner['opciones']['controls'] ? '&controls=1' : '&controls=0';
+            $src .= $dataBanner['opciones']['autoplay'] ? '&autoplay=1' : '&autoplay=0';
+            $src .= $dataBanner['opciones']['muted'] ? '&mute=1' : '&mute=0';
+        ?>
+            <div class="frame-responsive"><iframe src="<?= $src ?>" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <?php } else {
+            $target  = 'src="' . $dataBanner['cuerpo'] . '"';
+            $target .= $dataBanner['opciones']['controls'] ? ' controls ' : '';
+            $target .= $dataBanner['opciones']['autoplay'] ? ' autoplay ' : '';
+            $target .= $dataBanner['opciones']['muted'] ? ' muted' : '';
+        ?>
+            <video <?= $target ?> width="100%" style="<?= $dataBanner['opciones']['dimensionar'] ? 'object-fit: cover;' : null ?>;" loop></video>
+        <?php } ?>
+    </div>
+
     <br><br>
 
     <section id="resumen">
@@ -443,10 +472,12 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
                         <p style="text-align: center;">
                             Dicen que en este mundo nada es para siempre, excepto nuestros productos.
                         </p>
-                        
-                       <center><div class="col-lg-3 text-black fw-bold text-center" style="border-bottom:2px solid var(--color1);">
-                       <a href="/alacena">Ver Más</a>
-                       </div></center>
+
+                        <center>
+                            <div class="col-lg-3 text-black fw-bold text-center" style="border-bottom:2px solid var(--color1);">
+                                <a href="/alacena">Ver Más</a>
+                            </div>
+                        </center>
                     </div>
                 </div>
                 <?php foreach ($dataPublicaciones as $key => $pub) : ?>
@@ -491,46 +522,39 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
     <br>
     <section id="productos">
         <div class="container">
-            <div class="row py-5 d-flex justify-content-center " data-aos="fade-up">
-                <div class="col-lg-6  d-flex justify-content-center">
-                    <img src="<?= PATH_PUBLIC ?>/img/galeria/blog1.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-4 my-auto" >
-                    <h4>Inicia tu negocio</h4>
-                    <h5>Únete a nosotros</h5>
-                    <p>No necesitas inversión inicial, obten ganancias semanales.Te capacitamos de forma gratuita</p>
-                    <br>
-                    <div class="d-flex justify-content-center"><button class="btn btn-primary float-right">Ver más</button></div>
-                </div>
-            </div>
-            <hr>
-            <div class="row py-5 d-flex justify-content-center" data-aos="fade-up">
-                <div class="col-lg-4 my-auto">
-                    <h4>Emprende con nosotros</h4>
-                    <h5>Tú pones los horarios</h5>
-                    <p>Conviértete en emprendedora independiente con nosotros. ¡Genera tus propios ingresos y alcanza tus metas!</p>
-                    <br>
-                    <div class="d-flex justify-content-center"><button class="btn btn-primary float-right">Ver más</button></div>
-                </div>
-                <div class="col-lg-6  d-flex justify-content-center">
-                    <img src="<?= PATH_PUBLIC ?>/img/galeria/blog2.jpg" class="img-fluid" alt="">
-                </div>
-            </div>
-            <hr>
-            <div class="row py-5 d-flex justify-content-center " data-aos="fade-up">
-                <div class="col-lg-6  d-flex justify-content-center">
-                    <img src="<?= PATH_PUBLIC ?>/img/galeria/blog3.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="col-lg-4 my-auto">
-                    <h4>Kit de bienvenida</h4>
-                    <h5>Tu primer paso al éxito</h5>
-                    <p>Al iniciar tu negocio con nosotros, te entregamos este KIT DE BIENVENIDA</p>
-                    <br>
-                    <div class="d-flex justify-content-center"><button class="btn btn-primary float-right">Ver más</button></div>
-                </div>
-            </div>
-            <hr>
+            <?php foreach ($dataPublicaciones2 as $key => $pub) : ?>
+                <?php if ($key == 0 || $key == 2) {
+                ?>
+                    <div class="row py-5 d-flex justify-content-center " data-aos="fade-up">
+                        <div class="col-lg-6  d-flex justify-content-center">
+                            <img src="<?= $pub['portada'] ?>" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-4 my-auto">
+                            <h2 style="color:var(--color1);font-weight:bold;"><?= $pub['titulo'] ?></h2>
+                            <h3 style="color:black;font-weight:bold;">Únete a nosotros</h3>
+                            <p style="font-size:20px;"><?= $pub['detalle'] ?></p>
+                            <br>
+                            <div class="d-flex justify-content-center"><a href="/pub2/<?= $pub['tagname'] ?>"><button class="btn btn-primary float-right">Ver más</button></a></div>
+                        </div>
+                    </div>
+                    <hr>
+                <?php } else { ?>
+                    <div class="row py-5 d-flex justify-content-center" data-aos="fade-up">
+                        <div class="col-lg-4 my-auto">
+                            <h2 style="color:var(--color1);font-weight:bold;"><?= $pub['titulo'] ?></h2>
+                            <h3 style="color:black;font-weight:bold;">Tú pones los horarios</h3>
+                            <p style="font-size:20px;"><?= $pub['detalle'] ?></p>
+                            <br>
+                            <div class="d-flex justify-content-center"><a href="/pub2/<?= $pub['tagname'] ?>"><button class="btn btn-primary float-right">Ver más</button></a></div>
+                        </div>
+                        <div class="col-lg-6  d-flex justify-content-center">
+                            <img src="<?= $pub['portada'] ?>" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <hr>
 
+                <?php } ?>
+            <?php endforeach; ?>
         </div>
     </section>
     <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
@@ -600,5 +624,5 @@ $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
 
 </html>
 <script>
-  AOS.init();
+    AOS.init();
 </script>

@@ -590,7 +590,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 <div class="col-lg-6 my-auto">
                     <section class="d-flex list  ">
                         <span style="color:#D8723E;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                        <span class="ms-3" style="text-align:justify;">Es aquella persona que junto a su Dealer re
+                        <span class="ms-3" style="text-align:justify;">Es aquella persona que junto a su comerciante re
                             aliza una Experiencia Tupperware invitando a sus familiares,
                             amigos y conocidos a disfrutarla; allí podrán compartir las
                             bondades y usos de los productos disponibles.</span>
@@ -599,7 +599,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                         <span style="color:#D8723E;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
                         <span class="ms-3" style="text-align:justify;">La Anfitriona
                             podrá obtener Set Exclusivos según el nivel que logre
-                            la Dealer en su reunión.</span>
+                            la comerciante en su reunión.</span>
                     </section>
                 </div>
             </div>
@@ -648,7 +648,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                     </section>
                     <section class="d-flex list  ">
                         <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
-                        <span class="ms-3" style="text-align:justify;">Comerciante ruby.</span>
+                        <span class="ms-3" style="text-align:justify;">Tipos de comerciantes.</span>
                     </section>
                     <section class="d-flex list  ">
                         <span style="color:#D7D53F;"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
@@ -680,9 +680,9 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 </div>
             </div>
             <br>
-            <p style="text-align:center;color:#D5453A;font-size:21px;font-weight:800;">Dealer que logro consolidar su grupo
+            <p style="text-align:center;color:#D5453A;font-size:21px;font-weight:800;">Comerciante que logró consolidar su grupo
                 de personas y las encamina al Éxito, realiza <br>reuniones de unidad y las capacita.</p>
-            <p style="text-align:center;">Empresario (a) que entrena y da seguimiento a sus Dealers,
+            <p style="text-align:center;">Empresario (a) que entrena y da seguimiento a sus Comerciantes,
                 brindándoles la Oportunidad de ser futuras Empresarias (os).</p>
             <br>
             <div class="row">

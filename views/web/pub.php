@@ -319,11 +319,14 @@ if (isset($URI[1])) {
                                         <div class="images d-flex justify-content-center">
                                             <img class="crop3" src="<?= $pub['portada'] ?>">
                                         </div>
+                                        <?php
+                                            if(!empty($pub['img1'])){?>
                                         <center>
                                             <div class="div2">
                                                 <img class="crop3" src="<?= $pub['img1'] ?>">
                                             </div>
                                         </center>
+                                        <?php } ?>
                                     </div>
                                 </a>
 
