@@ -195,7 +195,7 @@ if (isset($URI[1])) {
 
         <div class="row justify-content-around">
             <div class="col-md-7">
-                <img src="<?= $dataPub['portada'] ?>" alt="" class="img-fluid">
+                <center><img src="<?= $dataPub['portada'] ?>" alt="" class="img-fluid" height="500" width="700"></center>
                 <br>
                 <div>
                     <?= $dataPub['cuerpo'] ?>
