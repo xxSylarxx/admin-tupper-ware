@@ -5,12 +5,15 @@ use Admin\Models;
 $objModal = new Models\ModalModel;
 $objBanner = new Models\BannerModel;
 $objEmpresa = new Models\EmpresaModel;
+$objYoutube = new Models\YoutubeModel;
 $objPublicaciones = new Models\PublicacionModel3;
 $objCorreos = new Models\CorreosModel;
 
 /* $dataCorreo = $objCorreos->registrarCorreos('1','2222'); */
 
 $dataEmpresa = $objEmpresa->listEmpresa()[1];
+$dataYoutube = $objYoutube->obtenerenlace1();
+$dataYoutube2 = $objYoutube->obtenerenlace2();
 $dataBanner = $objBanner->listBannerInWeb();
 $dataModal = $objModal->obtenerPopUp();
 $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb(0, 4, 14);
@@ -508,10 +511,10 @@ $dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
         <div class="container">
             <div class="row d-flex">
                 <div class="col-lg-6" style="box-shadow: 0px 31px 10px -11px rgba(0,0,0,0.5);" data-aos="flip-left">
-                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/Sbb5U8kYMIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="350" src="<?php echo ($dataYoutube); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-lg-6" style="box-shadow: 0px 31px 10px -11px rgba(0,0,0,0.5);" data-aos="flip-right">
-                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/bYsprATsHoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="350" src="<?php echo ($dataYoutube2); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -531,7 +534,7 @@ $dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
                         </div>
                         <div class="col-lg-4 my-auto">
                             <h2 style="color:var(--color1);font-weight:bold;"><?= $pub['titulo'] ?></h2>
-                            <h3 style="color:black;font-weight:bold;">Únete a nosotros</h3>
+                            <h3 style="color:black;font-weight:bold;"><?= $pub['subtitulo'] ?></h3>
                             <p style="font-size:20px;"><?= $pub['detalle'] ?></p>
                             <br>
                             <div class="d-flex justify-content-center"><a href="/pub2/<?= $pub['tagname'] ?>"><button class="btn btn-primary float-right">Ver más</button></a></div>
@@ -542,7 +545,7 @@ $dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
                     <div class="row py-5 d-flex justify-content-center" data-aos="fade-up">
                         <div class="col-lg-4 my-auto">
                             <h2 style="color:var(--color1);font-weight:bold;"><?= $pub['titulo'] ?></h2>
-                            <h3 style="color:black;font-weight:bold;">Tú pones los horarios</h3>
+                            <h3 style="color:black;font-weight:bold;"><?= $pub['subtitulo'] ?></h3>
                             <p style="font-size:20px;"><?= $pub['detalle'] ?></p>
                             <br>
                             <div class="d-flex justify-content-center"><a href="/pub2/<?= $pub['tagname'] ?>"><button class="btn btn-primary float-right">Ver más</button></a></div>

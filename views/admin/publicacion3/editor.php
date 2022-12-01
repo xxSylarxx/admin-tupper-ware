@@ -41,6 +41,13 @@
             border-radius: 0px;
             font-weight: bold;
         }
+        #subtitulo {
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid rgb(126, 126, 126);
+            border-radius: 0px;
+            font-weight: bold;
+        }
 
         #modalFiles .file-item-img {
             border-radius: 1px;
@@ -178,6 +185,7 @@
                 </div>
                 <div class="ps-4" style="width: calc(100% - 285px);">
                     <input type="text" class="form-control mb-3" id="titulo" name="titulo" value="<?= $this->dataPub['titulo'] ?>" placeholder="<?= $this->translate('Titulo de publicación') ?>" required>
+                    <input type="text" class="form-control mb-3" id="subtitulo" name="subtitulo" value="<?= $this->dataPub['subtitulo'] ?>" placeholder="<?= $this->translate('Subtitulo') ?>" required>
                     <textarea id="editor"><?php echo $this->dataPub['cuerpo'] ?></textarea>
                 </div>
             </div>

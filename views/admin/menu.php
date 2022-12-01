@@ -40,6 +40,14 @@
                 </span>
             </a>
         </li>
+        <li>
+            <a href="/admin/youtube" class="<?php echo $this->view_name == 'youtube' ? 'active' : '' ?>">
+            <i class="fab fa-youtube"></i>
+                <span class="links_name">
+                    <?= $this->translate('Videos Youtube') ?>
+                </span>
+            </a>
+        </li>
         <!-- <li>
             <a href="/admin/correos" class="<?//php echo $this->view_name == 'suscripciones' ? 'active' : '' ?>">
                 <i class="fas fa-envelope"></i>

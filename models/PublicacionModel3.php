@@ -82,7 +82,7 @@ class PublicacionModel3 extends DataBase
             $query = $this->bd->from('publicacion3 pb')
                 ->innerJoin('categorias3 ct ON ct.idcatg = pb.idcatg')
                 ->select(null)
-                ->select('pb.idpub, pb.idcatg, ct.nombre as categoria3, pb.titulo, pb.tagname, pb.portada, pb.detalle, pb.fecpub, pb.visible, pb.img1')
+                ->select('pb.idpub, pb.idcatg, ct.nombre as categoria3, pb.titulo, pb.tagname, pb.portada, pb.detalle, pb.fecpub, pb.visible, pb.img1, pb.subtitulo')
                 ->where("pb.idcatg LIKE '{$categoria}' AND pb.fecpub <= NOW() AND pb.visible = 'S'")
                 ->orderBy('fecpub DESC')
                 ->limit($limt)
@@ -186,6 +186,7 @@ class PublicacionModel3 extends DataBase
             'idcatg' => null,
             'portada' => null,
             'img1' => null,
+            'subtitulo' => null,
             'img2' => null,
             'img3' => null,
             'img4' => null,
