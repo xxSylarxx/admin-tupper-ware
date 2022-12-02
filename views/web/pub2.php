@@ -30,7 +30,8 @@ if (isset($URI[1])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= mb_strtoupper($dataEmpresa['nombre'], 'UTF-8') ?></title>
+    <meta name="description" content="<?= $dataEmpresa['metades'] ?>">
+    <title><?= $dataEmpresa['nombre'] ?></title>
     <link rel="shortcut icon" href="<?= PATH_PUBLIC ?>/img/icons/icon.png" type="image/png">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="<?= PATH_PUBLIC ?>/css/animate.min.css">
@@ -195,8 +196,8 @@ if (isset($URI[1])) {
 
         <div class="row justify-content-around">
             <div class="col-md-7">
-                <center><img src="<?= $dataPub['portada'] ?>" alt="" class="img-fluid" height="500" width="700"></center>
-                <br>
+                <!-- <center><img src="<//?= $dataPub['portada'] ?>" alt="" class="img-fluid" height="500" width="700"></center> -->
+                
                 <div>
                     <?= $dataPub['cuerpo'] ?>
 

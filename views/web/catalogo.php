@@ -393,29 +393,11 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             <div class="row d-flex justify-content-around">
                 <div class="col-lg">
                     <div class="row">
-                       <h2>¡Descubre nuestras ofertas y disfruta de todas las novedades y oportunidades ventajosas!</h2>
+                        <h2>Conoce nuestro nuevo catalogo e informate sobre lo nuevo que hay para ti. <br>
+                        Un catalogo novedoso y pensado exclusivamente para ti, con las mejores herramientas par llevar adelante tu negocio.   ( vigencia de semana #49 - #53) </h2>
                     </div>
-                    <div class="row d-flex justify-content-around">
-                        <div class="col-lg-3 d-flex justify-content-center">
-                            <div class="div1">
-                                <div class="images">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_bienvenida.jpg">
-                                </div>
-                                <div class="div2">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_bienvenida.jpg">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 d-flex justify-content-center">
-                            <div class="div1">
-                                <div class="images">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_lanzamiento.jpg">
-                                </div>
-                                <div class="div2">
-                                    <img class="crop1" src="<?= PATH_PUBLIC ?>/img/galeria/kit_lanzamiento.jpg">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row justify-content-around mt-4 pt-4">
+                        <iframe src="<?= PATH_PUBLIC ?>/files/Tupperware-Catalogo-2-Peru-FINAL.pdf" class="shadow" frameborder="0" width="100%" height="900"></iframe>
                     </div>
                 </div>
             </div>

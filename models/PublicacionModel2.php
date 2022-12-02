@@ -189,6 +189,13 @@ class PublicacionModel2 extends DataBase
             'img2' => null,
             'img3' => null,
             'img4' => null,
+            'img5' => null,
+            'img6' => null,
+            'img7' => null,
+            'img8' => null,
+            'img9' => null,
+            'img10' => null,
+            'img11' => null,
             'cuerpo' => null,
             'fecpub' => date('Y-m-d\TH:i'),
             'detalle' => null

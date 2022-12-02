@@ -160,14 +160,32 @@
                             <textarea class="form-control mt-1 mb-3" rows="1" name="detalle" id="detalle" maxlength="170" placeholder="Opcional"><?= $this->dataPub['detalle'] ?></textarea>
                             <span><?= $this->translate('Imágen de portada') ?> :</span>
                             <input type="text" class="form-control mt-1 mb-2" name="portada" id="portada" value="<?= $this->dataPub['portada'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
-                           
+
                             <span><?= $this->translate('Imagen 1') ?> :</span>
                             <input type="text" class="form-control mt-1 mb-2" name="img1" id="img1" value="<?= $this->dataPub['img1'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
                             <span><?= $this->translate('Imagen 2') ?> :</span>
                             <input type="text" class="form-control mt-1 mb-2" name="img2" id="img2" value="<?= $this->dataPub['img2'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
                             <span><?= $this->translate('Imagen 3') ?> :</span>
                             <input type="text" class="form-control mt-1 mb-2" name="img3" id="img3" value="<?= $this->dataPub['img3'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
-                           <!--  <span><//?= $this->translate('Imagen 4') ?> :</span>
+                            <div>
+                                <span><?= $this->translate('Imagen 4') ?> :</span>
+                                <input type="text" class="form-control mt-1 mb-2" name="img4" id="img4" value="<?= $this->dataPub['img4'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
+                                <span><?= $this->translate('Imagen 5') ?> :</span>
+                                <input type="text" class="form-control mt-1 mb-2" name="img5" id="img5" value="<?= $this->dataPub['img5'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
+                                <span><?= $this->translate('Imagen 6') ?> :</span>
+                                <input type="text" class="form-control mt-1 mb-2" name="img6" id="img6" value="<?= $this->dataPub['img6'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
+                                <span><?= $this->translate('Imagen 7') ?> :</span>
+                                <input type="text" class="form-control mt-1 mb-2" name="img7" id="img7" value="<?= $this->dataPub['img7'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
+                                <span><?= $this->translate('Imagen 8') ?> :</span>
+                                <input type="text" class="form-control mt-1 mb-2" name="img8" id="img8" value="<?= $this->dataPub['img8'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
+                                <span><?= $this->translate('Imagen 9') ?> :</span>
+                                <input type="text" class="form-control mt-1 mb-2" name="img9" id="img9" value="<?= $this->dataPub['img9'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
+                                <span><?= $this->translate('Imagen 10') ?> :</span>
+                                <input type="text" class="form-control mt-1 mb-2" name="img10" id="img10" value="<?= $this->dataPub['img10'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
+                                <span><?= $this->translate('Imagen 11') ?> :</span>
+                                <input type="text" class="form-control mt-1 mb-2" name="img11" id="img11" value="<?= $this->dataPub['img11'] ?>" oninput="changePortada(this.value)" placeholder="<?= $this->translate('Link de imagen') ?>">
+                            </div>
+                            <!--  <span><//?= $this->translate('Imagen 4') ?> :</span>
                             <input type="text" class="form-control mt-1 mb-2" name="img4" id="img4" value="<//?= $this->dataPub['img4'] ?>" oninput="changePortada(this.value)" placeholder="//<//?= $this->translate('Link de imagen') ?>"> -->
                             <img class="mt-2" src="<?= $this->dataPub['portada'] ?>" onerror="this.src = `https://via.placeholder.com/320x220`" id="imgPortada">
                             <!-- hidden -->
@@ -278,7 +296,7 @@
         const changePortada = (value) => {
             if (value.substring(0, 19) == 'https://img.youtube') {
                 document.getElementById("imgPortada").src = value;
-                
+
             } else {
                 let videoId = value.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
                 if (videoId != null) {
@@ -291,7 +309,7 @@
                     document.getElementById("imgPortada").src = thumb;
                 } else {
                     document.getElementById('imgPortada').setAttribute('src', value);
-                    
+
                 }
             }
         }
