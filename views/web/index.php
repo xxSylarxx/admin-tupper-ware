@@ -485,7 +485,7 @@ $dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
                 </div>
                 <?php foreach ($dataPublicaciones as $key => $pub) : ?>
                     <div class="my-auto col-lg-2 d-flex justify-content-center">
-                        <a href="/pub/<?= $pub['tagname'] ?>">
+                        <a href="/pub3/<?= $pub['tagname'] ?>">
                             <div class="div1">
 
                                 <div class="images">
@@ -537,7 +537,7 @@ $dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
                             <h3 style="color:black;font-weight:bold;"><?= $pub['subtitulo'] ?></h3>
                             <p style="font-size:20px;"><?= $pub['detalle'] ?></p>
                             <br>
-                            <div class="d-flex justify-content-center"><a href="/pub2/<?= $pub['tagname'] ?>"><button class="btn btn-primary float-right">Ver más</button></a></div>
+                            <div class="d-flex justify-content-center"><a href="/pub3/<?= $pub['tagname'] ?>"><button class="btn btn-primary float-right">Ver más</button></a></div>
                         </div>
                     </div>
                     <hr>
@@ -548,7 +548,7 @@ $dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
                             <h3 style="color:black;font-weight:bold;"><?= $pub['subtitulo'] ?></h3>
                             <p style="font-size:20px;"><?= $pub['detalle'] ?></p>
                             <br>
-                            <div class="d-flex justify-content-center"><a href="/pub2/<?= $pub['tagname'] ?>"><button class="btn btn-primary float-right">Ver más</button></a></div>
+                            <div class="d-flex justify-content-center"><a href="/pub3/<?= $pub['tagname'] ?>"><button class="btn btn-primary float-right">Ver más</button></a></div>
                         </div>
                         <div class="col-lg-6  d-flex justify-content-center">
                             <img src="<?= $pub['portada'] ?>" class="img-fluid" alt="">

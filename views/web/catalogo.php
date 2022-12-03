@@ -390,15 +390,19 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <br><br>
     <section id="resumen">
         <div class="container">
-            <div class="row d-flex justify-content-around">
-                <div class="col-lg">
-                    <div class="row">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-6">
+                    <img src="<?= PATH_PUBLIC ?>/img/img-page/portada_catalogo.jpg" class="img-fluid" alt="">
+                    <!-- <div class="row">
                         <h2>Conoce nuestro nuevo catalogo e informate sobre lo nuevo que hay para ti. <br>
                         Un catalogo novedoso y pensado exclusivamente para ti, con las mejores herramientas par llevar adelante tu negocio.   ( vigencia de semana #49 - #53) </h2>
                     </div>
                     <div class="row justify-content-around mt-4 pt-4">
-                        <iframe src="<?= PATH_PUBLIC ?>/files/Tupperware-Catalogo-2-Peru-FINAL.pdf" class="shadow" frameborder="0" width="100%" height="900"></iframe>
-                    </div>
+                        <iframe src="<//?= PATH_PUBLIC ?>/files/Tupperware-Catalogo-2-Peru-FINAL.pdf" class="shadow" frameborder="0" width="100%" height="900"></iframe>
+                    </div> -->
+                    <br>
+    <br>
+    <div class="d-flex justify-content-center"><a href="<?= PATH_PUBLIC ?>/files/Tupperware-Catalogo-2-Peru-FINAL.pdf" target="_blank"><button class="btn btn-primary float-right"><i class="fas fa-chevron-double-left"></i>&nbsp;&nbsp;Ver Catálogo</button></a></div>
                 </div>
             </div>
         </div>

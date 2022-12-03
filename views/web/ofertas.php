@@ -454,7 +454,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <div class="row">
         <?php foreach ($dataPublicaciones as $key => $pub) : ?>
             <div class="col-md-4 my-4 px-4">
-                <a href="/pub2/<?= $pub['tagname'] ?>" class="card border-0 shadow h-100">
+                <a href="/pub3/<?= $pub['tagname'] ?>" class="card border-0 shadow h-100">
                     <span class="news">Ofertas</span>
                     <!-- <img src="<?= PATH_PUBLIC ?>/img/galeria/blog1.jpg" class="img-fluid" alt=""> -->
                     <img src="<?= $pub['portada'] ?>" width="100%" height="330">
