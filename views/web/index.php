@@ -530,7 +530,7 @@ $dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
                 ?>
                     <div class="row py-5 d-flex justify-content-center " data-aos="fade-up">
                         <div class="col-lg-6  d-flex justify-content-center">
-                            <img src="<?= $pub['portada'] ?>" class="img-fluid" alt="">
+                            <img src="<?= $pub['portada'] ?>" class="img-fluid" alt="" style="object-fit:cover;">
                         </div>
                         <div class="col-lg-4 my-auto">
                             <h2 style="color:var(--color1);font-weight:bold;"><?= $pub['titulo'] ?></h2>
@@ -551,7 +551,7 @@ $dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
                             <div class="d-flex justify-content-center"><a href="/pub3/<?= $pub['tagname'] ?>"><button class="btn btn-primary float-right">Ver más</button></a></div>
                         </div>
                         <div class="col-lg-6  d-flex justify-content-center">
-                            <img src="<?= $pub['portada'] ?>" class="img-fluid" alt="">
+                            <img src="<?= $pub['portada'] ?>" class="img-fluid" alt="" style="object-fit:cover;">
                         </div>
                     </div>
                     <hr>
