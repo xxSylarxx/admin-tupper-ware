@@ -485,7 +485,7 @@ $dataPublicaciones2 = $objPublicaciones->listPublicacionesInWeb(0, 4, 15);
                 </div>
                 <?php foreach ($dataPublicaciones as $key => $pub) : ?>
                     <div class="my-auto col-lg-2 d-flex justify-content-center">
-                        <a href="/pub3/<?= $pub['tagname'] ?>">
+                        <a href="/pub4/<?= $pub['tagname'] ?>">
                             <div class="div1">
 
                                 <div class="images">

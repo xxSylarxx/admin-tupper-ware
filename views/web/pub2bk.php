@@ -3,8 +3,8 @@
 use Admin\Models;
 
 $objEmpresa = new Models\EmpresaModel;
-$objCategorias = new Models\CategoriasModel3;
-$objPublicacion = new Models\PublicacionModel3;
+$objCategorias = new Models\CategoriasModel2;
+$objPublicacion = new Models\PublicacionModel2;
 $dataEmpresa = $objEmpresa->listEmpresa()[1];
 $dataCategorias = $objCategorias->listCategoriasInWeb();
 $listPublicaciones = $objPublicacion->listPublicacionesInWeb(0, 5,15);
@@ -212,7 +212,7 @@ if (isset($URI[1])) {
     </section>
     <br>
     <br>
-    <div class="d-flex justify-content-center"><a href="/ofertas"><button class="btn btn-primary float-right">Ver Más Ofertas</button></a></div>
+    <div class="d-flex justify-content-center"><a href="/ofertas"><button class="btn btn-primary float-right"><i class="fas fa-chevron-double-left"></i>&nbsp;&nbsp;Regresar</button></a></div>
 
     <section id="otros">
         <div class="container">
