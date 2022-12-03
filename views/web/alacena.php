@@ -411,8 +411,8 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                         <h3>INTRODUCCIÓN</h3>
                         <br>
                         <br>
-                        <p>Productos para almacenar alimentos secos y mantenerlos 
-                            en buenas condiciones por más tiempo. Prácticas y líneas modernas, 
+                        <p>Productos para almacenar alimentos secos y mantenerlos
+                            en buenas condiciones por más tiempo. Prácticas y líneas modernas,
                             diseñadas para organizar y decorar su cocina.
                             Tienen tamaños ideales para satisfacer las diferentes necesidades de almacenamiento.
                             Deja que tu cocina sea más organizado y hermoso!<br><br>
@@ -430,9 +430,14 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                                         <div class="images">
                                             <img class="crop1" src="<?= $pub['portada'] ?>">
                                         </div>
-                                        <div class="div2">
-                                            <img class="crop1" src="<?= $pub['img1'] ?>">
-                                        </div>
+                                        <?php
+                                        if (!empty($pub['img1'])) { ?>
+                                            <div class="div2">
+
+                                                <img class="crop1" src="<?= $pub['img1'] ?>">
+
+                                            </div>
+                                        <?php } ?>
                                     </div>
                                     <div>
                                         <h5 class="titulo pt-2"><?= $pub['titulo'] ?></h5>
