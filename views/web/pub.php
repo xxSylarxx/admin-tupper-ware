@@ -224,6 +224,54 @@ if (isset($URI[1])) {
                                             <img src="<?= $dataPub['img3'] ?>" class="d-block crop2">
                                         </div>
                                     <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img4'])) { ?>
+                                        <div id="slider5" class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img4'] ?>" class="d-block crop2">
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img5'])) { ?>
+                                        <div id="slider6" class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img5'] ?>" class="d-block crop2">
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img6'])) { ?>
+                                        <div id="slider7" class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img6'] ?>" class="d-block crop2">
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img7'])) { ?>
+                                        <div id="slider8" class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img7'] ?>" class="d-block crop2">
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img8'])) { ?>
+                                        <div id="slider9" class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img8'] ?>" class="d-block crop2">
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img9'])) { ?>
+                                        <div id="slider10" class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img9'] ?>" class="d-block crop2">
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img10'])) { ?>
+                                        <div id="slider11" class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img10'] ?>" class="d-block crop2">
+                                        </div>
+                                    <?php } ?>
+                                    <?php
+                                    if (!empty($dataPub['img11'])) { ?>
+                                        <div id="slider12" class="carousel-item" data-bs-interval="2000">
+                                            <img src="<?= $dataPub['img11'] ?>" class="d-block crop2">
+                                        </div>
+                                    <?php } ?>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -270,6 +318,70 @@ if (isset($URI[1])) {
                             <div div="divsombra4" class="col-lg-3 px-2">
 
                                 <img id="minigaleria4" src="<?= $dataPub['img3'] ?>" class="crop1">
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img4'])) { ?>
+                            <div div="divsombra5" class="col-lg-3 px-2">
+
+                                <img id="minigaleria5" src="<?= $dataPub['img4'] ?>" class="crop1">
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img5'])) { ?>
+                            <div div="divsombra6" class="col-lg-3 px-2">
+
+                                <img id="minigaleria6" src="<?= $dataPub['img5'] ?>" class="crop1">
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img6'])) { ?>
+                            <div div="divsombra7" class="col-lg-3 px-2">
+
+                                <img id="minigaleria7" src="<?= $dataPub['img6'] ?>" class="crop1">
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img7'])) { ?>
+                            <div div="divsombra8" class="col-lg-3 px-2">
+
+                                <img id="minigaleria8" src="<?= $dataPub['img7'] ?>" class="crop1">
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img8'])) { ?>
+                            <div div="divsombra9" class="col-lg-3 px-2">
+
+                                <img id="minigaleria9" src="<?= $dataPub['img8'] ?>" class="crop1">
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img9'])) { ?>
+                            <div div="divsombra10" class="col-lg-3 px-2">
+
+                                <img id="minigaleria10" src="<?= $dataPub['img9'] ?>" class="crop1">
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img10'])) { ?>
+                            <div div="divsombra11" class="col-lg-3 px-2">
+
+                                <img id="minigaleria11" src="<?= $dataPub['img10'] ?>" class="crop1">
+
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (!empty($dataPub['img11'])) { ?>
+                            <div div="divsombra12" class="col-lg-3 px-2">
+
+                                <img id="minigaleria12" src="<?= $dataPub['img11'] ?>" class="crop1">
 
                             </div>
                         <?php } ?>
@@ -352,30 +464,183 @@ if (isset($URI[1])) {
     let mini2 = document.getElementById("minigaleria2");
     let mini3 = document.getElementById("minigaleria3");
     let mini4 = document.getElementById("minigaleria4");
+    let mini5 = document.getElementById("minigaleria5");
+    let mini6 = document.getElementById("minigaleria6");
+    let mini7 = document.getElementById("minigaleria7");
+    let mini8 = document.getElementById("minigaleria8");
+    let mini9 = document.getElementById("minigaleria9");
+    let mini10 = document.getElementById("minigaleria10");
+    let mini11 = document.getElementById("minigaleria11");
+    let mini12 = document.getElementById("minigaleria12");
 
     mini1.onclick = function() {
         document.getElementById("slider1").classList.add("active");
         document.getElementById("slider2").classList.remove("active");
         document.getElementById("slider3").classList.remove("active");
         document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
     }
     mini2.onclick = function() {
         document.getElementById("slider2").classList.add("active");
         document.getElementById("slider1").classList.remove("active");
         document.getElementById("slider3").classList.remove("active");
         document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
     }
     mini3.onclick = function() {
         document.getElementById("slider3").classList.add("active");
         document.getElementById("slider1").classList.remove("active");
         document.getElementById("slider2").classList.remove("active");
         document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
+        
     }
     mini4.onclick = function() {
         document.getElementById("slider4").classList.add("active");
         document.getElementById("slider1").classList.remove("active");
         document.getElementById("slider2").classList.remove("active");
         document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
+    }
+    mini5.onclick = function() {
+        document.getElementById("slider5").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
+    }
+    mini6.onclick = function() {
+        document.getElementById("slider6").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
+    }
+    mini7.onclick = function() {
+        document.getElementById("slider7").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
+    }
+    mini8.onclick = function() {
+        document.getElementById("slider8").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
+    }
+    mini9.onclick = function() {
+        document.getElementById("slider9").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
+    }
+    mini10.onclick = function() {
+        document.getElementById("slider10").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
+    }
+    mini11.onclick = function() {
+        document.getElementById("slider11").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider12").classList.remove("active");
+    }
+    mini12.onclick = function() {
+        document.getElementById("slider12").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+        document.getElementById("slider5").classList.remove("active");
+        document.getElementById("slider6").classList.remove("active");
+        document.getElementById("slider7").classList.remove("active");
+        document.getElementById("slider8").classList.remove("active");
+        document.getElementById("slider9").classList.remove("active");
+        document.getElementById("slider10").classList.remove("active");
+        document.getElementById("slider11").classList.remove("active");
     }
 
 </script>
