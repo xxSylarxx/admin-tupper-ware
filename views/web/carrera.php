@@ -539,7 +539,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                 <div class="col-lg-6 my-auto px-4">
                     <img src="<?= PATH_PUBLIC ?>/img/img-page/plandecarrera.jpeg" class="w-100 img-fluid " alt="">
                 </div>
-                <div class="col-lg-6  px-4" style="background-color:var(--color8);">
+                <div class="col-lg-6  px-4" style="background-color: rgba(30, 181, 218, .6);">
                     <div>
                         <br>
                         <h2 style="font-size:40px;color:var(--color1);font-weight:900;" class="animate__animated animate__fadeInUp">¡Tenemos diseñado un Plan de Carrera especial para ti!</h2>

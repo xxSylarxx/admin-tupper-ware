@@ -1,3 +1,29 @@
+<?php
+
+use Admin\Models;
+
+$objEmpresa = new Models\EmpresaModel;
+$objCategorias = new Models\CategoriasModel3;
+$objPublicacion = new Models\PublicacionModel3;
+$dataEmpresa = $objEmpresa->listEmpresa()[1];
+$dataCategorias = $objCategorias->listCategoriasInWeb();
+$listPublicaciones = $objPublicacion->listPublicacionesInWeb(0, 5,15);
+
+if (isset($URI[1])) {
+    if ($URI[1] == 'preview') {
+        $idcateg = $_POST['idcatg'];
+        $dataPub = $_POST;
+        $dataPub['categoria'] = $dataCategorias[$idcateg]['nombre'];
+    } else {
+        $tagname = $URI[1];
+        $dataPub = $objPublicacion->buscarPublicacionxTag($tagname);
+        $idcateg = $dataPub['idcatg'];
+        $dataPub['categoria'] = $dataCategorias[$idcateg]['nombre'];
+    }
+} else {
+    header('Location: /404');
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,48 +43,8 @@
 
     <script src="<?= PATH_PUBLIC ?>/js/bootstrap.min.js"></script>
 
-    <style>
-        header .navbar-nav .nav-item .activador {
-            color: var(--color1);
-            font-weight: bold;
-
-        }
-
-        #subniveles {
-            margin-left: .4rem;
-        }
-
-        .dropend .dropdown-toggle::after {
-            display: none;
-        }
-
-        .dropdown-menu li {
-
-            position: relative;
-        }
-
-        .dropdown-menu .submenu {
-            display: none;
-            position: absolute;
-            left: 100%;
-            top: -7px;
-        }
-
-        .dropdown-menu .submenu-left {
-            right: 100%;
-            left: auto;
-        }
-
-        .dropdown-menu>li:hover {
-            background-color: #f1f1f1
-        }
-
-        .dropdown-menu>li:hover>.submenu {
-            display: block;
-        }
-    </style>
-
     <?php include_once PATH_ROOT . '/views/web/partials/header.php'; ?>
+
     <style>
         .portada {
             background-color: var(--color2);
@@ -199,54 +185,111 @@
                 <li class="breadcrumb-item"><a href=""><//?= $dataPub['categoria'] ?></a></li>
             </ol> -->
             <div class="mt-3 py-5">
-                <h2 class="text-white">RECETAS</h2>
+                <h2 class="text-white"><?= $dataPub['titulo'] ?></h2>
             </div>
         </div>
     </div>
 
     <br><br><br>
-    
-    <div class="container-fluid">
+
+    <section class="container-fluid  animate__animated animate__zoomIn" id="publications">
+
         <div class="row justify-content-around">
             <div class="col-md-7">
-                <center><h2 style="font-weight:700;">CREMA DE CHAMPIÑONES</h2></center>
-                <br>
-                <div><img src="https://deslumbrantes.com.bo/wp-content/uploads/2020/07/crema-champinones.jpg" alt="" width="100%" height="500" /></div>
-                <div>&nbsp;</div>
-                <div>6 Porciones</div>
-                <div>Tiempo de preparaci&oacute;n: 25 minutos</div>
-                <div>&nbsp;</div>
-                <div><strong>INGREDIENTES</strong></div>
-                <ul>
-                    <li>500 gramos de champi&ntilde;ones frescos o de lata.</li>
-                    <li>2 Cucharadas de mantequilla.</li>
-                    <li>3 Cucharadas de cebolla picada.</li>
-                    <li>1 Cucharada de f&eacute;cula de ma&iacute;z.</li>
-                    <li>1 L de leche.</li>
-                    <li>2 ramitas de perejil.</li>
-                    <li>Sal y pimienta al gusto.</li>
-                </ul>
-                <div><strong>PREPARACI&Oacute;N</strong></div>
-                <ol>
-                    <li>En la Cacerola cocer los Champi&ntilde;ones en agua y licuarlos en 2 tazas del agua en la que se cocieron. Si utilizas champi&ntilde;ones de lata, escurrir y licuar en agua limpia.</li>
-                    <li>Derretir la mantequilla en la Cacerola a fuego medio. Agregar la cebolla picada en el mini Chef y sofre&iacute;r hasta que se vea transparente, a&ntilde;adir la f&eacute;cula de ma&iacute;z y cocinar moviendo constantemente hasta que tome un tono ligeramente dorado.</li>
-                    <li>Verter el licuado de champi&ntilde;ones, seguir moviendo y a&ntilde;adir la leche con el perejil, cocinar moviendo constantemente hasta que haya hervido durante 5 minutos.</li>
-                    <li>Sazonar con sal y pimienta.</li>
-                </ol>
+                <!-- <center><img src="<//?= $dataPub['portada'] ?>" alt="" class="img-fluid" height="500" width="700"></center> -->
+                
+                <div>
+                    <?= $dataPub['cuerpo'] ?>
+
+                </div>
             </div>
             <div class="col-md-3">
 
                 <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftupperwareperuoficial&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=543564153315944" width="100%" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
-    </div>
 
+    </section>
     <br>
     <br>
-    <div class="d-flex justify-content-center"><a href="/recetas"><button class="btn btn-primary float-right"><i class="fas fa-chevron-double-left"></i>&nbsp;&nbsp;Regresar</button></a></div>
+    <div class="d-flex justify-content-center"><a href="/recetas"><button class="btn btn-primary float-right">Ver Más Recetas</button></a></div>
+
+   <!--  <section id="otros">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="fw-bold mb-2 mt-4 text-start">CONOCE MÁS OFERTAS</h2>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <?php
+                        foreach ($listPublicaciones as $pub) :
+                            if ($pub['idpub'] == $dataPub['idpub']) {
+                                continue;
+                            }
+                        ?>
+                            <div class="col-lg-3 ">
+                                <a href="/pub2/<?= $pub['tagname'] ?>">
+                                    <div class="div1 ">
+                                        <div class="images d-flex justify-content-center">
+                                            <img class="crop3" src="<?= $pub['portada'] ?>">
+                                        </div>
+                                        <?php
+                                            if(!empty($pub['img1'])){?>
+                                        <center>
+                                            <div class="div2">
+                                                <img class="crop3" src="<?= $pub['img1'] ?>">
+                                            </div>
+                                        </center>
+                                        <?php } ?>
+                                    </div>
+                                </a>
+
+                                <h4 class="py-2"><?= $pub['titulo'] ?></h4>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
     <br><br><br>
 
-    <?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
+
 </body>
+<?php include_once PATH_ROOT . '/views/web/partials/footer.php'; ?>
 
 </html>
+
+<script>
+    let mini1 = document.getElementById("minigaleria1");
+    let mini2 = document.getElementById("minigaleria2");
+    let mini3 = document.getElementById("minigaleria3");
+    let mini4 = document.getElementById("minigaleria4");
+
+    mini1.onclick = function() {
+        document.getElementById("slider1").classList.add("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+    }
+    mini2.onclick = function() {
+        document.getElementById("slider2").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+    }
+    mini3.onclick = function() {
+        document.getElementById("slider3").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider4").classList.remove("active");
+    }
+    mini4.onclick = function() {
+        document.getElementById("slider4").classList.add("active");
+        document.getElementById("slider1").classList.remove("active");
+        document.getElementById("slider2").classList.remove("active");
+        document.getElementById("slider3").classList.remove("active");
+    }
+</script>

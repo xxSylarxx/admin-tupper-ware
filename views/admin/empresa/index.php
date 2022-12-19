@@ -126,11 +126,11 @@
                     <input type="text" class="form-control mt-1" name="twitter" value="<?php echo $this->empresa['twitter'] ?>">
                 </div>
                 <div class="col-sm-4 my-2">
-                    <label>Whatsapp 01:</label>
+                    <label>TikTok:</label>
                     <input type="text" class="form-control mt-1" name="whatsapp1" value="<?php echo $this->empresa['whatsapp1'] ?>">
                 </div>
                 <div class="col-sm-4 my-2">
-                    <label>Whatsapp 02:</label>
+                    <label>Whatsapp:</label>
                     <input type="text" class="form-control mt-1" name="whatsapp2" value="<?php echo $this->empresa['whatsapp2'] ?>">
                 </div>
                 <div class="col-sm-4 my-2">

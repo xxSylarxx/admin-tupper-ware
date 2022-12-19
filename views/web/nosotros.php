@@ -422,13 +422,12 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         }
 
         #nosotros1 {
-            background-color: var(--color8);
+            background-color: rgba(30, 181, 218, .6);
         }
 
         #nosotros2 {
-            background-image: url('<?= PATH_PUBLIC ?>/img/img-page/fondo-nosotros.jpg');
-            background-size: 100%;
-            background-repeat: no-repeat;
+            background-color:rgba(0, 164, 153, .7)
+
         }
 
         #nosotros3 {
@@ -551,7 +550,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <br>
         <h2 style="font-size:40px;color:var(--color5);font-weight:900;" data-aos="flip-up">Nuestros Principios</h2>
         <br>
-        <div class="container" style="background-color:rgb(255, 255, 255,0.5)" data-aos="flip-up">
+        <div class="container"  data-aos="flip-up">
             <div class="row">
                 <div class="col-lg-6 p-3">
                     <h2 style="color:#18605B;font-weight:900;">Nuestro Porqué</h2>
@@ -581,7 +580,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 
         <br>
         <br>
-        <h2 style="font-size:40px;color:var(--color2);font-weight:900;" data-aos="zoom-in">En TupperWare Somos...</h2>
+        <h2 style="font-size:40px;color:var(--color2);font-weight:900;" data-aos="zoom-in">En Tupperware Somos...</h2>
         <br>
         <div class="container" style="background-color:rgb(255, 255, 255,0.5)">
             <div class="row" data-aos="zoom-in">

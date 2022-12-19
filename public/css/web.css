@@ -134,8 +134,8 @@ header #submenu:hover {
 }
 header #logo {
   margin: 0px 5px 0px 5px;
-  height: 34px;
-  width: 200px;
+  height: 40px;
+  width: 215px;
 }
 header #logoresponsive {
   margin: 0px 5px 0px 5px;
@@ -182,7 +182,7 @@ footer .bar-inf a {
   font-size: 0.85em;
 }
 footer {
-  background: var(--color2);
+  background: var(--color1);
   background-size: 20%;
 }
 

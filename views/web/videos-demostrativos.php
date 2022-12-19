@@ -3,8 +3,8 @@
 use Admin\Models;
 
 $objEmpresa = new Models\EmpresaModel;
-$objCategorias = new Models\CategoriasModel;
-$objPublicaciones = new Models\PublicacionModel;
+$objCategorias = new Models\CategoriasModel3;
+$objPublicaciones = new Models\PublicacionModel3;
 $dataEmpresa = $objEmpresa->listEmpresa()[1];
 $dataCategorias = $objCategorias->listCategoriasInWeb();
 
@@ -18,8 +18,8 @@ if ($filter !== 'all') {
     $nameCategoria = $dataCategoria['nombre'];
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 } else {
-    $idCateg = '5';
-    $nameCategoria = '5';
+    $idCateg = '17';
+    $nameCategoria = '17';
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 }
 
@@ -382,6 +382,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             color: #3f3f3f;
             padding: 10px 18px;
         }
+
         #videos .card .news {
             position: absolute;
             top: 50%;
@@ -445,115 +446,35 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
 
     <section class="container videos" id="videos">
 
-        <div class="row">
-            <div class="col-md-4 my-4 px-4">
-                <a href="video1" class="card border-0 shadow h-100">
-                <span class="news">Videos</span>
-                    <img src="https://img.youtube.com/vi/6cTFu55e71k/maxresdefault.jpg" width="100%" height="230">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">EcoTwist Tupperware</h5>
-                        <div class="detalle">
-                            Tupperware solo hay uno.
+        <div class="row ">
+            <?php foreach ($dataPublicaciones as $key => $pub) : ?>
+                <div class="col-md-4 my-4 px-4">
+                    <a href="/pub5/<?= $pub['tagname'] ?>" class="card border-0 shadow h-100">
+                        <span class="news"><?= $pub['categoria3'] ?></span>
+                        <img src="<?= $pub['portada'] ?>" width="100%" height="230">
+                        <div class="card-body">
+                            <h5 class="text-info fw-bold pt-4"><?= $pub['titulo'] ?></h5>
+                            <div class="detalle">
+                                <?= $pub['detalle'] ?>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 my-4 px-4">
-                <a href="video2" class="card border-0 shadow h-100">
-                <span class="news">Videos</span>
-                    <img src="https://img.youtube.com/vi/bYsprATsHoU/maxresdefault.jpg" width="100%" height="230">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">VALORAMOS TU CONFIANZA</h5>
-                        <div class="detalle">
-                            Durante más de 75 años, nos hemos preocupado por hacer lo correcto para las personas y sus familias.
+                        <div class="card-footer text-warning">
+                            <i class="far fa-calendar-alt"></i> <span class="ms-2">&nbsp; <?= date('M d, Y', strtotime($pub['fecpub'])) ?></span>
                         </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 my-4 px-4">
-                <a href="video3" class="card border-0 shadow h-100">
-                <span class="news">Videos</span>
-                    <img src="https://img.youtube.com/vi/6cTFu55e71k/maxresdefault.jpg" width="100%" height="230">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">FRESQUITA TUPPERWARE</h5>
-                        <div class="detalle">
-                            Ideal para mantener frescos por más tiempo alimentos crudos con un alto porcentaje de agua, tales como verduras y frutas. 
-                        </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 my-4 px-4">
-                <a href="video4" class="card border-0 shadow h-100">
-                <span class="news">Videos</span>
-                    <img src="https://img.youtube.com/vi/DicQcDDforQ/maxresdefault.jpg" width="100%" height="230">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">ULTRA TAZONES TUPPERWARE</h5>
-                        <div class="detalle">
-                        Hay muchas recetas por preparar, y solo hay una marca Tupperware para prepararlas de la mejor manera.
-                        </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 my-4 px-4">
-                <a href="video5" class="card border-0 shadow h-100">
-                <span class="news">Videos</span>
-                    <img src="https://img.youtube.com/vi/HuGzOWs-MmU/maxresdefault.jpg" width="100%" height="230">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">!NO HAY TIEMPO QUE PERDER!</h5>
-                        <div class="detalle">
-                            Debemos pedir que los fabricantes faciliten el que los consumidores puedan encontrar repuestos de sus productos de una manera sencilla y durante el tiempo que marca la ley.
-                        </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 my-4 px-4">
-                <a href="video6" class="card border-0 shadow h-100">
-                <span class="news">Videos</span>
-                    <img src="https://img.youtube.com/vi/6cTFu55e71k/maxresdefault.jpg" width="100%" height="230">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">RALLADOR TUPPERWARE</h5>
-                        <div class="detalle">
-                            Práctico porque tiene dos tipos de rallado, solo tienes que girar el inserto rallador para el rallado que desees, la base y el sello son útiles para conservar tus alimentos rallados.
-                        </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 my-4 px-4">
-                <a href="video7" class="card border-0 shadow h-100">
-                <span class="news">Videos</span>
-                    <img src="https://img.youtube.com/vi/5oTm7ksc3RQ/maxresdefault.jpg" width="100%" height="230">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">TAZÓN MARAVILLA TUPPERWARE</h5>
-                        <div class="detalle">
-                            Su diseño y forma de tazón que permite transportar y conservar alimentos en la heladera.
-                        </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">21-11-2022</span>
-                    </div>
-                </a>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="row pt-4">
+            <div class="col-lg pt-3">
+                <ul class="pagination justify-content-center">
+                    <?= $objPublicaciones->paginationWeb($filter, $total, $pagina, "/publicaciones/"); ?>
+                </ul>
             </div>
         </div>
+
     </section>
-    
+
     <br>
     <br>
     <br>

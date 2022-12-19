@@ -745,7 +745,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
             </div>
             <br>
             <div class="row">
-                <div class="container d-flex justify-content-around p-4" style="background-color:#547EEA;margin-bottom:8.5rem;">
+                <div class="container d-flex justify-content-around p-4" style="background-color:rgba(84, 126, 234, .6);margin-bottom:8.5rem;">
                     <div class="col-lg-6">
                         <section class="d-flex list  ">
                             <span style="color:white;"><i class="fa fa-check"></i></span>
@@ -893,8 +893,8 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         <div id="separadorr">
             <img src="<?= PATH_PUBLIC ?>/img/img-page/base2.svg" class="w-100 img-fluid " alt="">
         </div>
-        <div class="container-fluid" style="background-color:#547EEA;">
-            <div class="row d-flex justify-content-center" style="padding:6rem;margin-top:-12px;">
+        <div class="container-fluid" style="background-color:#9cb4f4;">
+            <div class="row d-flex justify-content-center" style="padding:6rem;margin-top:-5px;">
                 <div class="col-lg-5 my-auto">
                     <span style="color:white;font-size:1.5rem;font-weight:600;">¿Te gustaría realizar una Experiencia?.</span>
                 </div>

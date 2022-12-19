@@ -459,7 +459,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                     <!-- <img src="<?= PATH_PUBLIC ?>/img/galeria/blog1.jpg" class="img-fluid" alt=""> -->
                     <img src="<?= $pub['portada'] ?>" width="100%" height="330">
                     <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4"><?= $pub['titulo'] ?></h5>
+                        <h5 class="fw-bold pt-4"><?= $pub['titulo'] ?></h5>
                         <div class="detalle">
                         <?= $pub['detalle'] ?>
                         </div>

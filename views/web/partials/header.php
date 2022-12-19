@@ -86,23 +86,23 @@ switch ($pagina) {
     <div class="bar-sup">
 
         <div class="ms-auto">
-            <a href="#" class="me-3" target="_blank"><i class="fab fa-facebook"></i><span> Facebook</span></a>
-            <a href="#" class="me-3" target="_blank"><i class="fab fa-youtube "></i><span> Youtube</span></a>
+            <a href="<?= $dataEmpresa['facebook'] ?>" class="me-3" target="_blank"><i class="fab fa-facebook"></i><span> Facebook</span></a>
+            <a href="<?= $dataEmpresa['youtube'] ?>" class="me-3" target="_blank"><i class="fab fa-youtube "></i><span> Youtube</span></a>
             <!-- <a href="#" target="_blank" class="me-3"><i class="fas fa-globe-americas"></i><span> Intranet</span></a> -->
 
         </div>
 
     </div>
+
     <div id="menu1">
+        <div style="display:flex;justify-content:center;">
+            <img id="logo" src="<?= PATH_PUBLIC ?>/img/icons/logo.png" alt="">
+        </div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand animate__animated animate__zoomIn" href="./">
-
                 <div class="d-flex flex-row align-items-center">
-
                     <img id="logoresponsive" src="<?= PATH_PUBLIC ?>/img/icons/logo.png" alt="">
-
                 </div>
-
             </a>
             <button class="navbar-toggler d-lg-none" type="button" style="background-color:var(--color1);" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" style="background-color:var(--color1);"></span>
@@ -113,7 +113,7 @@ switch ($pagina) {
                         <a class="nav-link fw-bold <?= $active1 ?>" href="/">Inicio</a>
                     </li>
                     <li class="nav-item dropdown my-auto">
-                        <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">CÁTALAGOS</span><i class="fas fa-caret-down"></i></a>
+                        <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">CATÁLAGOS</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="/catalogo">CATÁLOGO</a>
                             <!-- a class="dropdown-item" href="/revista">REVISTA IMÁN</a> -->
@@ -148,7 +148,7 @@ switch ($pagina) {
                             <li> <a class="dropdown-item" href="/recetas"> RECETAS </a></li>
                             <li> <a class="dropdown-item" href="/videos-demostrativos"> VIDEOS DEMOSTRATIVOS </a></li>
                         </ul>
-                        
+
                     </li>
                     <li class="nav-item dropdown my-auto">
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">NOSOTROS</span><i class="fas fa-caret-down"></i></a>
@@ -160,9 +160,6 @@ switch ($pagina) {
                             <a class="dropdown-item" href="https://museodigital.com.mx/" target="_blank">Museo</a>
 
                         </div>
-                    </li>
-                    <li>
-                        <img id="logo" src="<?= PATH_PUBLIC ?>/img/icons/logo.png" alt="">
                     </li>
                     <li class="nav-item dropdown my-auto">
                         <a class="nav-link fw-bold <?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">PLAN DE CARRERA</span><i class="fas fa-caret-down"></i></a>
@@ -186,7 +183,7 @@ switch ($pagina) {
 
                         </div>
                     </li> -->
-                   <!--  <li class="nav-item dropdown my-auto">
+                    <!--  <li class="nav-item dropdown my-auto">
                         <a class="nav-link fw-bold <//?= $active2 ?>" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="me-2">PEDIDOS</span><i class="fas fa-caret-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">APP</a>

@@ -236,7 +236,7 @@
 
     .btn-mas label {
         cursor: pointer;
-        background: var(--color1);
+        background: var(--color2);
         font-size: 23px;
     }
 
@@ -267,7 +267,7 @@
 
 <section id="redes">
     <div class="topcontrol2">
-        <a href="https://api.whatsapp.com/send/?phone=51903445266&text&type=phone_number&app_absent=0" target="_blank">
+        <a href="<?= $dataEmpresa['whatsapp2'] ?>" target="_blank">
             <span>
                 <i class="fab fa-whatsapp fa-2x"></i>
             </span>
@@ -276,11 +276,11 @@
     <div class="contain">
         <input type="checkbox" id="btn-mas">
         <div class="redes">
-            <a href="https://www.facebook.com/tupperwareperuoficial" style=" background: #3b5998;" class="fa fa-facebook" target="_blank"></a>
-            <a href="https://www.instagram.com/tupperware.peruoficial/" style="background-image: linear-gradient(to left top, #3315a1, #6e0095, #900088, #aa007a, #bc006d, #cb1563, #d82959, #e13c4f, #eb5547, #f16d3f, #f4853a, #f59c38);" class="fa fa-instagram" target="_blank"></a>
-            <a href="https://www.youtube.com/channel/UCfrwyZQC9MvHb_s5vBDGxUQ" style=" background: #f22224;" class="fa fa-youtube" target="_blank"></a>
+            <a href="<?= $dataEmpresa['facebook'] ?>" style=" background: #3b5998;" class="fa fa-facebook" target="_blank"></a>
+            <a href="<?= $dataEmpresa['instagram'] ?>" style="background-image: linear-gradient(to left top, #3315a1, #6e0095, #900088, #aa007a, #bc006d, #cb1563, #d82959, #e13c4f, #eb5547, #f16d3f, #f4853a, #f59c38);" class="fa fa-instagram" target="_blank"></a>
+            <a href="<?= $dataEmpresa['youtube'] ?>" style=" background: #f22224;" class="fa fa-youtube" target="_blank"></a>
            <!--  <a href="#" class="fa fa-twitter" style=" background: #00acee;" target="_blank"></a> -->
-            <a href="https://www.tiktok.com/@tupperware_peruoficial" class="fab fa-tiktok" style=" background: black;" target="_blank"></a>
+            <a href="<?= $dataEmpresa['whatsapp1'] ?>" class="fab fa-tiktok" style=" background: black;" target="_blank"></a>
         </div>
         <div class="btn-mas">
             <label for="btn-mas" class="fa fa-plus"></label>

@@ -422,7 +422,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
         }
 
         #historia1 {
-            background-color: var(--color8);
+            background-color: rgba(30, 181, 218, .6);
         }
 
         #historia2 {

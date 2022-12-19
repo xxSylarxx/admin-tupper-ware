@@ -3,8 +3,8 @@
 use Admin\Models;
 
 $objEmpresa = new Models\EmpresaModel;
-$objCategorias = new Models\CategoriasModel;
-$objPublicaciones = new Models\PublicacionModel;
+$objCategorias = new Models\CategoriasModel3;
+$objPublicaciones = new Models\PublicacionModel3;
 $dataEmpresa = $objEmpresa->listEmpresa()[1];
 $dataCategorias = $objCategorias->listCategoriasInWeb();
 
@@ -18,8 +18,8 @@ if ($filter !== 'all') {
     $nameCategoria = $dataCategoria['nombre'];
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 } else {
-    $idCateg = '5';
-    $nameCategoria = '5';
+    $idCateg = '16';
+    $nameCategoria = '16';
     $dataPublicaciones = $objPublicaciones->listPublicacionesInWeb($initPub, PUB_MAX_WEB, $idCateg);
 }
 
@@ -447,7 +447,24 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
     <section class="container videos" id="videos">
 
         <div class="row">
+        <?php foreach ($dataPublicaciones as $key => $pub) : ?>
             <div class="col-md-4 my-4 px-4">
+                <a href="/pub6/<?= $pub['tagname'] ?>" class="card border-0 shadow h-100">
+                    <span class="news"><?= $pub['categoria3'] ?></span>
+                    <img src="<?= $pub['portada'] ?>" width="100%" height="230">
+                    <div class="card-body">
+                        <h5 class="text-info fw-bold pt-4"><?= $pub['titulo'] ?></h5>
+                        <div class="detalle">
+                        <?= $pub['detalle'] ?>
+                        </div>
+                    </div>
+                    <div class="card-footer text-warning">
+                        <i class="far fa-calendar-alt"></i> <span class="ms-2">&nbsp; <?= date('M d, Y', strtotime($pub['fecpub'])) ?></span>
+                    </div>
+                </a>
+            </div>
+            <?php endforeach; ?>
+            <!-- <div class="col-md-4 my-4 px-4">
                 <a href="receta1" class="card border-0 shadow h-100">
                     <span class="news">Recetas</span>
                     <img src="https://deslumbrantes.com.bo/wp-content/uploads/2020/07/crema-champinones.jpg" width="100%" height="230">
@@ -478,23 +495,7 @@ $total = $objPublicaciones->totalPublicaciones($idCateg, true);
                         <i class="far fa-calendar-alt"></i> <span class="ms-2">22-11-2022</span>
                     </div>
                 </a>
-            </div>
-            <div class="col-md-4 my-4 px-4">
-                <a href="receta1" class="card border-0 shadow h-100">
-                    <span class="news">Recetas</span>
-                    <img src="https://deslumbrantes.com.bo/wp-content/uploads/2020/07/crema-champinones.jpg" width="100%" height="230">
-                    <div class="card-body">
-                        <h5 class="text-info fw-bold pt-4">CREMA DE CHAMPIÑONES</h5>
-                        <div class="detalle">
-                            6 Porciones Tiempo de preparación: 25 minutos
-                            INGREDIENTES 5oo gramos de champiñones frescos o de lata.
-                        </div>
-                    </div>
-                    <div class="card-footer text-warning">
-                        <i class="far fa-calendar-alt"></i> <span class="ms-2">22-11-2022</span>
-                    </div>
-                </a>
-            </div>
+            </div> -->
         </div>
     </section>
 
